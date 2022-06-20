@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Side_Navigation_2021" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Welcome" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="../Skins/Favicons/favicon-32x32.png" />
         <link rel="icon" sizes="96x96" href="../Skins/Favicons/IB_favicon_96x96.png" />
         <link rel="icon" sizes="32x32" href="../Skins/Favicons/IB_favicon_32x32.png" />
-        <link rel="icon" sizes="16x16" href="../Skins/Favicons/IB_favicon_16x16.png" /><title>Platform Release History</title>
+        <link rel="icon" sizes="16x16" href="../Skins/Favicons/IB_favicon_16x16.png" /><title>What's New in Platform 6.4</title>
         <!-- Appzi: Capture Insightful Feedback -->
         <!-- End Appzi -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,10 +23,25 @@
         <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <style>.col-container
+{
+	display: flex;
+	width: 100%;
+}
+
+.col
+{
+	flex: 1;
+	padding: 16px;
+}
+
+</style>
         <link href="../Resources/Stylesheets/ib_platform.css" rel="stylesheet" type="text/css" />
         <link rel="apple-touch-icon" sizes="192x192" href="../Skins/Favicons/IB_favicon_192x192.png" />
         <link rel="shortcut icon" href="../Skins/Favicons/favicon-32x32.png" />
@@ -62,7 +77,7 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
                     <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
                     </ul>
                 </aside>
@@ -102,7 +117,7 @@
                                     <div class="nav-search row">
                                         <form class="search" action="#">
                                             <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our documentation..." />
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
                                                 <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
                                                     <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
                                                     </div>
@@ -142,15 +157,60 @@
                                     </div>
                                     <div class="home-container">
                                         <div role="main" id="mc-main-content">
-                                            <h1><span class="mc-variable IB.ProductName variable">Platform</span> Release History</h1>
-                                            <p>This page lists out the official stable releases.</p>
+                                            <h1>What's New in Platform 6.4</h1>
+                                            <p>The following is a summary of features updates, enhancements, and performance improvements bundled with the <span style="font-weight: bold;" class="mc-variable IB.CompanyName variable">Infinite Blue</span><span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span> version <b>6.4.0.0</b>.  Customers currently running version <b>5.0</b> or later are eligible to upgrade to version <b>6.4</b>. If you are running an earlier version, please contact <a href="https://infiniteblue.com/support/">Support</a> for additional information.</p>
+                                            <h2>Features/Enhancements</h2>
+                                            <h3>Quick Filtering</h3>
+                                            <p>While the current detailed search tool lacks list view filtering and has other limitations, <span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span><b> 6.4</b> is now equipped with a new feature – <span class="uicontrol">Quick Filters</span> to address these restrictions.     The detailed search feature will not be removed from the <span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span>, yet it will no longer be evaluated for improvements.</p>
+                                            <p>Using the new <span class="uicontrol">Quick Filter</span> functionality, administrators can now create reusable templates for any list view for a specific object. The fields that a user can use to quickly filter a list of records are defined in these templates. Administrators can enable keyword filtering in list views as well, which allows users to search for records with strings and wildcard characters. Keyword Filtering, Quick Filtering, and basic List View Filters all work together to return a single subset of entries in a list view. This allows users to easily filter records by criteria using the same search page rather than having to maintain numerous pages. Furthermore, the filtered records list may be simply shared to save time and collaborate more effectively.</p>
+                                            <p>
+                                                <img src="../img/quick-search-1.png" style="width: 454px;height: 225px;" alt="" />
+                                            </p>
+                                            <p>For detailed information on this, see <a href="Quick Filters.htm">Quick Filters</a>.</p>
+                                            <h3>Large Job Triggers</h3>
+                                            <p><span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span><b> 6.4</b> now allows triggers to run as large jobs by administrators. This can be specified when invoking a trigger using REST API v2, Server-Side, or Client-Side APIs, or it can be enabled in the UI of a trigger. When a trigger operates in the background, it ignores typical trigger timing and transactional volume constraints (<code>MaxRuntimeTriggers</code> and <code>MaxTimeToRunTrigMS</code>).</p>
+                                            <p>This makes it possible to conduct more complex business logic in the background without interruption. Large job triggers can also be set delayed or recursive. When a large job trigger is queued and processing, it appears in Job Monitoring Section. Additionally, <span class="uicontrol">After Delete</span> trigger timing option is now also enabled for Create New Record and Object Scripts triggers.</p>
+                                            <p>
+                                                <img src="rfi1391098488146.jpg" style="width: 500px;height: 115px;" alt="" />
+                                            </p>
+                                            <p>For detailed information on this, see <a href="Delayed and recursive triggers.htm#Run_as_Large_job">Delayed and recursive triggers</a>.</p>
+                                            <h3>Performance Improvements</h3>
+                                            <p>While actual performance gains will vary depending on your environment, application complexity, and data volume, in comparison to 6.3, the following areas have improved performance.:</p>
+                                            <ul>
+                                                <li>
+                                                    <p><b>GraalJS</b> - While this feature is still in beta, several known concerns have been addressed, and the feature has been streamlined to run faster.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Elastic Search</b> - Elastic search has been improved in several ways to make it more stable and performant. This is now the preferred search engine over Lucene.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Scheduled FTP Import Batch Job</b> - Import mode selection is now available in the Scheduled FTP Import Batch Job. For these batch jobs, the user can choose between test, normal, and bulk mode.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>UI Performance</b> - For better efficiency, UI record activities can be been switched to Ajax calls using the shared property - <a href="Shared Properties.htm#EnableAjaxFormSubmit">EnableAjaxFormSubmit</a>.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Import Performance</b> - The process to create records via import has been slightly optimized to complete more quickly. The update records flow has been updated to be on par with the create flow in terms of unique field validation and performance.</p>
+                                                </li>
+                                            </ul>
+                                            <h3>Miscellaneous</h3>
+                                            <ul>
+                                                <li>
+                                                    <p><b>REST 2.0 APIs</b> - While this feature is still in beta, several known concerns have been addressed, and the feature has been streamlined to run faster. For detailed information on this, see <a href="Delayed and recursive triggers.htm#Run_as_Large_job">Delayed and recursive triggers</a>.</p>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="MCMiniTocBox_0 miniToc nocontent" data-mc-autonum="In this section:" data-mc-depth="1" data-mc-toc="True"><span class="autonumber"><span class="miniTocBoxTitle">In this section:</span></span>
                                     </div>
-                                    <div class="home-footer">
-                                        <p class="footer" style="color: #4d4d4d; text-align: right; vertical-align: middle;">© 2022 <a style="color: #4d4d4d;" href="http://www.infiniteblue.com/">Infinite Blue Platform</a>. All rights reserved.</p>
-                                    </div>
+                                    <footer class="footer-distributed">
+                                        <div class="footer-right"><a href="mailto:info@infiniteblue.com?subject=Information needed for" title="For any information, send an email to Infinite Blue Support" target="_blank"><img src="../Resources/Images/Home/email.png" alttext="E-mail" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.facebook.com" target="_blank"><img src="../Resources/Images/Home/facebook.png" alttext="Facebook" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.linkedin.com" target="_blank"><img src="../Resources/Images/Home/linkedin.png" alttext="LinkedIn" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.twitter.com" target="_blank"><img src="../Resources/Images/Home/twitter.png" alttext="Twitter" class="Hyperlinked" alt="" /></a>
+                                        </div>
+                                        <div class="footer-left" style="font-size: 9pt; color: white;">
+                                            <p class="footer-links"><a href="http://www.infiniteblue.com/">Infinite Blue Platform</a> © 2022</p>
+				Documentation Version 
+				<select class="minimal"><option>6.4</option><option value="platform/What's New in Platform 6.3.htm">6.3</option><option value="platform/What's New in Platform 6.2.htm">6.2</option></select><script src="../Resources/Scripts/select-link-redirect.js"></script></div>
+                                    </footer>
                                 </div>
                             </div>
                         </div>

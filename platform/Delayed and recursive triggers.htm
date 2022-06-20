@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="concept _Skins_HTML5___Side_Navigation_2021" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Adding business logic |Triggers and workflows|Trigger overview" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="concept _Skins_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Adding business logic |Triggers and workflows|Trigger overview" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -23,10 +23,25 @@
         <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <style>.col-container
+{
+	display: flex;
+	width: 100%;
+}
+
+.col
+{
+	flex: 1;
+	padding: 16px;
+}
+
+</style>
         <link href="../Resources/Stylesheets/ib_platform.css" rel="stylesheet" type="text/css" />
         <link rel="apple-touch-icon" sizes="192x192" href="../Skins/Favicons/IB_favicon_192x192.png" />
         <link rel="shortcut icon" href="../Skins/Favicons/favicon-32x32.png" />
@@ -62,7 +77,7 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
                     <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
                     </ul>
                 </aside>
@@ -102,7 +117,7 @@
                                     <div class="nav-search row">
                                         <form class="search" action="#">
                                             <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our documentation..." />
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
                                                 <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
                                                     <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
                                                     </div>
@@ -145,25 +160,42 @@
                                             <h1 class="concepttitle">Delayed and recursive triggers</h1>
                                             <p>If you would like a trigger to be delayed relative to a particular date and
    time, you can specify delay criteria. </p>
+                                            <h2>Trigger Delay Time</h2>
                                             <p>A trigger can be delayed relative to the current time or relative to the value
-   of any date or date/time field for the selected record. The example below shows a trigger that
-   will run seven days after the last record's update.  </p>
+   of any date or date/time field for the selected record. </p>
+                                            <p>Use the following parameters to specify the delay criteria for a trigger.</p>
+                                            <ul>
+                                                <li>
+                                                    <p><span class="uicontrol"><a name="Run_as_Large_job"></a>Run as Large job</span>: Check this option to run the delayed trigger as a large job. This enables the trigger run to be queued up as large job with additional monitoring and cancellation support. Matured large trigger jobs are served sequentially be separate thread pool</p>
+                                                    <div class="note">&#160;<b>Note</b>: <ul><li><p>It is not recommended to use this option for small-sized triggers written with simple computations .</p></li><li><p>Large trigger runs the script in an unbounded environment. However, the script execution will not stop pre-emptively due to <code>max js</code> time exceeding. This may cause the script to run in an infinite loop, blocking the other trigger runs.</p></li><li><p>The default pool size for a Large Event Executor Service is 1. This can be increased until 30 threads by the instance administrator using the  <a href="Shared Properties.htm#DelayedTriggersExecutorThreadCount">DelayedTriggersExecutorThreadCount</a> shared property.</p></li><li><p>Large job honors delayed and recursive settings, if specified. If no delay timings are set, the trigger is queued as a large job to be picked up and run immediately by separate thread.</p></li></ul></div>
+                                                </li>
+                                                <li>
+                                                    <p><span class="uicontrol">Run Relative To</span>: Select this to delay the trigger relatively to a particular date/time field type rather than run immediately.</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="uicontrol">Run At</span>: Specify the delay duration here.</p>
+                                                    <div class="note"><b>Note</b>: For delayed triggers, the options "Before" or "After" usually do not make any difference.</div>
+                                                </li>
+                                            </ul>
+                                            <p>The following example shows a trigger that
+   will run twenty days after the last record's update.  </p>
                                             <div class="fig">
                                                 <p>
-                                                    <img src="rfi1391098488146.jpg" style="width: 579;height: 43;" alt="" />
+                                                    <img src="rfi1391098488146.jpg" alt="" />
                                                 </p>
                                             </div>
+                                            <h2>Recursion</h2>
                                             <p>You can also specify criteria to run a particular trigger periodically,
    including the maximum number of times to run. The example below shows a trigger that runs every
    week starting from the last record's update, up to 3 times. </p>
                                             <div class="fig">
                                                 <p>
-                                                    <img src="rfi1391098489329.jpg" style="width: 519;height: 57;" alt="" />
+                                                    <img src="rfi1391098489329.jpg" alt="" />
                                                 </p>
                                             </div>
                                             <p>You can view stored delayed triggers by clicking <span class="uicontrol">Queue</span> on an object view page. A queue displays up to 1000 stored triggers and shows
    when they will run. It can be filtered by the selected object record. </p>
-                                            <img src="rfi1391098490495.jpg" style="width: 603;height: 102;" alt="" />
+                                            <img src="rfi1391098490495.jpg" alt="" />
                                             <p>When setting triggers to run after a delay or repeat, keep the following in mind:</p>
                                             <ul>
                                                 <li>Be careful when using delayed or repeated triggers to avoid unnecessary
@@ -197,9 +229,14 @@
                                             <p>See <a href="Debugging delayed triggers.htm" class="MCXref xref">Debugging delayed triggers</a> for more on debugging delayed triggers.</p>
                                         </div>
                                     </div>
-                                    <div class="home-footer">
-                                        <p class="footer" style="color: #4d4d4d; text-align: right; vertical-align: middle;">© 2022 <a style="color: #4d4d4d;" href="http://www.infiniteblue.com/">Infinite Blue Platform</a>. All rights reserved.</p>
-                                    </div>
+                                    <footer class="footer-distributed">
+                                        <div class="footer-right"><a href="mailto:info@infiniteblue.com?subject=Information needed for" title="For any information, send an email to Infinite Blue Support" target="_blank"><img src="../Resources/Images/Home/email.png" alttext="E-mail" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.facebook.com" target="_blank"><img src="../Resources/Images/Home/facebook.png" alttext="Facebook" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.linkedin.com" target="_blank"><img src="../Resources/Images/Home/linkedin.png" alttext="LinkedIn" class="Hyperlinked" style="padding-right: 10px;" alt="" /></a><a href="http://www.twitter.com" target="_blank"><img src="../Resources/Images/Home/twitter.png" alttext="Twitter" class="Hyperlinked" alt="" /></a>
+                                        </div>
+                                        <div class="footer-left" style="font-size: 9pt; color: white;">
+                                            <p class="footer-links"><a href="http://www.infiniteblue.com/">Infinite Blue Platform</a> © 2022</p>
+				Documentation Version 
+				<select class="minimal"><option>6.4</option><option value="platform/What's New in Platform 6.3.htm">6.3</option><option value="platform/What's New in Platform 6.2.htm">6.2</option></select><script src="../Resources/Scripts/select-link-redirect.js"></script></div>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
