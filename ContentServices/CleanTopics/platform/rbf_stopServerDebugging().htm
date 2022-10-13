@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Stops server-side debugging process started by rbf_startServerDebugging() . This API is used for displaying the results of debugging. Syntax rbf_stopServerDebugging(callback) Parameters callback The function that is executed when server debugging operation is completed. This receives a string parameter that contains a summary of debug operations. Note: Outputs from rbv_api.println() and similar functions are included and displayed as the results of debugging. Note: This API is supported in portals as well. Permissions It is only available for Administrative users. Example rbf_stopServerDebugging( function (debugMsg) { alert('Stop debugging server-side API, Debug Messages: ' +debugMsg);
+} );</body>
+</html>

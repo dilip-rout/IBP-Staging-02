@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This API is used to delete an authentication profile by an Authentication profile ID. HTTP Method DELETE URL https://app.infiniteblue.com/rest/api/authenticationProfile URL Parameters authProfileId The authentication profile ID of the profile which has to be deleted. If an authentication profile is mapped to any role or if it set as a Default UI/API authentication profile for a tenant, then we cannot delete the authentication profile. Note: Global authentication profiles like Custom, Kerberos, API token cannot be deleted. Permissions Required Full administrative privileges. Response The authentication profile which is deleted for the tenant in XML format. Sample XML output - valid response: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;Msg&gt;Authentication Profile with ID: 54d72c32-a2e1-4cb7-a6fe-58e336e50ac8 has been deleted&lt;/Msg&gt;
+&lt;/resp&gt; Sample invalid responses &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="fail"&gt;
+&lt;err&gt;Authentication Profile with ID: 54d72cfd32-a2e1-4cb7-a6fe-58e336e50ac8 doesn't exist or cannot be deleted&lt;/err&gt;
+&lt;/resp&gt; {
+"status": "fail",
+"message": "You cannot delete Custom/Kerberos/API token authentication profile"
+}</body>
+</html>

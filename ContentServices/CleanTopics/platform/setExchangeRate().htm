@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sets the exchange rate between two currencies on a given date. Syntax setExchangeRate(string sessionId, string srcCode, string destCode, Calendar date, double rate); Parameters sessionId A string containing the session ID obtained at log in. srcCode The currency code to convert from. destCode The currency code to convert to. date The Calandar object containing the date. rate Double containing rate to be set Output None Permissions Required Manage Exchange Rates permission for the logged-in user Example Calendar today = Calendar.getInstance();
+today.setTime(new Date()); binding.setExchangeRate(sessionId, "EUR", "USD", today, 1.2823);</body>
+</html>

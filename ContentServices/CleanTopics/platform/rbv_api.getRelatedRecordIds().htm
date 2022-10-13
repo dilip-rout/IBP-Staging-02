@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns an array of related record IDs for the specified relationship field and object record ID. Syntax rbv_api.getRelatedRecordIds(objName,relFieldName,id) Parameters objName Integration name of the object. relFieldName Integration name of the relationship field. id Record ID for which related records have to be fetched. Return Value An array of related record IDs. Example var arr = rbv_api.getRelatedRecordIds("Room","R1321", {!id});
+for (var k=0; k&lt;arr.length; k++) { var id = arr[k]; rbv_api.println("id="+id);
+}</body>
+</html>

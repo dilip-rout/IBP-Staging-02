@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves the file attachment associated with a particular file field from a specific record. Syntax getBinaryData(string sessionId, long id, string fieldName); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. fieldName A string containing the field integration name. Output Binary data (file attachment) from specified file Field wrapped in a ByteArr Permissions Required View permission for the requested object type. Example long id = 123456;
+ByteArr arr = binding.getBinaryData(sessionId, id, "picture");
+if (arr != null { byte[] data = arr.getArr();
+}</body>
+</html>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sends a JSON request to the specified URL and returns the HTTP response body. Syntax rbv_api.sendJSONRequest(url, data, method, contentType, username, password, headers, retryParams) Parameters url URL to send an HTTP request data Text string or a JSON object to send as a body of the request method HTTP method, one of GET (default), POST, PUT or DELETE contentType MIME content type of data. For example: application/json; charset=UTF-8 (default) username Login name for BASIC authentication, by default null password Password for BASIC authentication, by default null headers Optional array of HTTP headers in name/value pairs, by default null retryParams Optional JSON object that includes the following mandatory retry options for trigger. numRetries — Number of retries allowed for a trigger. The maximum number of retries must not exceed 3. retryInterval — Interval (ms) between two subsequent retries. The maximum retry timeout value (Retry Interval * Number of retries) can be configured using MaxHttpRetryTimeoutInMins shared.property. Default value of MaxHttpRetryTimeoutInMins is 1 min. statusCodes — HTTP Response codes on which retry should happen. It can be a comma separated values of status codes as well as a range of status codes. For example, 302-400,500. Return value Body of HTTP response Example rbv_api.sendJSONRequest
+("http://www.infiniteblue.com/master/system/ri.jsp", '{"data":"data"}', "POST", "UTF-8", "admin2@1",
+"welcome", "",'{ "numRetries" : "3","retryInterval" : "1000",
+"statusCodes" : "200-300,400,500"}');</body>
+</html>

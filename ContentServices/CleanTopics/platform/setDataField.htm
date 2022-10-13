@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sets the value of a single field for a specific record. For objects in dedicated tables or external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), you must specify both the objName and id parameters. HTTP Method GET or POST URL https://app.infiniteblue.com/rest/api/setDataField URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. id The record ID. fieldName The field integration name. value Value to be set. Must be formatted the same way as values in spreadsheet imports. For File Upload fields: Base-64 encoded binary value of file. contentType For File Upload fields only: MIME content type of uploaded data. fileName For File Upload fields only: original name of file being uploaded. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Edit permission for the requested object type. Response Status message wrapped in XML Example Output example: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;Msg&gt;Field "amount" has been updated&lt;/Msg&gt;
+&lt;/resp&gt;</body>
+</html>

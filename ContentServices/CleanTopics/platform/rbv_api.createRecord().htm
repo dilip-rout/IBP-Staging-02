@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This Object Script method creates new object records from the values passed in. The Object Script API invokes triggers on create, on update and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue() . Note: This methods observes required and unique field properties. An attempt to create or update a record without setting required fields or by violating uniqueness of field values will cause an error. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.createRecord(objName, arr) Parameters objName Integration name of the type of object to create arr JavaScript array of field name/value pairs (required fields must be supplied). For multiple records, provide multiple array of field name/value pairs. Return value Object ID of the newly created record Permissions required Create permission for the selected object type. Example The following creates a related record: var x = new Array(); x["amount"]=1000; x["R477842"]={!id}; x["name"]="API Created"; var newId = rbv_api.createRecord("item", x); rbv_api.print("Created record with id: "+newId); The following creates multiple related records: var objs = [];
+for (var i=0; i &lt; 10; i++) {
+var obj = new Object();
+obj['name'] = 'API Rec1' + i;
+obj['fld'] = 'Modify';
+objs.push(obj);
+}
+rbv_api.createRecord("ServerSideAPIBulk", objs); The following creates a Communication Log record: var a = new Array();
+a["name"] = "Next Action Changed";
+a["body"] = "Test body string";
+a["commParent"] = {!id};
+rbv_api.createRecord("COMMLOG", a);</body>
+</html>

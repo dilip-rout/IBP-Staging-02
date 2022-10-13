@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This API is used to edit an authentication profile by authentication profile ID. HTTP Method PUT URL https://app.infiniteblue.com/rest/api/authenticationProfile URL Parameters authProfileId The authentication profile ID of the profile which has to be edited. authProfileName This is an optional parameter. Authentication profile name to update the existing authentication profile. defaultUIAuth This is an optional parameter. If set to true, the authentication profile which is being created will be set as customers default authentication. defaultAPIAuth This is an optional parameter. If set to true, the authentication profile which is being created will be set as customers default authentication. Note: Remaining parameters are based on the type of authentication which ever is supported for setAuthentication API currently. Permissions Required Full administrative privileges. Response The authentication profile for the tenant in XML or JSON format. Sample XML output: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;authProfileId&gt;54d72c32-a2e1-4cb7-a6fe-58e336e50ac8&lt;/authProfileId&gt;
+&lt;Msg&gt;Authentication Profile has been updated successfully&lt;/Msg&gt;
+&lt;/resp&gt; Sample JSON output: {
+"authProfileId": "54d72c32-a2e1-4cb7-a6fe-58e336e50ac8",
+"Msg": "Authentication Profile has been updated successfully"
+} Sample invalid responses &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="fail"&gt;
+&lt;err&gt;Authentication Profile with ID: 54d72cfd32-a2e1-4cb7-a6fe-58e336e50ac8 doesn't exist or cannot be deleted&lt;/err&gt;
+&lt;/resp&gt; &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="fail"&gt;
+&lt;err&gt;Global Authentications like Custom/Kerberos/API Token cannot be updated&lt;/err&gt;
+&lt;/resp&gt; &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="fail"&gt;
+&lt;err&gt;This authentication type cannot be set as default API authentication&lt;/err&gt;
+&lt;/resp&gt;</body>
+</html>

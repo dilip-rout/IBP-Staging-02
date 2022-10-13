@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Performs a full-text search in the Platform database. The search query has the same syntax used in the standard Platform interface. For more information about search syntax, see Views and Search . Syntax textSearch(string sessionId, string query, [string objDefName]); Parameters sessionId A string containing the session ID obtained at log in. query Query for full-text search like "John Smith" (see Views and Search for more details) objDefName Integration name for selected object definition. This parameter is optional and allows you to narrow the search to a specified object. Output IDs of all records found in the search, returned as LongArr Example LongArr arr = binding.textSearch(sessionId, "John Smith", "lead");
+long[] ids = arr.getArr();</body>
+</html>

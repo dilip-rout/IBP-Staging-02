@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Attaches an onload event handler function to a page. This function is useful as a shorthand for adding an onload event handler function to a page. Call this function in a script or HTML component on the page for which you want to add an onload event handler. This function works for both the New UI and the Classic UI. For the New UI, it works for both page refresh using AJAX as well as for a complete page load. See HTML event handlers and Managing object pages for more information about onload functions. Note: Infinite Blue strictly discourages using the document.ready jQuery function. Syntax rbf_addOnLoadMethod(callback) Parameters callback The name of the function to use as a onload event handler. Note: This API is supported in portals as well. Example The following example prints a message to the console when the page loads. &lt;script&gt;
+var onLoad = function () { if(console){ console.log("Executing function on page load"); } }; rbf_addOnLoadMethod(onLoad); &lt;/script&gt;</body>
+</html>

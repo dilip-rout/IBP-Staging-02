@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This section describes with an example how to create company-wide settings to implement sales tax rates that are different in different states of a country. To do so you can create company-wide settings in the following way: Create two fields in the Settings object for the two different states: Setting Name Integration Code Value California Tax ca_tax 7.25 Arizona Tax az_tax 6.60 Then, if you identify each state with its code, implement the sales taxes differently for the different states using their state code. This can be done using the below formula: switch ("{!state#code}") { case "CA": return {!#SETTINGS.ca_rate}; case "AZ": return {!#SETTINGS.az_rate}; default: return 0; } The following are the advantages of using settings rather that substitute values into formula directly: You can change settings in a single convenient place with controlled access. You can publish your formula without referring to specific values.</body>
+</html>

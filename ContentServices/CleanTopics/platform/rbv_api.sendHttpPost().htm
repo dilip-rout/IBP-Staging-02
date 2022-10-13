@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sends multipart HTTP POST requests to the specified URL and returns the body of the HTTP response. Syntax rbv_api.sendHttpPost(url, params, headers, chunked, retryParams) Parameters url A URL containing POST request. Note: Ensure that the URL parameters contain your customer ID or login name of your Platform user account. params An array of POST parameters in name/value pairs. headers An optional array of HTTP headers in name value pairs. chunked If set to true or omitted, HTTP POST "chunked" parameter is used. retryParams AN optional JSON object that includes the following mandatory retry options for trigger. numRetries — Number of retries allowed for a trigger. The maximum number of retries must not exceed 3. retryInterval — Interval (ms) between two subsequent retries. The maximum retry timeout value (Retry Interval * Number of retries) can be configured using MaxHttpRetryTimeoutInMins shared.property. Default value of MaxHttpRetryTimeoutInMins is 1 min. statusCodes — HTTP Response codes on which retry should happen. It can be a comma separated values of status codes as well as a range of status codes. For example, 302-400,500. Return value Body of HTTP response Example rbv_api.sendHttpPost
+("http://www.infiniteblue.com/master/system/ri.jsp",
+'{"params":"params"}',"" ,true,'{"numRetries" : "3","retryInterval" : "2000",
+"statusCodes" : "200-300,400,500"}');</body>
+</html>

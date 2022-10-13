@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), returns an array of field values from related records for a given relationship and record ID. Note: For native Platform objects, you can use the method, rbv_api.getRelatedFields() . Syntax rbv_api.getRelatedFields2(relName, objName, Id, fieldName) Parameters relName Integration name of relationship. objName Integration name of Object. Id Record ID from one side of the relationship. fieldName Integration name for field in related object. Return value Array of field values from related records or NULL if no related records exist. Permissions required View permission for the selected object type. Example var values = rbv_api.getRelatedFields2("R1321", "ex_group", "{!#UID}", "status");
+rbv_api.printArr(arr);</body>
+</html>

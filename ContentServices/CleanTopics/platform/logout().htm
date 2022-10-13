@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Terminates the specified API session. This method should be called to explicitly end each SOAP session. Syntax logout(string sessionID); Parameters sessionId A string containing the session ID obtained at log in. Output None Example URL url = new URL("https://app.infiniteblue.com/webapi/services/rpcrouter"); RpcrouterSoapBindingStub binding = (RpcrouterSoapBindingStub) new IWebServicesServiceLocator().getrpcrouter(url);
+binding.setTimeout(60000); String sessionId = binding.login("username", "password");
+System.out.println("loginsuccessful: sessionId="+sessionId); // Perform some API calls binding.logout(sessionId);</body>
+</html>

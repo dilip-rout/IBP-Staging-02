@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This API creates an authentication profile. Note: Not more than Password, Kerberos, Custom, API token &amp; OE authentication profile can exist. This holds true in case of creation of authentication profiles via API too. Authentication type cannot be created via APIs. HTTP Method POST URL https://app.infiniteblue.com/rest/api/authenticationProfile URL Parameters authType The Type of authentication with which the profile has to be created. authProfileName Authentication profile name for the profile being created. defaultUIAuth This is an optional parameter. If set to true, the authentication profile which is being created will be set as customers default authentication. defaultAPIAuth This is an optional parameter. If set to true, the authentication profile which is being created will be set as customers default authentication. Note: Remaining parameters are based on the type of authentication which ever is supported for setAuthentication API currently. Permissions Required Full administrative privileges. Response The authentication profile for the tenant in XML or JSON format. Sample XML output: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;authProfileId&gt;2a439049-f829-4b97-8ba1-575c131b0b8a&lt;/authProfileId&gt;
+&lt;Msg&gt;Authentication Profile has been created successfully&lt;/Msg&gt;
+&lt;/resp&gt; Sample JSON output: {
+"authProfileId": "54d72c32-a2e1-4cb7-a6fe-58e336e50ac8",
+"Msg": "Authentication Profile has been created successfully"
+}</body>
+</html>

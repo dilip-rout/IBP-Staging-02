@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>You can show and hide sections on an Edit page based on a user's selection. This example was contributed by Tim Colson. The example use case: The object has a picklist with the values Not a member (code NO) and Club member (code YES) The page's Membership Info section should be shown if Club member is selected and hidden otherwise. To accomplish this, follow these steps: In the page editor, add a script component with the following script to the Edit page (see Editing pages ): function customizeEdit() { var sectionID = rbf_getSectionIdByTitle("Membership Info"); var code = rbf_getPicklistCode("membership"); rbf_showOrHideSection(sectionID , code=="YES"); } Add onchange event handler to the picklist: customizeEdit(); For consistency, add an onload event handler to the page: customizeEdit(); When the section is hidden, it looks like this: When the section is shown, it looks like this:</body>
+</html>

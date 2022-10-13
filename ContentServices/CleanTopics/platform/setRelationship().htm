@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For native Platform objects, this method assigns an array of related records to the specified record. Note: For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), you can use the method, setRelatedIDs() . Syntax setRelationship(string sessionId, long id, string relName, LongArr arr); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. relName Relationship's integration name arr IDs of related records Output None Permissions Required Edit permission for the requested object type. Example long id = 123456;
+long[] arr = new long[] { 100890, 100891 }; binding.setRelationships(sessionId, id, "R1223456", new LongArr(arr));</body>
+</html>

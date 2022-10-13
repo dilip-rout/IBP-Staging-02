@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>You can use custom Java objects (available on CLASSPATH) in Platform formulas. To do that please add permissions for Platform formulas to use your objects by adding entry to the Shared Properties: CustomClassFilter=RegEx expression which matches classes you want to allow Example: consider formula below var x = new Packages.java.util.ArrayList();
+x.add("TEST");
+return x.size(); This formula will cause an error in standard Platform installation since formulas are not allowed to use Java object ArrayList. However this will change if you add the following entry to stared.properties configuration file: CustomClassFilter=java.util.ArrayList After this change formula above is valid and produces correct result. Note: The CustomClassFilter entry is a regular expression and can include any regex syntax.</body>
+</html>

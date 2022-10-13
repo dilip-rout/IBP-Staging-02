@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Warning: This method is deprecated. Please change any existing code to use createRecord , which takes an object ID as a parameter. Creates a new record using data from URL parameters. The names of the URL parameters used by this API are field integration names. If a field is not found, the system ignores the URL parameter. Field values must be formatted the same way as CSV imported values. For more information, see Importing Data . Note: Use this method with the PHP CURL package. HTTP Method POST URL https://app.infiniteblue.com/rest/api/create2 URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. useIds true or false. output The output format, one of: xml (default), json , or csv . field1;[field2; ...] Parameter's name - integration name of field to set; parameter's value - value of field to set. Permissions Required Create permission for the requested object type. Response The ID and integration name of the new record wrapped in an XML document (see example below). Example Input example (URL parameters): &amp;objDefName=person&amp;useIds=false&amp;club_member=false&amp;lastName=Smith&amp;status=Created Output example: &lt;resp status="ok"&gt;
+&lt;data id="314452" objName="person" /&gt;
+&lt;Msg&gt;12 fields have been processed&lt;/Msg&gt;
+&lt;/resp&gt;</body>
+</html>

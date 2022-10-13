@@ -6,9 +6,15 @@
 ===============================
 */
 
+@font-face 
+{
+	font-family: 'Tenon';
+	src: url(../Fonts/Tenon.otf);
+}
+
 *
 {
-	font-family: Segoe UI;
+	font-family: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 }
@@ -44,7 +50,7 @@
 *[outputclass="synmeta"]
 {
 	font-size: 170%;
-	font-family: "Segoe UI";
+	font-family: "Tenon";
 }
 
 *[outputclass="keylabel"]
@@ -66,7 +72,7 @@
 {
 	display: block;
 	font-weight: normal;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	color: black;
 	margin: 0.3em 0;
 }
@@ -75,7 +81,7 @@
 {
 	display: block;
 	font-weight: normal;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	background-color: inherit;
 	margin: 0.3em 0;
 }
@@ -324,10 +330,10 @@ pre
 
 img
 {
-	mc-thumbnail: none;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	max-width: 100%;
+	mc-thumbnail: none;
 }
 
 div:nth-child(2)
@@ -351,49 +357,49 @@ h1
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
-	font-size: 1.8em;
+	color: #0572ed;
+	font-family: 'Tenon';
+	font: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-weight: normal;
+	font-size: 2em;
+	font-weight: bold;
 }
 
 h2
 {
-	color: #023660;
-	font: Segoe UI;
-	font-family: 'Segoe UI';
+	color: #0572ed;
+	font: Tenon;
+	font-family: 'Tenon';
 	font-style: normal;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 2;
-	font-weight: normal;
-	font-size: 1.7em;
+	font-size: 1.8em;
+	font-weight: bold;
 }
 
 h3
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font: Segoe UI;
-	font-family: 'Segoe UI';
-	color: #023660;
+	font: Tenon;
+	font-family: 'Tenon';
+	color: #0572ed;
 	mc-heading-level: 3;
-	font-weight: normal;
 	font-size: 1.6em;
+	font-weight: bold;
 }
 
 h4
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #023660;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	mc-heading-level: 0;
-	font-weight: normal;
 	font-size: 1.5em;
+	font-weight: bold;
+	color: #001649;
 }
 
 h5
@@ -402,9 +408,10 @@ h5
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	font-weight: normal;
-	color: #023660;
 	font-size: 1.4em;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
+	color: #001649;
+	font-weight: bold;
 }
 
 h6
@@ -412,21 +419,22 @@ h6
 	mc-heading-level: 0;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	font-weight: normal;
-	color: #023660;
 	font-size: 1.3em;
+	color: #001649;
+	font-weight: bold;
 }
 
 p.TOC1
 {
-	color: #003366;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	font-size: 14pt;
 	mc-auto-number-format: '{n}. ';
 	mc-auto-number-offset: 2px;
+	color: #0572ed;
 }
 
 ::marker
@@ -451,7 +459,7 @@ span.mc-variable
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 figcaption
@@ -656,7 +664,7 @@ u
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 small
@@ -711,7 +719,7 @@ b
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 acronym
@@ -796,35 +804,35 @@ a.MCBreadcrumbsLink
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a.MCBreadcrumbsPrefix
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a.MCBreadcrumbsSelf
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a.MiniTOC1
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a.MiniTOC1:link
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a.GlossaryPageTerm
@@ -837,7 +845,7 @@ a:link
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -853,14 +861,14 @@ a:focus
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 }
 
 a:hover
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 	font-size: ;
 }
 
@@ -874,8 +882,8 @@ a
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
-	color: #2381c3;
+	font-family: 'Tenon';
+	color: #0572ed;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -1053,7 +1061,7 @@ span
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 li::marker
@@ -1105,7 +1113,7 @@ p.TOC6
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	color: #003366;
+	color: #0572ed;
 }
 
 p.TOC5
@@ -1113,34 +1121,34 @@ p.TOC5
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	color: #003366;
+	color: #0572ed;
 }
 
 p.TOC4
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	font-size: 12.5;
-	color: #003366;
+	color: #0572ed;
 }
 
 p.TOC3
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	font-size: 13pt;
-	color: #003366;
+	color: #0572ed;
 }
 
 p.TOC2
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	font-size: 13.5 pt;
-	color: #003366;
+	color: #0572ed;
 }
 
 p.ListOf
@@ -1466,19 +1474,19 @@ h1.concepttitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
+	color: #0572ed;
+	font-family: 'Tenon';
+	font: Tenon;
 	mc-heading-level: 1;
 	font-size: 1.8em;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 html.concept
 {
-	font-family: Segoe UI;
+	font-family: Tenon;
 	mc-hyphenate: never;
 }
 
@@ -1496,7 +1504,7 @@ p
 	font-size: 12pt;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 table.simpletable
@@ -1531,19 +1539,21 @@ div.section
 	font-size: 10pt;
 	mc-hyphenate: never;
 	vertical-align: baseline;
+	font: Se;
+	font-family: 'Tenon';
 }
 
 h2.sectiontitle
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	font-style: normal;
-	font: Segoe UI;
+	font: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 2;
 	font-weight: normal;
 	font-size: 1.7em;
-	color: #023660;
+	color: #0572ed;
 }
 
 div.fig
@@ -1569,7 +1579,7 @@ li
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	font-size: 12pt;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 span.uicontrol
@@ -1577,7 +1587,7 @@ span.uicontrol
 	font-weight: bold;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 span.cite
@@ -1601,14 +1611,14 @@ h1.tasktitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
+	color: #0572ed;
+	font-family: 'Tenon';
+	font: Tenon;
 	mc-heading-level: 1;
 	font-size: 1.8em;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 html.task
@@ -1650,7 +1660,7 @@ div.stepresult
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 div.result
@@ -1673,7 +1683,7 @@ div.note
 	border-bottom-width: 1px;
 	border-left-color: #f37c20;
 	border-left-width: 2px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 div.topic-note
@@ -1693,7 +1703,7 @@ div.topic-note
 	border-left-width: 2px;
 	border-top-color: #f37c20;
 	border-top-width: 2px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-align: center;
 }
@@ -1731,7 +1741,7 @@ td
 	border-bottom-color: gray;
 	mc-hyphenate: never;
 	font-size: 12pt;
-	font-family: Segoe UI;
+	font-family: Tenon;
 	padding: 5px;
 	vertical-align: baseline;
 }
@@ -1795,6 +1805,7 @@ div.choice
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
+	font-family: 'Tenon';
 }
 
 ol.substeps
@@ -1830,7 +1841,7 @@ div.noteWarning
 	padding: 7px;
 	border: solid 2px #ff8c00;
 	border-radius: 3px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 div.postreq
@@ -1864,19 +1875,19 @@ h1.referencetitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
+	color: #0572ed;
+	font-family: 'Tenon';
+	font: Tenon;
 	mc-heading-level: 1;
 	font-size: 1.8em;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 html.reference
 {
-	font-family: Segoe UI;
+	font-family: Tenon;
 	mc-hyphenate: never;
 }
 
@@ -2094,14 +2105,14 @@ span.apiname
 h1.title
 {
 	font-style: normal;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
-	font-size: 3 em;
+	font-family: 'Tenon';
+	font: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	font-weight: normal;
+	font-weight: bold;
+	color: #0572ed;
+	font-size: 4 em;
 }
 
 p.title
@@ -2109,9 +2120,9 @@ p.title
 	line-height: 15px;
 	color: #ffffff;
 	text-decoration: none;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	font-size: 2em;
-	font: Segoe UI;
+	font: Tenon;
 	text-align: right;
 	mc-hyphenate: never;
 	vertical-align: baseline;
@@ -2119,15 +2130,15 @@ p.title
 
 h2.title
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	font-style: normal;
-	font: Segoe UI;
-	color: #2381c3;
-	font-size: 3 em;
+	font: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	font-weight: normal;
+	font-weight: bold;
+	color: #0572ed;
+	font-size: 4em;
 }
 
 @media only screen and (max-device-width: 1279px)
@@ -2281,38 +2292,44 @@ table.ibplatform01
 	{
 		mc-heading-level: 0;
 		font-size: 1.7em;
-		color: #023660;
+		color: #0572ed;
+		font-weight: bold;
 	}
 
 	h2
 	{
 		font-size: 1.7em;
+		font-weight: bold;
 	}
 
 	h3
 	{
-		color: #023660;
+		color: #0572ed;
 		font-size: 1.6em;
+		font-weight: bold;
 	}
 
 	h4
 	{
-		color: #023660;
+		color: #0572ed;
 		font-size: 1.5em;
+		font-weight: bold;
 	}
 
 	h5
 	{
-		color: #023660;
+		color: #0572ed;
 		font-size: 1.4em;
-		font-family: 'Segoe UI';
+		font-family: 'Tenon';
+		font-weight: bold;
 	}
 
 	h6
 	{
-		font-family: 'Segoe UI';
-		color: #023660;
+		font-family: 'Tenon';
+		color: #0572ed;
 		font-size: 1.3em;
+		font-weight: bold;
 	}
 
 	span.varname
@@ -2335,6 +2352,12 @@ table.ibplatform01
 		mc-heading-level: 0;
 	}
 
+	drophead
+	{
+		font-family: 'Tenon';
+		font-size: 1.8em;
+	}
+
 	td
 	{
 		border-bottom: none 2px #ffffff;
@@ -2354,15 +2377,15 @@ h1.Specialclass
 
 p.h2
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	font-size: 18pt;
 	font-weight: bold;
 	font-style: normal;
-	color: #2381c3;
-	font: Segoe UI;
+	font: Tenon;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
+	color: #0572ed;
 }
 
 div.note-list
@@ -2387,14 +2410,14 @@ h1.displayonly
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #023660;
-	font-family: 'Segoe UI';
-	font: Segoe UI;
+	color: #0572ed;
+	font-family: 'Tenon';
+	font: Tenon;
 	font-size: 1.8em;
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 table.clear
@@ -2664,7 +2687,7 @@ span.beta
 	vertical-align: middle;
 	text-align: center;
 	border-radius: 5px;
-	background: #2381c3;
+	background: #0572ed;
 	padding: 1px 4px;
 }
 
@@ -2679,7 +2702,7 @@ select
 	border-radius: 4px;
 	display: inline-block;
 	font: inherit;
-	line-height: 1.5em;
+	line-height: 1em;
 	padding: 0.5em 3.5em 0.5em 1em;
 	/* reset */
 	margin: 0;
@@ -2704,7 +2727,7 @@ select.minimal:focus
 	background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
 	background-size: 5px 5px, 5px 5px, 1px 1.5em;
 	background-repeat: no-repeat;
-	border-color: #023660;
+	border-color: #0572ed;
 	outline: 0;
 }
 
@@ -2719,13 +2742,14 @@ select:-moz-focusring
 
 .footer-distributed
 {
-	background: linear-gradient(0deg, rgba(2,54,96,1) 0%, rgba(35,129,195,1) 31%);
+	background: #ffffff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
 	padding: 20px 30px;
+	border-radius: 0px 50px 0px 0px;
 }
 
 .footer-distributed .footer-left p

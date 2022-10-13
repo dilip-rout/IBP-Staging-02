@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This API will return settings of an authentication profile based on the given authentication profile ID for viewing. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getAuthenticationProfileById URL Parameters authProfileId The authentication profile ID of the profile which has to be edited. Permissions Required Full administrative privileges. Response The authentication profile by Id for the tenant in XML format. Sample XML output: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;authenticationProfile&gt;
+&lt;authProfileName&gt;TEMPPROF&lt;/authProfileName&gt;
+&lt;authProfileId&gt;6bddbcb7-b565-4a57-8ae4-0323da8f0130&lt;/authProfileId&gt;
+&lt;authType&gt;2&lt;/authType&gt;
+&lt;authDescription&gt;HTTP POST&lt;/authDescription&gt;
+&lt;defaultUIAuth&gt;false&lt;/defaultUIAuth&gt;
+&lt;defaultAPIAuth&gt;false&lt;/defaultAPIAuth&gt;
+&lt;targetURL&gt;www.google.com&lt;/targetURL&gt;
+&lt;headerKeys&gt;[&amp;quot;Content-Type&amp;quot;,null,null,null,null,&amp;quot;text\u002Fxml; charset=UTF-8&amp;quot;]&lt;/headerKeys&gt;
+&lt;headerValues&gt;[null,null,null,null]&lt;/headerValues&gt;
+&lt;responseText&gt;Done&lt;/responseText&gt;
+&lt;/authenticationProfile&gt;
+&lt;/resp&gt; Sample invalid responses {
+"status": "fail",
+"message": "Authentication profile with id: 6bddbcb7-b565-4a57-8sdfdfae4-0323da8f0130 does not exist"
+}</body>
+</html>

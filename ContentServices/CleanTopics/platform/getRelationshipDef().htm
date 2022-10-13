@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves a description of a relationship definition as an XML document in a sub-node of the DataObjectDef node. See Relationship XML Definition for a description of the RelationshipDef XML node and an example of its use. Syntax getRelationshipDef(string sessionId, string relName); Parameters sessionId A string containing the session ID obtained at log in. relName String containing the integration name of the relationship definition to retrieve Output An XML document with the relationship definition in a RelationshipDef node. Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example retrieves a relationship definition: String xmlData = binding.getRelationshipDef(sessionId, "R123456");</body>
+</html>

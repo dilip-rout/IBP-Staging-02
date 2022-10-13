@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For user session data, this function returns the value for the specified key. See User session data API for more information about user session data. Syntax rbv_api.getSessionData(key); Parameters key A string that is the lookup key for user session data. The maximum length of a key is 50 characters. Return value If successful, returns the value associated with that key. Note that you should call JSON.parse() on the response to get the result in the correct JavaScript data type (see example below). Throws an exception if there is no value associated with the key. Exception messages include: Empty key received! — No key parameter was passed No Mappings Set for [key] — There is no value associated with the specified key or there is no user session data to retrieve Example The following example returns the value for the specified key. try { var key = "name1"; var resp = JSON.parse(rbv_api.getSessionData(key)); rbv_api.println(resp); } catch (error) { rbv_api.println(error);
+} If there is no value associated with the specified key, Platform throws an exception with the following string: JavaException: java.lang.Exception: No Mappings Set for "name1"</body>
+</html>

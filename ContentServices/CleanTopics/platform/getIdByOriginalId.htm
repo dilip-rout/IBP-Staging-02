@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Given the original ID and an entity type, returns the entity's ID. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getIdByOriginalId URL Parameters sessionId The session ID obtained from the body of the response when calling login . entityType The type of entity. Can be one of object, field, relationship, webpage, view, template, report, chart, gauge, trigger, process, status, action, button, or datamap. origId The original ID of the entity. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required The user must have the Administrator role. Response If successful, the ID of the specified entity. If an entity of the specified type with the specified original ID does not exist, returns an error message in the specified output format (XML or JSON). Example The following example retrieves the ID for an object with the original ID 7550. https://app.infiniteblue.com/rest/api/getIdByOriginalId?
+sessionId=e7bf663caa844ac89dce1c36c17c9300@46216462&amp;entityType=object&amp;origId=7550 The output in XML format: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt; &lt;id&gt;46219927&lt;/id&gt;
+&lt;/resp&gt; If the specified entity does not exist, returns an error message as shown below (in XML format): &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="fail"&gt; &lt;err&gt;No object exists with original ID - 7550&lt;/err&gt;
+&lt;/resp&gt;</body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>When editing any of these components in the Template Helper, select the Hosted Files group, select the merge field token corresponding to the desired hosted file, and paste it into your template: Example using tokens in formulas The following example illustrates the usage of hosted JavaScript files in server-side formulas (using the filename[text] format described above). Assume you have created and uploaded a JavaScript file that contains: function my_func(x, y) { return x+y;
+} You can create a server-side formula which uses this file by using the hosted file's filename[text] merge token and invoking the function, as follows: {!#HOSTED_FILE.499203#text} my_func({!num1}, {!num2}); If you use the formula debugger to debug this formula, it will be parsed in the following form: function my_func(x, y) { return x+y;
+} my_func(100, 200); Note: When using JavaScript functions in server-side formulas, do not use a standalone return statement; doing so will cause an error. The result of the very last JavaScript statement (typically a function call) will be used as the formula result. For information about server-side APIs, see Server-side API .</body>
+</html>

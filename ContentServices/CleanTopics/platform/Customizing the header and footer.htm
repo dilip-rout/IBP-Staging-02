@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>You can customize the look of application pages by adding a custom header and/or footer. You can add any HTML, CSS, and/or JavaScript to customize the header and footer. If you want to use images or refer to a CSS, you should upload those as hosted files first. See Hosted files for details. You can use the same techniques to customize the sidebar for an application (see Custom sidebar ) and to customize the user interface, for example, by executing custom JavaScript, you can change the color of or hide certain Platform HTML elements. See Working with templates , Formulas , and Client-side JavaScript for more information. Follow these steps to modify the header and footer: Navigate to the application definition. For example, From the application switcher, select Setup Home. In the Application Setup section, click Applications. Click the name of the application you want to modify. From the More actions menu, select Header And Footer. Enter your custom style information in HTML Header and HTML Footer boxes. Click Save. For example, the custom header and footer shown above uses a hosted graphic and locally declared styles. The HTML Header defines my-header and my-footer classes as follows: &lt;style&gt;
+.my-header {
+background: #eee;
+margin-bottom: 10px;
+padding: 10px;
+margin-bottom: 25px;
+font-size: 25px;
+font-weight: bold;
+padding: 35px;
+border-radius: 5px;
+background: #00b7ea;
+background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3));
+background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+background: -o-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+background: -ms-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+color: #fff;
+}
+.my-footer {
+background: #eee;
+margin-bottom: 10px;
+padding: 10px;
+margin-bottom: 25px;
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+padding: 15px;
+border-radius: 5px;
+color: #fff;
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+&lt;/style&gt;
+&lt;div class="my-header"&gt;
+&lt;img src='{!#HOSTED_FILE.53382#url}' border='0' align='absleft'/&gt;
+Great Reads Check Out System
+&lt;/div&gt; The following, in the HTML Footer section, defines the footer: &lt;div class="my-footer"&gt;
+May your days always have happy endings!
+&lt;/div&gt;</body>
+</html>

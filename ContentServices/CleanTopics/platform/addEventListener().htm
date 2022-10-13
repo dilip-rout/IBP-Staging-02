@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Adds an event listener for a custom event. You can use this function to listen for Platform custom events. See Custom events for a description of custom events in Platform. Note: If your applications contain any script components that execute on the document.ready event, they will no longer behave in the same way because document ready events can get delivered before components are rendered on the page. Instead, you should replace the document.ready event with a call to addEventListener() on the rbs_pageRender custom event as shown below. Syntax rb.newui.util.addEventListener(event, handler); Parameters event The event to listen for handler The function that will handle the event Return value None Example The following example creates a listener for the rbs_pageRender custom event. Note: All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session to use these methods by logging in with credentials for an administrative user. &lt;script&gt;
+try { if (!rbf_isNewUI()) { throw 'This Script is written specific to New UI Context'; } var onPageRender = function (event) { if(console){ console.log("**** Processing event rbs_pageRender ****"); } }; rb.newui.util.addEventListener(rb.newui.util.customEvents.rbs_pageRender, onPageRender);
+}
+catch (err) { if (console) { console.log(err); }
+}
+&lt;/script&gt;</body>
+</html>

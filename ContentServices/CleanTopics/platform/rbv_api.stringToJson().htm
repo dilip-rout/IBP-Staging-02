@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This method parses a text string into a JSON object Syntax rbv_api.stringToJson(str) Parameters str A string value Return value A text string Example var x = {"a":"AAAA", "b":100};
+var y = rbv_api.jsonToString(x);
+rbv_api.println("y="+y); var z = rbv_api.stringToJson(y);
+rbv_api.println("z.a="+z.a);
+rbv_api.println("z,b="+z.b); Output:
+y={"b": 100,"a": "AAAA"}
+z.a=AAAA
+z,b=100</body>
+</html>

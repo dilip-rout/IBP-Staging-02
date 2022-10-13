@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Runs an SQL SELECT query on the server and returns the results as a 2D-array. The SELECT query used in this method consists of the following parts: The SELECT statement expects columns or expressions to be selected (mandatory). Use the field integration names as SQL column names. You can use expressions such as COUNT(1). You cannot use * to retrieve all columns. The FROM clause must consist of exactly one object name (mandatory). The WHERE clause can include a valid SQL expression to narrow the selection (optional). Use field integration names as SQL column names. The ORDER BY clause can include a valid SQL expression to order the selection (optional). Use field integration names as SQL column names. You can use special tokens in your queries such as: TODAY for current time WEEK for 12PM of last Sunday MONTH for 12PM of 1st day of current month QUARTER for 12PM of 1st day of current quarter YEAR for 12PM of 1st day of current year CURR_USER for id of currently logged in user Object and Field names are case-sensitive, while other components of the SQL query are not. Use #code suffix to fetch integration codes for picklist fields rather than IDs. See Adding business logic for more information. HTTP Method GET URL https://app.infiniteblue.com/rest/api/selectQuery URL Parameters sessionId The session ID obtained from the body of the response when calling login . startRow The number of the row from which to start output. Defaults to 0 . maxRows The maximum number of rows in the output, which can be configured per Platform instance. query A text pattern to search. output The output format, one of: xml (default), json , or csv . Note: The format of date or date/time fields is governed by the shared properties UseISODateFormatInRESTJSON &amp; UseISODateFormatInRESTXMLQuery and can be configured from System Console &gt; System &gt; Shared Properties &gt; General &gt; API. For more information, see Shared Properties . The shared properties mentioned above are applicable only if the output is in JSON format. Permissions Required The current user requires View permission on the selected object type to run this API. Response Query results as 2D array Example Query to run: select id, firstName, lastName from lead oder by updatedAt desc
+startRow=0
+maxRows=2 Output example in XML: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;row&gt;
+&lt;col&gt;131227&lt;/col&gt;
+&lt;col&gt;Bill&lt;/col&gt;
+&lt;col&gt;Smith&lt;/col&gt;
+&lt;/row&gt;
+&lt;row&gt;
+&lt;col&gt;131228&lt;/col&gt;
+&lt;col&gt;John&lt;/col&gt;
+&lt;col&gt;Roth&lt;/col&gt;
+&lt;/row&gt;&lt;/resp&gt; Output example in JSON: [ [ 131227, "Bill", "Smith" ],
+[ 131228, "John", "Roth" ] ]</body>
+</html>

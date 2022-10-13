@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), this method retrieves the value of a single field from a specific record. Note: For native Platform objects, you can use the method, getDataField() . Syntax getDataField2(string sessionId, String objDefName, String uid, String fieldName, Boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. objDefName A string containing the object definition integration name. uid A string containing the record ID. fieldName A string containing the field integration name. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output Field's value wrapped in a DataField container. Permissions Required View permission for the requested object type. Example DataField field = binding.getDataField2(sessionId, "client", "123456", "lastName", false);
+if (field != null) { String lastName = field.getValue();
+}</body>
+</html>

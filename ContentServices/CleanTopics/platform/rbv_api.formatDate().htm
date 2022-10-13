@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Formats a JavaScript Date class instance as specified in the pattern parameter. Syntax rbv_api.formatDate(date, pattern) Parameters date instance of JavaScript Date class pattern A pattern specified using the conventions defined in the Java SimpleDateFormat class Return value Date formatted as a string Example var d = rbv_api.selectValue("select updatedAt from orders where id=?", {!id});
+var x = rbv_api.formatDate(d, "yyyy-MM-dd");
+rbv_api.println("x="+x); Output:
+x=2012-03-12</body>
+</html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Parses an XML string and returns an instance of org.w3c.dom.Element corresponding to the XML root. JavaScript can use all methods of this Java object. See http://www.w3.org/2003/01/dom2-javadoc/org/w3c/dom/Element.html for more info. Syntax rbv_api.parseXML(xmlString) Parameters xmlString An XML document as a string Return value Root element of an XML document Example var xml = "&lt;a&gt;&lt;b&gt;BBB&lt;/b&gt;&lt;c&gt;CCC&lt;/c&gt;&lt;/a&gt;";
+var root = rbv_api.parseXML(xml);
+var nodes = root.getChildNodes(); for (var k=0; k&lt;nodes.length; k++) { var child = nodes.item(k); rbv_api.println("Tag="+child.getTagName()); var nodes2 = child.getChildNodes(); for (var n=0; n&lt;nodes2.length; n++) { var child2 = nodes2.item(n); var x = child2.getNodeValue(); rbv_api.println("Value="+x); } } Output:
+Tag=b
+Value=BBB
+Tag=c
+Value=CCC</body>
+</html>

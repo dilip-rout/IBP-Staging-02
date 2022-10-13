@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose Assign a callback function to be used when processing API errors, such as errors in SQL queries, etc. By default the API uses the rbf_showInfoMessage() method to display error messages, but this behavior can be customized. Syntax rbf_setErrorsCallback(callback) Parameters callback The callback function, which will receive an error message as a first parameter and API name (which caused the error) as second parameter Note: This API is supported in portals as well. Example var callback = function(errMsg, apiName) { alert("ERROR: "+errMsg+" in: "+apiName); }; rbf_setErrorsCallback(callback);</body>
+</html>

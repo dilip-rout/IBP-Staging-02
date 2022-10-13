@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sets the binary data (file attachment) associated with a particular file field from a specific record. Syntax setBinaryData(string sessionId, long id, string fieldName, string contentType, string suggestedFileName, ByteArr binData); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. fieldName File Field's integration name contentType MIME content type of data. For example: text/html text/plain application/pdf application/msword application/excel application/vnd.ms-powerpoint application/wordperfect5.1 application/rtf suggestedFileName Suggested file name (with valid file extension) binData File's binary data wrapped in a ByteArr Output None Permissions Required Edit permission for the requested object type. Example // Read binary data
+byte[] data;
+long id = 123456; ByteArr binData = new ByteArr(data);
+binding.setBinaryData(sessionId, id, "pdfData", "application/pdf", "invoice.pdf", binData);</body>
+</html>

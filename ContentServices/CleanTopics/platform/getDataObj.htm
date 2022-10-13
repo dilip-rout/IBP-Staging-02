@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Warning: This method is deprecated. Please change any existing code to use getRecord , which takes an object ID as a parameter. Retrieves all field data (including formulas) for a given record in XML format. The composite output is generated recursively in a tree-type structure. The following rules apply: The maximum level of recursion is provided as a URL parameter. Each data record is included in the output only once. No more than 1000 total data records are included in the output. The objNames input parameter can be used to explicitly set the list of output data objects. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getDataObj URL Parameters sessionId The session ID obtained from the body of the response when calling login . id The record ID. composite The number of levels for related records to be included recursively in the output. Defaults to 0. objNames A comma-separated list of object names. If present, only objects from this list are included in the output. fieldList A comma-separated list of field names. If present, only fields from this list are included in the output. output Optional parameter specifying the output format, one of: xml (default) or json . Note: The format of date or date/time fields is governed by the shared property UseISODateFormatInRESTJSON and can be configured from System Console &gt; System &gt; Shared Properties &gt; General &gt; API. For more information, see Shared Properties . The shared property mentioned above is applicable only if the output is in JSON format. Permissions Required View permission for the requested object type. Response All of the field data for the specified object record. Example Output example for core record: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;data id="131227" objName="person"&gt;
+&lt;Field name="id"&gt;131227&lt;/Field&gt;
+&lt;Field name="club_member"&gt;false&lt;/Field&gt;
+&lt;Field name="lastName"&gt;Smith&lt;/Field&gt;
+&lt;Field name="status"&gt;Created&lt;/Field&gt;
+&lt;Field name="updatedAt"&gt;20110111T143331Z&lt;/Field&gt;
+&lt;/data&gt;
+&lt;/resp&gt; Output example for core and related record (composite parameter set to 1): &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;data id="131227" objName="person"&gt;
+&lt;Field name="id"&gt;131227&lt;/Field&gt;
+&lt;Field name="club_member"&gt;false&lt;/Field&gt;
+&lt;Field name="lastName"&gt;Smith&lt;/Field&gt;
+&lt;Field name="status"&gt;Created&lt;/Field&gt;
+&lt;Field name="updatedAt"&gt;20110111T143331Z&lt;/Field&gt;
+&lt;Field name="R986"&gt;131228,131229&lt;/Field&gt;
+&lt;composite&gt;
+&lt;data id="131228" objName="payment"&gt;
+&lt;Field name="amount"&gt;500.00&lt;/Field&gt;
+&lt;Field name="paym_date"&gt;20110115T143331Z&lt;/Field&gt;
+&lt;Field name="R986"&gt;131227&lt;/Field&gt;
+&lt;/data&gt;
+&lt;data id="131229" objName="payment"&gt;
+&lt;Field name="amount"&gt;450.00&lt;/Field&gt;
+&lt;Field name="paym_date"&gt;20110116T143331Z&lt;/Field&gt;
+&lt;Field name="R986"&gt;131227&lt;/Field&gt;
+&lt;/data&gt;
+&lt;/composite&gt;
+&lt;/data&gt;
+&lt;/resp&gt;</body>
+</html>

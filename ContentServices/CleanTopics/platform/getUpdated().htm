@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves an array of record IDs of a specified object type that were either created or updated within the given date/time interval. This method is not available for external objects, including those mapped to OpenEdge service objects. Syntax getUpdated(string sessionId, Calendar from, Calandar till, string objDefName); Parameters sessionId A string containing the session ID obtained at log in. from Beginning of date/time interval (not null) till End of date/time interval or null objDefName String integration name for object definition to search Output IDs of all records found in the search, returned as LongArr Example Calendar from = Calendar.getInstance();
+from.setTime(...);
+Calendar till = null; LongArr arr = binding.getUpdated(sessionId, from, till, "lead");
+long[] ids = arr.getArr();</body>
+</html>

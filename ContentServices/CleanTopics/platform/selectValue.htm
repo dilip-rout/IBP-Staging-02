@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Runs an SQL SELECT query on the server and returns the first element from the results as single value. HTTP Method GET URL https://app.infiniteblue.com/rest/api/selectValue URL Parameters sessionId The session ID obtained from the body of the response when calling login . output Optional parameter specifying the output format, one of: xml (default) or json . query A text pattern to search. Note: The format of date or date/time fields is governed by the shared properties UseISODateFormatInRESTJSON &amp; UseISODateFormatInRESTXMLQuery and can be configured from System Console &gt; System &gt; Shared Properties &gt; General &gt; API. For more information, see Shared Properties . The shared properties mentioned above are applicable only if the output is in JSON format. Permissions Required The current user requires View permission on the selected object type to run this API. Response Query result as single value Example Example of first element returned by query wrapped in XML: &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;resp status="ok"&gt;
+&lt;value&gt;53&lt;/value&gt;
+&lt;/resp&gt; Output example in JSON: { "value": 53.0 }</body>
+</html>

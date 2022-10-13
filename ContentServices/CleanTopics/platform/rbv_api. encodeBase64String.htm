@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This function encodes input string in supplied character-encoding scheme into base64. Syntax rbv_api.encodeBase64String(str, charSetName) Parameters str The input string to be encoded into base64. charSetName Name of the character-encoding scheme of input string. Currently only UTF-8 or ISO-8859-1 schemes are supported. Return Value A base64 encoded string. Example The below example shows how an URL&#160;is encoded/decoded. var str1 = "https://infiniteblue.com/";
+var encodedStr1 = rbv_api.encodeBase64String(str1,"UTF-8");
+rbv_api.println(encodedStr1); //aHR0cHM6Ly9pbmZpbml0ZWJsdWUuY29tLw==
+var decodedStr1 = rbv_api.decodeBase64String(encodedStr1,"UTF-8");
+rbv_api.println(decodedStr1); //https://infiniteblue.com/
+rbv_api.println( str1.equals(decodedStr1) ); //true The below example shows how a JSON&#160;string is encoded/decoded. var myFruitObj = {"fruit": "Apple","size": "Large","color": "Red"};
+var str2 = JSON.stringify(myFruitObj);
+var encodedStr2 = rbv_api.encodeBase64String(str2,"UTF-8");
+rbv_api.println(encodedStr2); //eyJmcnVpdCI6IkFwcGxlIiwic2l6ZSI6IkxhcmdlIiwiY29sb3IiOiJSZWQifQ==
+var decodedStr2 = rbv_api.decodeBase64String(encodedStr2,"UTF-8");
+rbv_api.println(decodedStr2.equals(str2)); //true</body>
+</html>

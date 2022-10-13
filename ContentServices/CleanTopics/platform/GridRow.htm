@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose GridRow is a client-side JavaScript object that represents a row in a grid control on an application page. Access a GridRow from a GridControl by calling the method getGridRow(rowIndex), where rowIndex is the number of the row (the first row has the rowIndex of 0). See GridControl for more information. Interface The GridRow component has the following public interface: getData() — Returns GridRow data in serialized JSON format getField(fieldName) — Returns the FieldContext object for the specified field in the row where the field is identified by its integration name.. See FieldContext for more information. getFieldCell(fieldName) — Returns a jQuery object of the field container element where the field is identified by its integration name. getFieldData(fieldName) — Returns field data in serialized JSON format where the field is identified by its integration name. getIndex() — Returns the row Index of this GridRow getRecordId() — Returns the GridRow record's record ID. The value is -1 for new GridRow records. Example The following example returns the value of the field with the integration name "name" for the first row of the first grid on the page . &lt;script&gt;
+rbf_getGridControlComponent(0).getGridRow(0).getFieldData("name");
+&lt;/script&gt;</body>
+</html>

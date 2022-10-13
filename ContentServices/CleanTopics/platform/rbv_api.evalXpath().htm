@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Parses an XML string and evaluates an XPath expression. See http://www.w3schools.com/xsl for more information on XPath. Syntax rbv_api.evalXpath(xmlString, xpathExpr) Parameters xmlString XML document as a string xpathExpr XPath expression to evaluate Return value Result of XPath evaluation Example The following example evaluates a three-node XPath. var xmlString = "&lt;a&gt;&lt;b&gt;node one&lt;/b&gt;&lt;c&gt;node two&lt;/c&gt;&lt;b&gt;node three&lt;/b&gt;&lt;/a&gt;";
+var xpathExpr = "/a/b/text()";
+var res = rbv_api.evalXpath(xmlString, xpathExpr);
+for (var k=0; k&lt;res.length; k++) rbv_api.println("Result: "+res.item(k)); Output:
+Result: [#text: node one]
+Result: [#text: node three]</body>
+</html>

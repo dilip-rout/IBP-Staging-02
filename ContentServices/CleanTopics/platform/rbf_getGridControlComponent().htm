@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns the GridControl object from the current page in the position specified by the gridNo parameter. You can also get a GridControl object using rbf_getPageComponent() . Note: This API and the GridControl object are only available in the New UI. Syntax rbf_getGridControlComponent(gridNo) Parameters gridNo The order in which the grid control appears on the page. For the first grid control on the page, the value is 0, for the second grid control on the page, the value is 1, and so on. Note: This API is not supported in portals. Return value The specified GridControl object. Example The following example returns the number of grid rows in the first grid control component on the current page: var numberOfGridRows = rbf_getGridControlComponent(0).getMaxRowIndex();</body>
+</html>

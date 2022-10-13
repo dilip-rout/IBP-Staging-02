@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Creates a new customer record and starts the creation process using data from URL parameters. For private cloud users, the user credentials for the user sending this request must belong to the Master server. The URL parameter password can be used to set specific password for first administrative user, otherwise, a temporary password will be created and sent through email. The output parameter is optional. HTTP Method POST URL https://app.infiniteblue.com/rest/api/createCustomer URL Parameters sessionId The session ID obtained from the body of the response when calling login . useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. field1;[field2; ...] Parameter's name - integration name of field to set; parameter's value - value of field to set. Same for other fields. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Create permission for the Customer type. Response ID of newly created record as a long wrapped in an XML document or a JSON string (see example below). Example Single create input example: companyName=API+Test&amp;email=myemail@mycompany.com&amp;lastName=Admin
+&amp;loginName=myemail@mycompany.com&amp;timeZone=PST
+&amp;mailSender=noreply@mycompany.com&amp;password=my_password Single create input with search and storage fields example: companyName=API+Test&amp;email=myemail@mycompany.com&amp;lastName=Admin
+&amp;loginName=myemail@mycompany.com&amp;timeZone=PST
+&amp;mailSender=noreply@mycompany.com&amp;password=my_password
+&amp;searchServer=SEARCH
+&amp;searchIndex=12c882bb-7dcb-4424-a5f7-4ed74482eafa&lt;&gt;indiazone
+&amp;storageLocation=781df589-0fff-4e2d-afa7-a1ec1460xxx0&lt;&gt;s3databucket
+&amp;storageServer=STORAGE Note: The API call must not have any blank spaces in it. Output example: {
+id: 7941
+objName: "CUSTOMER"
+status: "ok"
+}</body>
+</html>

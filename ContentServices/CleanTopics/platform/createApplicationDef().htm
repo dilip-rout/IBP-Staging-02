@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Creates a new application definition and its components from an XML document. This method will create any objects described in the document, create their corresponding tabs and menus, and attach both objects and menus to the newly created application. See Application XML Elements for a description of the Application XML node and an example of its use. Syntax createApplicationDef(string sessionId, string xmlString); Parameters sessionId A string containing the session ID obtained at log in. XMLString A string containing an XML application node description that includes any objects to
+be created. Output Status text: Application ABC has been created Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example passes in the XML required to create an application. String infoMessage = binding.createApplicationDef(sessionId, xmlString);</body>
+</html>

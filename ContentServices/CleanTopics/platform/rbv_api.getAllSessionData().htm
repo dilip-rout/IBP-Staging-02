@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For user session data, this function returns a complete map of key/value pairs stored as user session data as a JavaScript object. See User session data API for more information about user session data. Syntax rbv_api.getAllSessionData(); Parameters None Return value If successful, returns a complete map of key/value pairs stored as user session data as a JavaScript object. Note that you should call JSON.parse() on the response to get the result in the correct JavaScript data types (see example below). If there is no user session data, throws an exception with the string No Custom Session Data is Set by User. Example The following example returns all key/value pairs set as user session data. try { var resp = JSON.parse(rbv_api.getAllSessionData()); rbv_api.println(resp); } catch (error) { rbv_api.println(error);
+} The following is a sample response. {"name3": "Jane", "name2": "Jim", "name1": "Joe"} If there is no user session data, Platform throws an exception with the following string: JavaException: java.lang.Exception: No Custom Session Data is Set by User</body>
+</html>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This function retrieves the name of the class to which the specified object belongs. Syntax rbv_api.getClassName(object) Parameters object The specified object whose name of the class needs to be retrieved. Return Value Name of the class in string. Example This example shows the retrieval of the class name for Java and native Javascript date objects. var x = rbv_api.selectValue("select createdAt from Customer where id=?", 15872); rbv_api.println(rbv_api.getClassName(x)); var y = new Date();
+rbv_api.println(rbv_api.getClassName(y)); This example shows the output for Graal JS. com.oracle.truffle.polyglot.PolyglotMap com.oracle.truffle.polyglot.PolyglotMap This example shows the output for Rhino JS. org.mozilla.javascript.NativeDate org.mozilla.javascript.NativeDate</body>
+</html>

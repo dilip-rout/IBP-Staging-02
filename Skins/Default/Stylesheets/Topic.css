@@ -432,9 +432,9 @@ a.glossaryTerm
 
 .xref
 {
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	vertical-align: baseline;
-	color: #2381c3;
+	color: #0572ed;
 	font-size: 13pt;
 	font-style: normal;
 	font-variant: normal;
@@ -445,7 +445,7 @@ a.glossaryTerm
 .xref:hover
 {
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .xref:focus
@@ -454,16 +454,16 @@ a.glossaryTerm
 	text-decoration: none;
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 div.MCBreadcrumbsBox_0
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	font-size: 11pt;
-	color: #2381c3;
+	color: #0572ed;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: black;
@@ -473,12 +473,12 @@ div.MCBreadcrumbsBox_0
 
 div.MCMiniTocBox_0
 {
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	display: block;
 	font-size: 14;
 	margin: 10px 0px 0px;
 	padding-top: 5px;
-	color: #2381c3;
+	color: #0572ed;
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: black;
@@ -493,7 +493,7 @@ p.MiniTOC1_0
 	font-size: 12pt;
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	display: list-item;
 	margin: 5px 0px 5px 10px;
 	font-weight: normal;
@@ -538,7 +538,7 @@ a.MiniTOC1:link
 	mc-leader-format: '.';
 	color: black;
 	font-size: 12pt;
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	font-weight: normal;
 	font-style: normal;
 	text-decoration: underline;
@@ -551,6 +551,43 @@ a.MiniTOC1:link
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
+}
+
+.dropDownHotspot
+{
+	color: #0572ed;
+	font-weight: normal;
+	font-family: Tenon;
+	text-decoration: none;
+}
+
+.dropDownHotspot:link
+{
+	color: #0572ed;
+	font-weight: normal;
+	font-family: Tenon;
+	text-decoration: none;
+}
+
+.MCDropDown_Open .MCDropDownHotSpot_.MCHotSpotImage
+{
+	background-position: left;
+	background-image: url('up-16px.png');
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+.MCDropDown_Closed .MCDropDownHotSpot_.MCHotSpotImage
+{
+	background-position: left;
+	background-image: url('down-16px.png');
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+.dropDownHead
+{
+	text-decoration: none;
 }
 
 .codeSnippetBody
@@ -583,7 +620,7 @@ a.MiniTOC1:link
 {
 	border: none 2px #ffffff;
 	background-color: #f5f5f5;
-	font-family: 'Segoe UI';
+	font-family: Tenon;
 	font-size: 10pt;
 	padding: 1em;
 }

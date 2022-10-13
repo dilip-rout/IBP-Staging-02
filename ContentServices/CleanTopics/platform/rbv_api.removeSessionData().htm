@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For user session data, this function removes the session data for the specified key. See User session data API for more information about user session data. Syntax rbv_api.removeSessionData(key); Parameters key A string that is the lookup key for user session data. The maximum length of a key is 50 characters. Return value If successful, returns the string OK. If unsuccessful, throws an exception with one of the following messages: Empty key received! — No key parameter was passed No Mappings Set for [key] — There is no value associated with the specified key or there is no user session data to retrieve Example If successful, the following example removes the user session data associated with the key "name1" and returns the string OK. try { var key = "name1"; var resp = rbv_api.removeSessionData(key); rbv_api.println(resp); } catch (error) { rbv_api.println(error);
+} If there is no value associated with the specified key, Platform throws an exception with the following string: JavaException: java.lang.Exception: No Mappings Set for "name1"</body>
+</html>

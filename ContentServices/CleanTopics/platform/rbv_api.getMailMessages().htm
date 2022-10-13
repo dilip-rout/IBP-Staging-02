@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns email messages based on specified start and end indexes (1-based) from the INBOX folder of the logged in user. Syntax rbv_api.getMailMessages(start, end) Parameters start The start index (1-based) of message in the INBOX folder. end The end index (1-based) of message in the INBOX folder. Return value Array of objects representing messages. See available properties in rbv_api.getMailMessage() . Example rbv_api.openPOP3("mail.mydomain.com", 995, "address@mydomain.com", password, null);
+var arr = rbv_api.getMailMessages(100, 110);
+for (var k=0; k&lt;arr.length; k++) { var m = arr[k]; rbv_api.println(m.get('subject'));
+}
+rbv_api.closeMailSession();</body>
+</html>

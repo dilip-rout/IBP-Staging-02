@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Runs a trigger on an object. For objects in dedicated tables , you must specify the objName parameter. HTTP Method PUT or POST URL https://app.infiniteblue.com/rest/api/runTrigger URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName Optional integration name to narrow the search to a particular object. id The record ID. triggerId Integration name or the original ID of the trigger. checkValidation If set to true , checks validation formula before running the trigger. This is set to false by default. runRecursions When true , configures the trigger to run recursively, if recursive properties on the trigger definition page are set. Defaults to false if the parameter is not set. output Optional parameter specifying the output format, one of: xml (default) or json . Response Standard success or failure output. Permissions Edit permission for the requested object type. Example Input example (URL parameters): &amp;objName=person&amp;id=314452&amp;triggerId=TR1 Output example (in XML format): &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;resp status="ok"&gt; &lt;/resp&gt;</body>
+</html>

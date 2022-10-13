@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This property allows you to specify whether Platform uses AJAX requests to navigate between top-level tabs and tab sub-menus (generic and object). Setting it to false disables navigation between top-level tabs and tab sub-menus using AJAX requests. Setting it to true enables navigation between top-level tabs and tab sub-menus using AJAX requests. Note: This property applies to the new UI, not the classic UI. Most Platform tenants are using the new UI. However, tenants on older Private Cloud installations might still be using the classic UI. This property is not supported in portals. You must set this property's value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Fully qualified name rb.newui.options.tabMenuLink.ajaxNavigation Example The following example disables navigation between top-level tabs using AJAX requests for an application: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.tabMenuLink.ajaxNavigation = false;
+}
+&lt;/script&gt; Controlling Timeout on Tab Ajax Loading Prior to Platform v5.0, the Tab Ajax loading was set with a timeout of 10s. Now, the following changes have been made: The Ajax timeout default value is set to 60s Allow changing value via JavaScript override with the following property: rb.newui.options.tabAjaxLoadTimeout. The property unit is in milliseconds. Customer can change the timeout value using the following script to a custom sidebar or custom header: &lt;script&gt;
+try { if (!rbf_isNewUI()) { throw 'This Script is written for New UI'; } rb.newui.options.tabAjaxLoadTimeout = 5000;
+}
+catch (err) { if (console) { console.log(err); }
+}
+&lt;/script&gt;</body>
+</html>

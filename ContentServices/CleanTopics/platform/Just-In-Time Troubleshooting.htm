@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>The following troubleshooting is applicable for Just-In-Time in Global Authentication Mode: The incoming mapped value for the custId is the determining factor in this configuration. If a user exists for the incoming custId value: The user is logged into the corresponding tenant according to the defined permissions. If a user exists and the incoming custId(valid) value don’t match with the existing user’s custId: The user is created using the incoming custId with the mapped values. If a user exists and the incoming custId value is invalid: Throws the following error Cannot find customer with id: 9xxx to create user If a user doesn’t exist for a valid incoming custId value: The user is created with all the mapped values into the defined custId’s tenant. If a user doesn’t exist for an invalid incoming custId value: Throws the following error Cannot find customer with id: 3333 to create user</body>
+</html>

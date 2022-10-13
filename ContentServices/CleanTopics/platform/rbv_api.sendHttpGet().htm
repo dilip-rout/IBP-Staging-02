@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Sends HTTP GET requests to the specified URL and returns the HTTP response body. Syntax rbv_api.sendHttpGet(url,headers,charset,retryParams) Parameters url URL for the GET request headers Optional. A String of name-value pairs specifying the HTTP Headers to be sent in the request. charset Optional. Preferred encoding scheme for the HTTP response. Default value is UTF-8. retryParams Optional. A JSON object that Includes the following mandatory retry options for trigger. numRetries — Number of retries allowed for a trigger. The maximum number of retries must not exceed 3. retryInterval — Interval (ms) between two subsequent retries. The maximum retry timeout value (Retry Interval * Number of retries) can be configured using MaxHttpRetryTimeoutInMins shared.property. Default value of MaxHttpRetryTimeoutInMins is 1 min. statusCodes — HTTP Response codes on which retry should happen. It can be a comma separated values of status codes as well as a range of status codes. For example, 302-400,500. Return value HTTP response Example rbv_api.sendHttpGet
+("http://www.infiniteblue.com/master/system/ri.jsp",
+"","UTF-8" ,'{ "numRetries" : "3","retryInterval" : "2000"
+,"statusCodes" : "200-300,400,500"}');</body>
+</html>

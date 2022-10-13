@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This function returns the input after unescaping the literals. Syntax rbv_api.unescapeJava(input) Parameters input The input string to unescape the literals. Return Value A new unescaped string. Example The below example shows the conversion of Unicode codepoints into respective characters. var input1 = "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F";
+var y = rbv_api.unescapeJava(input1);
+rbv_api.println(y); //Поздравления This below example shows the conversion of escape sequences into respective characters var input2 = "X\\tY\\n\\\"Z\\\"";
+var x = rbv_api.unescapeJava(input2); rbv_api.println(x);
+//X Y //"Z"</body>
+</html>

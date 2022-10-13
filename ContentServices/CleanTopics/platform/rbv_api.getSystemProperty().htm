@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This function returns a fixed helper tokens used by the end user. Syntax rbv_api.getHelpers(key); Parameters key Any valid lookup key from the following table to obtain the value of the system property. Property Name Description systemName In the Platform Private Cloud evaluation version, this property sets the
+link displayed in the upper-left corner of each page. Typically, this link is
+set to navigate to your web site. In the Platform Private Cloud licensed version, this
+property is configured in license.xml file. Default: Infinite Blue hostName This is the host name of Platform installation, for
+example, www.infiniteblue.com cpToken A client principal token used to access a JSDO Invoke method on an OpenEdge Data Object from Platform Object script. This token can be used in an HTTP header under the header name X-OE-CLIENT-CONTEXT-ID. serverUrl ServerURL value points to the current node IP address. dateToday Today's date in the user-selected format Return value String value for the key provided. Example var propertyvalue = rbv_api.getSystemProperty(dateToday); rbv_api.println(propertyvalue);</body>
+</html>

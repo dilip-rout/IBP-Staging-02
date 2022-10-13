@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>When working with client-side and server-side APIs, you must clearly understand the difference between the two API definitions to avoid using client-side APIs for server-side APIs, or vice-versa. All server-side APIs are prefixed with rbv_api. and all client-side APIs are prefixed with rbf_. Unlike client-side APIs, server-side APIs cannot be executed in the Web browser directly. If you must execute a server-side API in a client-side script, you must enclose the server-side API in an #EVAL[ ] block. The following section describes, with examples, how to avoid mixing client-side and server-side APIs. The following script, when added to a page's script component, will cause a runtime error because an rbv_api. variable (a server-side API) is not recognized by a Web browser’s script: &lt;h2&gt;Number of Clients: &lt;span id='counter'&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;script&gt;
+var count = rbv_api.selectNumber("select count(1) from client");
+document.getElementById("counter").innerHTML = count;
+&lt;/script&gt; The two ways to fix the above error are: Enclose the server-side API in an #EVAL[ ] block: &lt;h2&gt;Number of Clients: &lt;span id='counter'&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;script&gt;
+var count = #EVAL[ rbv_api.selectNumber("select count(1) from client"); ];
+document.getElementById("counter").innerHTML = count;
+&lt;/script&gt; Note: When working with Script components, you can use the Test EVAL[] Block button to debug/develop server-side script. Use a client-side API instead of a server-side API: &lt;h2&gt;Number of A: &lt;span id='counter'&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;script&gt;
+rbf_selectNumber("select count(1) from a", function(value) { document.getElementById("counter").innerHTML = value; });
+&lt;/script&gt; Typically, server-side API execution is faster and it is not subjected to a limit on the number of AJAX calls allowed per login session. A client-side API is used whenever user input can only be made available during runtime and not when the Web browser page is rendered.</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This API is used to map UI authentication &amp; API authentication to certain roles. HTTP Method POST URL https://app.infiniteblue.com/rest/api/mapAuthenticationToRole URL Parameters roles The role id's list as "," separated parameter. UIAuthProfileId This is the authentication profile ID to which UI authentication of above roles is to be mapped. APIAuthProfileId This is the authentication profile ID to which API authentication of above roles is to be mapped. Permissions Required Full administrative privileges. Response The authentication profile mapped to roles for the tenant in JSON format. Sample JSON output: {
+"Msg": "Role(s) [90, 35011] are mapped to respective Authentication profiles",
+"UIAuthProfileId": "6fba7e5a-64ab-47e8-ba4b-c360c482e280",
+"APIAuthProfileId": "6fba7e5a-64ab-47e8-ba4b-c360c482e280"
+} Sample invalid responses {
+"status": "fail",
+"message": "You have passed atleast one non-numeric input in roles parameter"
+} {
+"status": "fail",
+"message": "Authentication Profile with ID: 6fba7e5a-64ab-47e8-sdfba4b-c360c482e280 does not exist"
+}</body>
+</html>

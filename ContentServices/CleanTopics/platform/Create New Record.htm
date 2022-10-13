@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This trigger creates a new record from the current record using a conversion map. See Converting records for information about conversion maps. To use this trigger, select a conversion map (which determines the type of the resulting record). Also, refer to Update Field Value for details about access control policies and dependent triggers. Note: You must create at least one conversion map to convert the current record into another record to use this type of trigger. The ID of the newly created record is available for other triggers in the update chain through the shared value named newID_objectName. The following Object Script example reads the ID of the newly created record and creates an activity log record: var newID = rbv_api.getSharedValue("newID_entity");
+rbv_api.createActivityLog("entity", {!id}, "New record created: "+newID);</body>
+</html>

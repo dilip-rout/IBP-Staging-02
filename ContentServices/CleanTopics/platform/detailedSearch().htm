@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Performs a detailed search throughout the customer's Platform database. This is equivalent to the search capabilities provided by the Detailed search component. Syntax detailedSearch(string sessionId, string query, string objDefName, SearchFilterArr filterArr, string joinType, string expression) Parameters sessionId A string containing the session ID obtained at log in. query String query for full-text search (see above) objDefName String integration name for selected object definition. This parameter is optional and allows you to narrow the search to a specified object. filterArr SearchFilterArr instance which wraps an array of SearchFilter instances. See SearchFilter Class for more information. joinType Type of join between filters. Valid values are: AND (default), OR, or null (if expression is present) expression String SQL Expression that includes tokens for filters. Example: ((1 OR 2) AND 3) Output IDs of all records found in the search, returned as LongArr Example SearchFilter[] filters = new SearchFilter[1];
+SearchFilter filter = new SearchFilter();
+filter.setFieldName("firstName");
+filter.setOpCode("EQ");
+filter.setOpValue("Smith");
+filters[0] = filter; SearchFilterArr filterArr = new SearchFilterArr(filters); LongArr arr = binding.detailedSearch(sessionId, null, "lead", filterArr, "AND", null);
+long[] ids = arr.getArr();</body>
+</html>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Reviewers: I ran out of time to try to reproduce this example. Writers: please do this in a future release, move the explanation of what the methods do, and add the appropriate steps. Consider a more complex use case than that shown in Simple Grid Calculation Example . Suppose that you want the user to select an item price from a price list instead of inputting it directly. To the data model described in Simple Grid Calculation Example you could add a relationship (R8011504) with a Catalog Item object. The JavaScript to handle this use case would be as follows: &lt;script&gt;
+var m_rowIndex = -1; function rbf_findPrice(rowIndex) { m_rowIndex = -1; var catId = rbf_getInt(rbf_getGridValue2(0, 'R8011504', rowIndex)); var p = rbf_getFloat(rbf_getGridValue2(0, 'price', rowIndex)); if (catId&gt;0 &amp;&amp; p&lt;=0) { rbf_getFields("catalog_item", catId, "msrp", rbf_callback); m_rowIndex = rowIndex; } else { rbf_showGridRow(rowIndex); }
+} function rbf_showGridRow(rowIndex) { var a = rbf_getFloat(rbf_getGridValue2(0, 'quantity', rowIndex)); var p = rbf_getFloat(rbf_getGridValue2(0, 'price', rowIndex)); var t = a*p; rbf_setGridContent2(0, 'total', rowIndex, rbf_formatCurrency(t));
+} function rbf_callback(objName, objId, values) { var p = values["msrp"]; if (m_rowIndex &gt;= 0) { rbf_setGridValue2('price', m_rowIndex, p); rbf_showGridRow(m_rowIndex); }
+}
+&lt;/script&gt; Set rbf_findPrice(@@) as an onUpdate event handler in the Grid. The functions perform the following: If a related Catalog Item is selected but the Price field is not set yet, the rbf_findPrice() function sends an AJAX request using rbf_getFields() to determine the price of the selected item and return it. Otherwise rbf_showGridRow() calculates the Line Item totals. The rbf_callback function processes the information fetched by the AJAX response. It finds the 'msrp' value from response and copies it to the 'price' field, and then updates the grid row using rbf_showGridRow().</body>
+</html>

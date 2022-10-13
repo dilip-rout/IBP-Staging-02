@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves an array of related record IDs. Note: This method does not work for external objects. Use getRelatedIDs() for external objects, including those mapped to OpenEdge services. Syntax getRelationships(string sessionId, long id, string relName); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. relName Relationship's integration name Output IDs of related records wrapped in a LongArr Permissions Required View permission for the requested object types. Example long id = 123456;
+LongArr arr = binding.getRelationships(sessionId, id, "R76543");
+if (arr != null { long[] ids = arr.getArr();
+}</body>
+</html>

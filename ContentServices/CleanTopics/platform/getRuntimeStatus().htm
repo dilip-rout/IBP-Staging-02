@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves the runtime status of the Customer on the Web API server. Syntax getRuntimeStatus(string sessionId, long id); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. Output Runtime status: RUNTIME_ERROR = -1; RUNTIME_UNLOADED = 1; RUNTIME_LOADED = 2; RUNTIME_LOADING = 3; RUNTIME_CREATING = 4; RUNTIME_BUSY = 5; Permissions Required View permission for the Customer type. Example int status = binding.getRuntimeStatus(sessionId, 123456);</body>
+</html>

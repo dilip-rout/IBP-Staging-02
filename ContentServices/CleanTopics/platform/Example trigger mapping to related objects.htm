@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This example calls a Corticon Decision Service that returns an estimated car insurance premium. It illustrates how you can map fields from related objects in the request. The request mapping maps fields from two related objects, Car and Person, where Car is the base object. The response mapping maps a field from the base entity Request to a field in the Car object. Request mapping The request mapping maps fields such as Make, Model, and Gender from the Car and Person objects. Response mapping The response mapping maps the result of the calculation to estimate the premium to the Insurance Premium field in the Platform object. Note that the Request entity node on the Corticon side is just a user-specified label. Result The example trigger is configured to run after create or update. The following screen shows the the values for a new record: After the record was saved, the following screen shows that the trigger received a response from the decision service with the value of the insurance premium:</body>
+</html>

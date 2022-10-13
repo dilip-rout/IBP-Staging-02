@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves a specified range of data records in a view. The selected view defines sorting and filtering of the output. The amount of processing and time required to get complete results can vary widely, depending on whether it fetches related records and the number of rows you specify per page. Syntax getPage(string sessionId, string viewId, string filterName, string filterValue, int startRow, int rowsPerPage, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. viewId The original ID of the view. filterName The name of the field to filter output using the equals option (will replace the filter set
+in the view, if any). filterValue The value of the field to filter output using the equals option. startRow An integer representing the number of the data record to start from. rowsPerPage An integer representing the number of data records in output. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output Selected records as DataObjArr Permissions Required View permission for the requested object type. Example DataObj[] arr = binding.getPage("7ae747a0e36648ef8bd016eec1502779@46216462", "25513", " lastName", "Grey ", 0, 20, false).getObjects();
+for (DataObj obj: arr) { System.out.println("\nID="+obj.getId()+ " objName="+obj.getObjDefName()); DataField[] fields = obj.getFields(); for (DataField field: fields) { System.out.println("Name="+field.getName()+ " Value="+field.getValue()); }
+}</body>
+</html>

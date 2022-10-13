@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Defines a single search filter for the detailedSearch() method's filterArr parameter. There can be up to five SearchFilters per search, and they are passed to the method in an array. Parameters fieldName String name of data field used for filtering opCode Code of operation. The following codes are available. Not all codes are compatible with all fields; the same rules apply as in the Detailed search component. EQ equals NEQ not equal ST starts with CT contains NCT does not contain LT less than GT greater than LE less or equal GE greater or equal IN in array NIN not in array CH checked NCH unchecked INC including NINC not including NUL is null NNUL not null IS is TREE in sub-tree NTREE not in sub-tree FLAG flagged UFLAG unflagged VIEW viewed UVIEW unviewed opValue Filter's value as a string. Use comma-separated enumerations for arrays. Example SearchFilter[] filters = new SearchFilter[1];
+SearchFilter filter = new SearchFilter();
+filter.setFieldName("firstName");
+filter.setOpCode("EQ");
+filter.setOpValue("Smith");
+filters[0] = filter; SearchFilterArr filterArr = new SearchFilterArr(filters); LongArr arr = binding.detailedSearch(sessionId, null, "lead", filterArr, "AND", null);
+long[] ids = arr.getArr();</body>
+</html>

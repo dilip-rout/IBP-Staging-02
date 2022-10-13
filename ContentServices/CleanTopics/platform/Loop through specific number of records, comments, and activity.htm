@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Optionally, you can include a maximum number of records to iterate through in parentheses at the end of the LOOP_BEGIN token. This template will iterate through the first 10 related records, ordered according to the selected view: {!#LOOP_BEGIN.R8011504#8108944(10)} … {!#LOOP_END.R8011504} Using similar syntax you can loop through related comments and activity trail records. The following example displays two last activity trail records: &lt;ul&gt;{!#LOOP_BEGIN.$ACT_TRAIL(2)} &lt;li&gt;{!$ACT_TRAIL.content}&lt;/li&gt; {!#LOOP_END.$ACT_TRAIL}&lt;/ul&gt;</body>
+</html>

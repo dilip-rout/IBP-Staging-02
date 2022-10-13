@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns a value of 12AM on the first day of the current year, plus or minus the number of years specified. Syntax rbv_api.firstDayOfYear(offset) Parameters offset Number of years to offset the current year (positive, negative, or zero) Return value Date as a string Example The following example calculates first day of the current calendar year and uses Query API to sum invoice records after that date: var d = new Date(rbv_api.firstDayOfYear(0));
+var sum = rbv_api.selectNumber("SELECT SUM(amount) FROM invoice WHERE due_date&gt;=?", d);</body>
+</html>

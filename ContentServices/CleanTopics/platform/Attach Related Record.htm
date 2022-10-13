@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This trigger attaches the current record to a related record (i.e. establishes a relationship between two records). To use this trigger, select or define: A relationship between current object and a target object. A formula that calculates the ID or array of IDs of the related record (instead of a condition formula). If this formula returns a null or negative number, this trigger is ignored. The following formula example uses the query API to determine the ID of the record to be attached: var arr = rbv_api.selectQuery("SELECT id FROM contact WHERE status=?", 'Ready'); var ids = new Array(); for (var k=0; k&lt;arr.length; k++) { ids[k] = arr[k][0]; } return ids; Note: You must create at least one relationship for the current object in order to use this type of trigger.</body>
+</html>

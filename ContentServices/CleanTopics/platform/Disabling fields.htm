@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Often, behavior of one field should depend on a selection made in another field. Consider the example below, in which there are three fields: Club Member (checkbox) Membership Fee (currency) Member Since (date) The last two fields should only be available for the user to enter data if Club Member is checked. The steps below describe how to accomplish this: Create a script component on the page with the following code: &lt;script&gt;
+function my_showClubControls(form) { var isMember = form.club_member.checked; rbf_setFieldDisabled('membership_fee', !isMember); rbf_setFieldDisabled('member_since', !isMember);
+}
+&lt;/script&gt; Add event handling code to the onclick event of the Club Member check box (you can pass form as a parameter to JavaScript functions): if (typeof my_showClubControls == 'function') my_showClubControls(form); For consistency, add the same code as above to the page's onload handler: if (typeof my_showClubControls == 'function') my_showClubControls(document.theForm); The Membership Fee and Member Since fields will be enabled or disabled, depending whether the check box Club Member is checked.</body>
+</html>

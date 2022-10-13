@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Note: This property is deprecated in Platform version 4.2. Responsive images are now enabled by default, and you can control whether an image is responsive by selecting or deselecting the Responsive field for that image in the page editor. This property specifies whether image fields are responsive to different screen sizes. When true (the default), image fields are responsive. When false, image fields are not responsive. When image fields are responsive, Platform ignores image width and height properties for the field in the page editor. Note: You must set this property's value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Fully qualified name rb.newui.options.useResponsiveImage Example The following script turns off responsive images: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.useResponsiveImage = false;
+}
+&lt;/script&gt;</body>
+</html>

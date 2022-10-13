@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), this method moves the specified array of records to the Recycle Bin. This method will increment the hits counter for each array element. Note: For native Platform objects, you can use the method, deleteArr() and deleteArrNoAudit() . Syntax deleteRecords(string sessionId, String objDefName, StringArr ids, Boolean blockAudit); Parameters sessionId A string containing the session ID obtained at log in. objDefName A string containing the object definition integration name. ids StringArr array of record ids to be deleted. blockAudit If set to true, no audit records are created. Output None Permissions Required Delete permission for the requested object type. Example Introduce example here. String[] arr = new String[] { "100890", "100891" };
+binding.deleteRecords(sessionId, "client", new StringArr(arr));</body>
+</html>

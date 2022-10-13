@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Creates a new record. This method only works with native Platform objects. To create an external object record, see createRecord() Syntax create(string sessionId, string objDefName, DataFieldArr arr, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing Integration name for object definition arr A DataFieldArr array of values for fields of a newly created record.
+Record ID and auto-numbers are assigned automatically. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output ID of newly created record as a long Permissions Required Create permission for the requested object type. Example // Populate data Fields to be set for new record
+DataField[] Fields = new DataField[5];
+DataField Field = new DataField();
+Field.setName("firstName");
+Field.setValue("John");
+Fields[0]=Field;
+Field.setName("lastName");
+Field.setValue("Smith");
+Fields[1]=Field; // Call create API
+binding.create(sessionId, "lead", new DataFieldArr(Fields), true);</body>
+</html>

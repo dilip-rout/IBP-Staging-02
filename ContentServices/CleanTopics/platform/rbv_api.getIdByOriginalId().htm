@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Given the original ID for an entity and an entity type, returns the entity's ID. Syntax rbv_api.getIdByOriginalId(entityType, origId) Parameters entityType A string indicating the type of entity. Can be one of "object", "field", "relationship", "webpage", "view", "template", "report", "chart", "gauge", "trigger", "process", "status", "action", "button", or "datamap". origId The original ID of the entity. Return value If successful, the ID of the specified entity. If no entity of the specified type with the specified original ID exists, throws an exception. Example The following example prints the ID of an object definition to the console. try {
+var id = rbv_api.getIdByOriginalId("object", "7550");
+rbv_api.println(id); } catch (error) { rbv_api.println(error);
+} After running this example successfully, the object definition's ID is printed: 150049675 If no object with the specified original ID exists, the following message is printed to the console: JavaException: com.rb.core.services.api.ApiException: Error: No object exists with original ID - 7550</body>
+</html>

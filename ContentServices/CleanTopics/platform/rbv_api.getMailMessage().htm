@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns the specified number of email messages from the INBOX folder of the logged in user. Syntax rbv_api.getMailMessage(msgNo) Parameters msgNo The number of email messages. Return value Object representing message. The following properties are available: to: address “to” cc: address “CC” from: name of sender if available, else, address “from” fromEmail: address "from" subject: subject of email message body: body of email message as HTML text: body of email message as plain text date: date and time of email message as plain text Example rbv_api.openPOP3("mail.mydomain.com", 995, "address@mydomain.com", password, null);
+var m = rbv_api.getMailMessage(100);
+var x = m.get("subject");
+rbv_api.closeMailSession();</body>
+</html>

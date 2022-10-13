@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Custom JSP pages can be used in Platform the same way as other external pages by creating a Tab of type “Web” and assigning the URL of that page to it. If you wish to use Platform classes in your custom JSP: Ensure that rb_core.jar is available to Tomcat when serving your JSP. Use CustomUIUtil.getUser(request) to ensure that the visitor has a valid Platform session. Add the Platform session ID to the JSP’s URL (cookies are not always reliable), for example: custom.jsp?sessionId={!#SESSION_ID} Here is a simple example of a custom JSP page: &lt;%@ page import="com.rb.core.data.user.User" %&gt;
+&lt;%@ page import="com.rb.core.ui.web.CustomUIUtil" %&gt;
+&lt;%
+User u = CustomUIUtil.getUser(request);
+%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt; &lt;meta http-equiv='content-type' content='text/html; charset=UTF-8'&gt; &lt;title&gt;Custom Page&lt;/title&gt;
+&lt;/head&gt; &lt;body&gt;
+&lt;h1&gt;Welcome, &lt;%=u%&gt;&lt;/h1&gt; &lt;/body
+&lt;/html&gt;</body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Warning: This method is deprecated. Please change any existing code to use getRecord() , which takes an object ID as a parameter. Retrieves all field data, including formulas, for a given record. Syntax getDataObj(string sessionId, long id, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output All of the field data for the specified object record. Each field value is wrapped in a DataField container. Permissions Required VIEW permission for requested record Example long id = 123456;
+DataObj obj = binding.getDataObj(sessionId, id, true);
+if (obj != null) { DataField[] fields = obj.getFields();
+}</body>
+</html>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>EVAL blocks allow you to use simple JavaScript-based expressions in a Platform template. To debug an EVAL block in the Template Helper, click EVAL[] Block. Syntax for an EVAL block is as follows: #EVAL[ JavaScript returning String ] The following example loops through records but renders &lt;img&gt; tag only for records with amount &gt; 1000: &lt;ul&gt; {!#LOOP_BEGIN.R8011504#8108944} &lt;li&gt;#EVAL[{!R8011504.amount}&gt;1000 ? "&lt;img src='important.gif'&gt;" : ""] Bill: {!order.name} Amount: {!R8011504.amount}&lt;/li&gt; {!#LOOP_END.R8011504} &lt;ul&gt;</body>
+</html>

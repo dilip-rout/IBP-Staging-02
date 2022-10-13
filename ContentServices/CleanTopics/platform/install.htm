@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Installs or updates Platform application from an XML document. Invoking this API will cause a customer reload. All currently logged users will be forced to log out. HTTP Method GET URL https://app.infiniteblue.com/rest/api/install URL Parameters sessionId The session ID obtained from the body of the response when calling login . overrideChanges A value of true or false . If true (default value), override changes made by administrative users. output Optional parameter specifying the output format, one of: xml (default) or json . Request Body Application XML. Permissions Required Full administrative privileges. Response Short report on application installation/update Example Output example: &lt;resp status="ok"&gt;
+&lt;Report&gt;Application "Test" has been installed.&lt;/Report&gt;
+&lt;/resp&gt;</body>
+</html>

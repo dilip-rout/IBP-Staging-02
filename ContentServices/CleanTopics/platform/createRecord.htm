@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Similar to create , creates a new record. Returns the ID of the newly created record as a string. This method works for external objects, including those mapped to OpenEdge service objects. Provide the integration names of the fields to set along with their values. If a field is not found, the system will ignore that URL parameter. Field values must be formatted the same way as you would for a CSV import; see Importing data . HTTP Method POST URL https://app.infiniteblue.com/rest/api/createRecord URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. field1, field2, ... Integration name of the field(s) and their values. You must supply a value for required fields. Some fields, such as those that represent relationships, can have multiple values. Use the field name only once, and specify the ID of the records to attach separated with a | symbol. @p1 When creating a User record, the password for the new user. This parameter is optional. If it is not specified: If the password is managed by Platform, a temporary password is generated for the user. If the password is not managed by Platform (external authentication), the password remains the same as the one in the external system that manages the password. @resetPassword When creating a User record, sets a temporary password for the user. This parameter is optional. This applies in cases where the user is already present in an external system and Platform can set the password, for example, when the user already has a Progress ID (Hosted Platform) or is already a user in an OpenEdge SPA configuration where set password is configured. If the @p1 parameter is passed, Platform ignores this parameter. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Create permission for the requested object type. Response The ID of the newly created record as a long value and a status of ok, wrapped in an XML document or JSON string. Example Input example (URL parameters): &amp;objName=USER&amp;useIds=false&amp;firstName=John&amp;lastName=Smith&amp;email=johns555@gmail.com&amp;@p1=mypassword&amp;sendWelcomeEmail=false Output example (XML): &lt;resp status="ok"&gt;
+&lt;data id=”314452” objName=”USER” /&gt;
+&lt;Msg&gt;4 fields have been processed&lt;/Msg&gt;
+&lt;/resp&gt; Output example (JSON): {
+id: 314452
+objName: "USER"
+status: "ok"
+}</body>
+</html>

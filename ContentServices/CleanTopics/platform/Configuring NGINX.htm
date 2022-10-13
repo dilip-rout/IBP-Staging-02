@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This topic describes the procedure to configure nginx. Install Nginx on the target machine. Configuration of Nginx is controlled by a configuration file, nginx.conflocated in &lt;nginx_install_dir&gt;/conf directory. The nginx.conf file also includes the rb-upstreams.conf , rb-locations.conf and proxy.conf files which get stitched together.The rb-upstreams.conf &amp; rb-locations.conf contents are dynamically updated based on your topology when it is configured from Platform. So, there is no necessity to manually change these files . File Name Description rb-upstreams.conf file This file contains the configuration related to upstream servers. This defines a named pool of servers that Nginx can then proxy requests to. For example, upstream webapi {
+server localhost:80;
+}
+upstream storage {
+server localhost:80;
+}
+upstream search {
+server localhost:80;
+}
+upstream router {
+server localhost:80;
+}
+upstream rest {
+server localhost:80;
+}
+upstream prod1 {
+server localhost:80;
+}
+upstream master {
+server localhost:80;
+} rb-locations.conf This file contains the mapping between client requests and upstreams. For example, location /webapi {
+proxy_pass http://webapi;
+}
+location /storage {
+proxy_pass http://storage;
+}
+location /search {
+proxy_pass http://search;
+}
+location /router {
+proxy_pass http://router;
+}
+location /rest {
+proxy_pass http://rest;
+}
+location ~ /prod1/(.+\.(png|gif|ico|jpg|jpe?g|svg|css|js|map|woff|woff2))$ {
+alias static/$1;
+}
+location /prod1 {
+proxy_pass http://prod1;
+}
+location ~ /master/(.+\.(png|gif|ico|jpg|jpe?g|svg|css|js|map|woff|woff2))$ {
+alias static/$1;
+}
+location /master {
+proxy_pass http://master;
+}
+location /*.jsp {
+proxy_pass http://master;
+} proxy.conf This file contains proxy related configurations like setting proxy headers, etc. If https upstream is enabled, add respective proxy_ssl related configuration into this file. For example, proxy_redirect off;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme; proxy_set_header X-Forwarded-Host $host:$server_port;
+proxy_connect_timeout 90;
+proxy_send_timeout 90;
+proxy_read_timeout 90;
+proxy_buffer_size 4k;
+proxy_buffers 4 32k;
+proxy_busy_buffers_size 64k;
+proxy_temp_file_write_size 64k; Serving Static Files from the Nginx machine Once you configure the Nginx proxy in Platform, static files such as js, css &amp; images will be served from the Nginx machine. Nginx is bundled with all css, js &amp; images files of the current Platform version and is available for user to download. So, beginning with Platform 5.0 onwards, whenever a new version of Platform is available, it is recommended that you update the Nginx also to the latest version if you are using an Nginx machine. You can download the Nginx machine to respective platform and run it. When configuring the Webproxy (Nginx) from Platform, the rb-locations.conf file required configuration is updated dynamically to serve static files from the Nginx machine instead (and not form the Tomcat). Nginx serves only the master and prod machine static files. Sample rb-location.conf file below to serve static files for prod/master machines request from Nginx. location ~ /prod1/(.+\.(png|gif|ico|jpg|jpe?g|svg|css|js|map|woff|woff2))$ {
+alias static/$1;
+} location ~ /master/(.+\.(png|gif|ico|jpg|jpe?g|svg|css|js|map|woff|woff2))$ {
+alias static/$1;
+} All static files available under static folder of Nginx folder such as \nginx\static\ Nginx Java Handler Nginx runs on two ports - one port is used for external access and the other port is a java handler on which Platform makes API calls for internal communication. The internal APIs are authenticated against a private key which exists in both Platform and the Nginx machine. The private key should be available at rollbase/config/security directory. Note: You must copy the private.key from rollbase/config/security and paste it into nginx/conf folder. server { listen 9080; server_name localhost; handlers_lazy_init on; location / { root html; index index.html index.htm; } location /config/topology { content_handler_type 'java'; content_handler_name 'com.rb.nginx.handler.ConfigHandler'; # Set this flag to true for proxy SSL content_handler_property is.secure.server 'false'; # Authentication handler access_handler_type 'java'; access_handler_name 'com.rb.nginx.handler.AuthenticationHandler'; } location /config/environment { content_handler_type 'java'; content_handler_name 'com.rb.nginx.handler.ConfigHandler'; # Authentication handler access_handler_type 'java'; access_handler_name 'com.rb.nginx.handler.AuthenticationHandler'; } location /config/files { content_handler_type 'java'; content_handler_name 'com.rb.nginx.handler.ConfigHandler'; # Authentication handler access_handler_type 'java'; access_handler_name 'com.rb.nginx.handler.AuthenticationHandler'; } location /config/systemcheck { content_handler_type 'java'; content_handler_name 'com.rb.nginx.handler.ConfigHandler'; # Authentication handler access_handler_type 'java'; access_handler_name 'com.rb.nginx.handler.AuthenticationHandler'; } location /health/ping { content_handler_type 'java'; content_handler_name 'com.rb.nginx.handler.HealthCheckHandler'; } error_page 500 502 503 504 /50x.html; location = /50x.html { } error_page 404 /404.html; location = /404.html { } } Configuring Nginx from Platform You can configure the Nginx server in the following ways in Platform: Configuring Nginx from the System Console &gt; System &gt; Servers &gt; NGINX Server Configuring Nginx through the node-config.json file Using REST API To configure the nginx.conf file, do the following: user: Set to root so that java plug-in module can get admin permission to the nginx installed location. worker_processes: Set to auto. Nginx will automatically create the worker processes based on the machine configuration. In general, count of workers depends on the number of cores. Java handler listens on different port (default is 9080). jvm_path: Used by java handler to initialize the jvm. jvm_classpath: Class path for the java handler. shared_map: Shared memory between the workers, used by the java handler. This is applicable only for Linux platforms. content_handler_type: Set to java content_handler_name: Entry point for the java handler. HTTPS configuration: Nginx access can be made secure with ssl configuration. You can add SSL at server context, as illustrated in the example below. https upstreams: Set content_handler_property is.secure.server to 'true' for location /config/topology . Adding the SSL at server context. #
+# HTTPS HANDLER
+# server { listen 9443 ssl; server_name prgs.example.com; handlers_lazy_init on; root html; ssl_certificate cert.pem; ssl_certificate_key cert.key; ssl_session_cache shared:SSL:1m; ssl_session_timeout 5m; ssl_ciphers HIGH:!aNULL:!MD5; ssl_prefer_server_ciphers on; location / { root html; index index.html index.htm; }
+location /config/topology {
+content_handler_type 'java';
+content_handler_name 'com.rb.nginx.handler.ConfigHandler';
+# Set this flag to true for proxy SSL
+content_handler_property is.secure.server 'true';
+# Authentication handler
+access_handler_type 'java';
+access_handler_name 'com.rb.nginx.handler.AuthenticationHandler';
+}
+location /config/environment {
+content_handler_type 'java';
+content_handler_name 'com.rb.nginx.handler.ConfigHandler';
+# Authentication handler
+access_handler_type 'java';
+access_handler_name 'com.rb.nginx.handler.AuthenticationHandler';
+}
+location /config/files {
+content_handler_type 'java';
+content_handler_name 'com.rb.nginx.handler.ConfigHandler';
+# Authentication handler
+access_handler_type 'java';
+access_handler_name 'com.rb.nginx.handler.AuthenticationHandler';
+} } Optionally, add any post requirements, using &lt;postreq&gt;.</body>
+</html>

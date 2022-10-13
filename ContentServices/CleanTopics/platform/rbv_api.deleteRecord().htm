@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This Object Script method deletes any record. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.deleteRecord(objName, Id) Parameters objName Integration name of object Id ID of record to delete Return value None Permissions required Delete permission for the selected object type. Example The following example deletes a record: rbv_api.deleteRecord("item", {!R477842.id}); The following example deletes multiple records: var result = rbv_api.selectQuery("SELECT ID FROM ServerSideAPIBulk where fld=?", 100, "delete");
+var recordIds = new Array();
+for (var i=0; i&lt;result.length; i++) {
+recordIds.push(result[i][0]);
+}
+rbv_api.deleteRecord("ServerSideAPIBulk", recordIds);</body>
+</html>

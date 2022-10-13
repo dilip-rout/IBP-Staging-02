@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns a value of 12AM on the first day of the current month plus or minus the number of months specified. Syntax rbv_api.firstDayOfMonth(offset) Parameters offset Number of months to offset the current month (positive, negative, or zero) Return value Date as a string. Example var d = new Date(rbv_api.getCurrentDate());
+rbv_api.println(d);
+var d1 = new Date(rbv_api.firstDayOfMonth(0));
+rbv_api.println(d1);
+var d2 = new Date(rbv_api.firstDayOfMonth(-1));
+rbv_api.println(d2); Output: Sat Feb 26 2012 13:00:02 GMT-0800 (PST)
+Tue Feb 01 2012 00:00:00 GMT-0800 (PST)
+Sat Jan 01 2012 00:00:00 GMT-0800 (PST)</body>
+</html>

@@ -1,4 +1,4 @@
-/* MadCap Table Style: */
+﻿/* MadCap Table Style: */
 
 /*<meta Version="9" />*/
 
@@ -44,7 +44,7 @@
 
 	mcTableHeadStyle
 	{
-		background-color: #2381c3;
+		background-color: #0572ed;
 	}
 
 	mcTableBodyStyle
@@ -99,7 +99,7 @@ mcTableColumnStyle
 	separator-color: #000000;
 	name: Column1;
 	id: 0;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 mcTableHeadStyle
@@ -110,10 +110,10 @@ mcTableHeadStyle
 	separator-color: #000000;
 	name: Header1;
 	id: 2;
-	background-color: #2381c3;
+	background-color: #0572ed;
 	font-weight: bold;
 	cell-content-style-tag: p;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 }
 
 mcTableBodyStyle
@@ -125,7 +125,7 @@ mcTableBodyStyle
 	name: Body1;
 	id: 1;
 	type: Automatic;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 mcTableFootStyle
@@ -441,14 +441,14 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadI-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -461,9 +461,9 @@ mcTableFootStyle
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
@@ -471,7 +471,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-HeadE-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -481,9 +481,9 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
@@ -491,7 +491,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-HeadF-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -504,14 +504,14 @@ mcTableFootStyle
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadH-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -521,9 +521,9 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
@@ -531,7 +531,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-HeadD-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -541,14 +541,14 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadC-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -561,14 +561,14 @@ mcTableFootStyle
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadB-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -578,14 +578,14 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadA-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -595,14 +595,14 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
-	background-color: #2381c3;
+	background-color: #0572ed;
 }
 
 .TableStyle-ib-table-HeadG-Column1-Header1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon Bold';
 	font-weight: bold;
 }
 
@@ -617,12 +617,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootI-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootE-Column1-Footer1
@@ -631,7 +631,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -642,7 +642,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-FootE-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootF-Column1-Footer1
@@ -651,7 +651,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-top-width: 1px;
 	border-top-color: #000000;
 	border-top-style: solid;
@@ -659,7 +659,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-FootF-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootH-Column1-Footer1
@@ -668,7 +668,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -676,7 +676,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-FootH-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootD-Column1-Footer1
@@ -685,7 +685,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-top-width: 1px;
 	border-top-color: #000000;
 	border-top-style: solid;
@@ -693,7 +693,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-FootD-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootC-Column1-Footer1
@@ -702,12 +702,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootC-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootB-Column1-Footer1
@@ -716,7 +716,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -724,7 +724,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-FootB-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootA-Column1-Footer1
@@ -733,12 +733,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootA-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootG-Column1-Footer1
@@ -747,12 +747,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-FootG-Column1-Footer1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-Body-Body1
@@ -766,12 +766,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyI-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyE-Column1-Body1
@@ -783,7 +783,7 @@ mcTableFootStyle
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -791,7 +791,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-BodyE-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyF-Column1-Body1
@@ -803,12 +803,12 @@ mcTableFootStyle
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyF-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyH-Column1-Body1
@@ -817,7 +817,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -825,7 +825,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-BodyH-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyD-Column1-Body1
@@ -837,12 +837,12 @@ mcTableFootStyle
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
 	border-bottom-style: solid;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyD-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyC-Column1-Body1
@@ -851,12 +851,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyC-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyB-Column1-Body1
@@ -865,7 +865,7 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 	border-right-width: 1px;
 	border-right-color: #000000;
 	border-right-style: solid;
@@ -873,7 +873,7 @@ mcTableFootStyle
 
 .TableStyle-ib-table-BodyB-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyA-Column1-Body1
@@ -882,12 +882,12 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyA-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyG-Column1-Body1
@@ -896,12 +896,11 @@ mcTableFootStyle
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
 
 .TableStyle-ib-table-BodyG-Column1-Body1 p
 {
-	font-family: 'Segoe UI';
+	font-family: 'Tenon';
 }
-
 

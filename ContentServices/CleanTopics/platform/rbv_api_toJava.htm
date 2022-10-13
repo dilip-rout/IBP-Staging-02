@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This function converts an input Date or Date/Time value into a Java object. Syntax rbv_api.toJava(jsObject) Parameters jsObject The input Date or Date/Time value to be converted into a Java object. Return Value Java date object. Example This example shows the conversion of a Date or Date/Time value into a Java date object. var x = new Date();
+var y = rbv_api.toJava(x);
+rbv_api.println(rbv_api.getClassName(x));//org.mozilla.javascript.NativeDate
+rbv_api.println("x="+x); //Thu Sep 20 2018 14:57:59 GMT+0530 (IST)
+rbv_api.println(rbv_api.getClassName(y)); //java.util.Date
+rbv_api.println("y="+y); //Thu Sep 20 14:57:59 IST 2018</body>
+</html>

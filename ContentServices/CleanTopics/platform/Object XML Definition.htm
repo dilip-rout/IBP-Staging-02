@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>The following nodes and elements describe an object definition: DataObjectDef Node ObjectProps Node Object Definition XML Example DataObjectDef Node The following table describes the DataObjectDef XML node. Element Name XML Element Type Data Type Description SingularName Node String The singular name for the object. PluralName Node String The plural name for the object. NameTemplate Node String The template to use when creating names for new objects of this type. Description Node String Description of this object. Attributes Node String A comma-separated list of object attributes. See the Field Groups XML file for attribute names in System Console &gt; System &gt; Control Panel &gt; Configuration &gt; Field Groups. Props Node Complex A set of properties for this object. See the ObjectProps node description. DataFieldDefs Node Complex A set of fields for this object. See the DataFieldDef node description. RelationshipDefs Node Complex A set of relationships for this object. See the RelationshipDef node description. id Attr int The object ID. origId Attr int The original ID of the object. objDefName Attr String The object integration name (required). isSystem Attr Boolean Specifies whether this is a system object. isAuditable Attr Boolean Specifies whether audit is enabled for this object. isViewable Attr Boolean Specifies whether to track record views per user. isFlaggable Attr Boolean Specifies whether to track record flagging per user. isDependent Attr Boolean Specifies whether the object is a dependent object. isDeployed Attr Boolean Specifies whether the object is deployed. addComponents Attr Boolean Specifies whether the default components, such as pages and views will be added to new the object. createTab Attr Boolean Specifies whether a tab will be created for a new object. attachApp Attr int OriginalID of application to which the new object and tab will be attached. ObjectProps Node The elements in the following table are children of the ObjectProps node. Element Name XML Element Type Data Type Description auditView Node Boolean Specifies whether to allow viewing of audit records. auditCreate Node Boolean Specifies whether to allow creation of audit records. auditEdit Node Boolean Specifies whether to allow edit of audit records. auditDelete Node Boolean Specifies whether to allow deletion of audit records. dataSetName Node String For OpenEdge objects, the data set name. defProcess Node int Specifies the ID of the default workflow process. deleteFormula Node String Specifies a formula to calculate delete permissions for this record. editFormula Node String Specifies a formula to calculate edit permissions for this record. enableReports Node Boolean Specifies whether to enable reports for this object. googleSynch Node Boolean For objects with an Event attribute, specifies whether to synchronize with the Google calendar. isCloud Node Boolean Specifies whether the object is an external object accessed through Hybrid Data Pipeline. isLegacy Node Boolean Specifies whether this is an external object. isManaged Node Boolean Specifies whether this object is managed by the application publisher and cannot be modified. isOpenEdge Node Boolean Specifies whether the object is an OpenEdge ABL object. isReadOnly Node Boolean For external objects, specifies whether the object is read-only. loginName Node String Login name for OpenEdge and external objects that will be accessed through Hybrid Data Pipeline. pkColumn Node String Primary key(s) for OpenEdge and external objects. queryInsert Node String A Base-64 encoded INSERT query for external objects. queryDelete Node String A Base-64 encoded DELETE query for external objects. queryNewID Node String A Base-64 encoded query to fetch a new record ID external objects. querySelect Node String A Base-64 encoded SELECT query for external objects. queryUpdate Node String A Base-64 encoded UPDATE query for external objects. password Node String The password for OpenEdge objects. This property is encrypted and cannot be set with an API call. requireUserCreds Node Boolean Specifies whether to require individual user credentials for OpenEdge objects. resourceURI Node String The URI to an OpenEdge resource. showTags Node Boolean Specifies whether to show Search Tag options. isDedicatedDef Node Boolean Specifies whether the object is using dedicated table for data storage Object Definition XML Example The following shows an example DataObjectDef node: &lt;DataObjectDef id="10359" origId="14184" objDefName="b" isSystem="no" isAuditable="no" isViewable="no" isFlaggable="no" isDependent="no" isDeployed="yes"&gt;
+&lt;Props&gt;
+&lt;isManaged&gt;false&lt;/isManaged&gt;
+&lt;defProcess&gt;-1&lt;/defProcess&gt;
+&lt;enableReports&gt;true&lt;/enableReports&gt;
+&lt;googMap&gt;false&lt;/googMap&gt;
+&lt;auditView&gt;false&lt;/auditView&gt;
+&lt;showTags&gt;false&lt;/showTags&gt;
+&lt;googSynch&gt;false&lt;/googSynch&gt;
+&lt;/Props&gt;
+&lt;SingularName&gt;B&lt;/SingularName&gt;
+&lt;PluralName&gt;Bs&lt;/PluralName&gt;
+&lt;DataFieldDefs&gt;
+&lt;DataFieldDef id="19869" origId="19869" objName="b" fieldName="sumbur" dataName="FieldDummy" uiClass="FormulaField" isRequired="no" isReadOnly="yes" isTextIndexable="no" isSystem="no" isAuditable="no" maxLength="0"&gt;
+&lt;DisplayLabel&gt;Sumbur&lt;/DisplayLabel&gt;
+&lt;Props&gt;
+&lt;returnType&gt;1&lt;/returnType&gt;
+&lt;decimalPlaces&gt;0&lt;/decimalPlaces&gt;
+&lt;hideLabel&gt;false&lt;/hideLabel&gt;
+&lt;formatIndex&gt;0&lt;/formatIndex&gt;
+&lt;formulaB64&gt;eyFpZH0rMg==&lt;/formulaB64&gt;
+&lt;/Props&gt;
+&lt;/DataFieldDef&gt;
+&lt;!-— More fields here --&gt;
+&lt;/DataFieldDefs&gt;
+&lt;RelationshipDefs&gt;
+&lt;RelationshipDef id="19891" origId="19891" relName="R19877" objDef1="b" objDef2="a1" singularName1="B" pluralName1="Bs" singularName2="A" pluralName2="As" isMultiple1="yes" isMultiple2="yes" orphanControl1="no" orphanControl2="no" cloneRelated1="no" cloneRelated2="no" isSystem="no" isPkFk="no"&gt;
+&lt;/RelationshipDef&gt;&lt;/RelationshipDefs&gt;
+&lt;/DataObjectDef&gt;</body>
+</html>

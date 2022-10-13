@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This function converts the input Date or Date/Time value from User format to ISO format. The values for Date or Date/Time are returned in the format as selected by the user from the localization settings. Syntax rbv_api.getDateInISOFromUserFormat(date,format) Parameters date The Date or Date/Time value to be returned. format The format of the date to be returned. To convert input value into Date format, enter Date and to convert input value into Date/Time format, enter DateTime in the format parmeter. Return Value Date in ISO format Example In the given user profile setting for Date Format as Thursday, August 21, 2014 and Date/Time format as Aug 21, 2014, 10:00:00 AM GMT+5:30, the output result is shown below: var d = rbv_api.selectValue("select updatedAt from server where id=?", 120104);
+rbv_api.println("d="+d); // Tue Jul 03 14:38:15 IST 2018 var d1 = rbv_api.getDateInISOFromUserFormat(d,"date");
+rbv_api.println("d1="+d1);// 2018-07-03 var d2 = rbv_api.getDateInISOFromUserFormat(d,"datetime");
+rbv_api.println("d2="+d2); // 2018-07-03T09:08:15Z</body>
+</html>

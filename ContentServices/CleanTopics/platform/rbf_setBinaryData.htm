@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This function is used to upload selected files in the file and image upload fields for a specific Platform record. The current user must have Editpermission on the selected object type to run this API. Syntax rbf_setBinaryData(objName, id, fieldName) Parameters objName The object integration name. id ID of the selected record fieldName Integration name of the field to update Note: This API does not accept the file path due to security reasons. To upload the files and images, select the files from the UI and execute the API. This API is supported in portals as well. Example The following example sets the selected value to upload files: rbf_setBinaryData("room", {!id}, "suite_image");</body>
+</html>

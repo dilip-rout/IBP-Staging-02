@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>The following sections describe the application-level XML elements that define application metadata: Application Node ApplicationProps Node Application Definition XML Example Reviewers: a very few of the XML elements were marked required, but I suspect more are. I know a user can find that out by looking them up in the XSD, I didn't have time to do that. So, if you notice any that s/be required, please let me know. Application Node Element Name XML Element Type Data Type Description DisplayName Node String The application display name. Description Node String The application description. Props Node Complex The application properties. See the description for ApplicationProps . DependentDefs Node String A set of comma-separated objects, which must be installed prior to installing this application. DataObjectDefs Node Complex A set of object definitions. See the description for DataObjectDef. id Attr int The application ID. origId Attr int The original application ID. orderNo Attr int The order in which this application appears in the list of applications. isSystem Attr Boolean Specifies whether this is a system application. version Attr int The application version. terminateOnError Attr Boolean Specifies whether to terminate the application when an error occurs. ApplicationProps Node The following elements exist in the ApplicationProps element, a child of the Application node. Element Name XML Element Type Data Type Description pubManaged Node int One of the following values: 0: unlocked (not managed), 1: fully locked, 2: partially locked isDeployed Node boolean If true, application is deployed and non-administrative users who have the appropriate permissions will be able to use the application. If false, only administrators will have access. helpField Node Boolean Specifies whether to enable help pop-ups for object fields in this application. isDeployed Node boolean If true, application is deployed and non-administrative users who have the appropriate permissions will be able to use the application. If false, only administrators will have access. dependentDefs Node String Comma-separated, installer-generated list of dependent objects. isHidden Node Boolean Specifies whether this application is hidden and does not appear in the drop-down list of applications. useLegacyHeaderFooter Node Boolean Specifies whether to use the legacy header and footer in the UI. showMenus Node Boolean Specifies whether to show second-level menus in a row underneath application tabs. isMobile Node Boolean Specifies whether to enable Mobile-Web functionality for this application. Application Definition XML Example The following shows an XML example of an Application node: &lt;Application id="7558" origId="7558" orderNo="3" isSystem="false" version="1" &gt;
+&lt;DisplayName&gt;ABC&lt;/DisplayName&gt;
+&lt;Props&gt;
+&lt;pubManaged&gt;0&lt;/pubManaged&gt;
+&lt;helpField&gt;false&lt;/helpField&gt;
+&lt;isDeployed&gt;true&lt;/isDeployed&gt;
+&lt;dependentDefs&gt;,&lt;/dependentDefs&gt;
+&lt;isHidden&gt;false&lt;/isHidden&gt;
+&lt;useLegacyHeaderFooter&gt;false&lt;/useLegacyHeaderFooter&gt;
+&lt;showMenus&gt;false&lt;/showMenus&gt;
+&lt;/Props&gt;
+&lt;DependentDefs&gt;USER&lt;/DependentDefs&gt;
+&lt;DataObjectDefs&gt;
+&lt;!-- List of Objects --&gt;
+&lt;/DataObjectDefs&gt;
+&lt;/Application&gt;</body>
+</html>

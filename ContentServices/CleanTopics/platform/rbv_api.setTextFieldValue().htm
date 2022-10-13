@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This Object Script method sets the value of a text field to the name of a file to be stored. This method only works with native Platform objects. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.setTextFieldValue(objName, Id, fieldname, textValue, contentType, fileName) Parameters objName Integration name of object Id ID of record to modify fieldName Integration name of the field to update textValue Plain text content of value to be set contentType MIME content type fileName Name of file to be stored Return value None Permissions required Edit permission for the selected object type. Example var xmlBody = "&lt;test&gt;TEST&lt;/test&gt;" rbv_api.setTextFieldValue("invoice", {!id}, "xmlField", xmlBody, "text/xml", "invoice.xml");</body>
+</html>

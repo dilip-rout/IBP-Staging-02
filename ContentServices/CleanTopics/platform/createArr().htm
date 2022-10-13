@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For native Platform objects, this method creates an array of new object records. This API increments the hits counter for each array element. This method and createArrNoAudit() each take an array of transport Objects of type DataObj wrapped in a DataObjArr instance. This transport Object carries: Object name Record ID (for update only) Fields to be set This is a convenient form for transporting data. Note that, this API is optimized for faster performance in cases when related records must be resolved by name. Note: For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), you can use the method, createArr2() . Syntax createArr(string sessionId, DataObjArr arr, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. arr A DataObjArr array of DataObjs with data for new
+records. Record IDs and auto-numbers are assigned automatically. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output Ids of newly created records as a LongArr Required Permissions Create permission for the requested object type. Example // Array of transport objects to be sent to createArr
+DataObj[] arr = new DataObj[10]; // Populate data Fields to be set for record 0
+DataField[] Fields = new DataField[5];
+DataField Field = new DataField();
+Field.setName("amount");
+Field.setValue("1000");
+Fields[0]=Field; // Create record 0
+DataObj obj = new DataObj();
+obj.setObjDefName("lead");
+obj.setFields(Fields);
+arr[0] = obj; // Repeat for record 1 // Call createArr API
+binding.createArr(sessionId, new DataObjArr(arr), false);</body>
+</html>

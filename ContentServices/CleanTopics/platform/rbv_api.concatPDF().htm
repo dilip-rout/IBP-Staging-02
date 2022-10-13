@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Concatenates two or more PDF documents specified as base-64 encoded strings. This method only works with native Platform objects. Syntax rbv_api.concatPDF(encodedValue1, encodedValue2, …) Parameters encodedValue1 base-64 encoded string representing 1st PDF document encodedValue2, ... base-64 encoded string representing PDF document(s) to concatenate Return value Merged PDF document as a base-64 encoded string Example var pdf1 = rbv_api.getBinaryData("document", {!id}, "pdf_file1");
+var pdf2 = rbv_api.getBinaryData("document", {!id}, "pdf_file2");
+var pdf3 = rbv_api.concatPDF(pdf1, pdf2);
+rbv_api.setBinaryFieldValue("document", {!id}, "pdf_file3", pdf3, "application/pdf", "merged.pdf");</body>
+</html>

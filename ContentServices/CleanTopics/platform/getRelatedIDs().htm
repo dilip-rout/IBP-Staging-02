@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves an array of related record IDs. Unlike getRelationships(), this API works with external objects, including those based on OpenEdge services. Syntax getRelatedIDs(sessionId, objDefName, id, relName); Parameters sessionId A string containing the session ID obtained at log in. objDefName A string containing the object definition integration name. id A string containing the record ID. relName A string containing the relationship integration name. Output A stringArr containing a list of related record IDs. Permissions Required View permission for the requested object types. Example The following example returns the IDs of the records related to the oeTest object through the R291855 relationship. LongArr arr = binding.getRelatedIDs(sessionId, "oeTest", "789456", "R291855");
+if (arr != null) { String[] ids = arr.getArr();
+}</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns the default authentication profile for the tenant. This method is only available for Platform Private Cloud. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getAuthentication URL Parameters sessionId The session ID obtained from the body of the response when calling login . output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Full administrative privileges. Response The authentication for the tenant in XML or JSON format. Examples Output example in XML format: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;authType&gt;0&lt;/authType&gt;
+&lt;authDescription&gt;Password&lt;/authDescription&gt;
+&lt;APIAuthType&gt;0&lt;/APIAuthType&gt;
+&lt;authAPIDescription&gt;Password&lt;/authAPIDescription&gt;
+&lt;useSecQuestions&gt;false&lt;/useSecQuestions&gt;
+&lt;securityLevel&gt;Low&lt;/securityLevel&gt;
+&lt;expirPolicy&gt;0&lt;/expirPolicy&gt;
+&lt;enablePasswordHistory&gt;false&lt;/enablePasswordHistory&gt;
+&lt;passwordHistoryLimit&gt;1&lt;/passwordHistoryLimit&gt;
+&lt;passwordActivationContextExpiry&gt;2&lt;/passwordActivationContextExpiry&gt;
+&lt;useKnowledgeFactorToken&gt;true&lt;/useKnowledgeFactorToken&gt;
+&lt;knowledgeFactorToken&gt;email&lt;/knowledgeFactorToken&gt;
+&lt;newUserPasswordActivationContextExpiry&gt;2&lt;/newUserPasswordActivationContextExpiry&gt;
+&lt;/resp&gt; SAML Authentication response: &lt;resp status="ok"&gt;
+&lt;authType&gt;9&lt;/authType&gt;
+&lt;authDescription&gt;SAML/ADFS&lt;/authDescription&gt;
+&lt;APIAuthType&gt;10&lt;/APIAuthType&gt;
+&lt;authAPIDescription&gt;API Token&lt;/authAPIDescription&gt;
+&lt;samlName&gt;Salesforce&lt;/samlName&gt;
+&lt;issuer&gt;https://rmateti-dev-ed.my.salesforce.com&lt;/issuer&gt;
+&lt;entityId&gt;
+http://nbhydrmateti.bedford.progress.com:8830
+&lt;/entityId&gt;
+&lt;samlIdpLoginUrl&gt;
+http://nbhydrmateti.bedford.progress.com:8830/router/login/loginSaml
+&lt;/samlIdpLoginUrl&gt;
+&lt;samlIdpLogoutUrl&gt;https://www.twitter.com&lt;/samlIdpLogoutUrl&gt;
+&lt;samlAttributeMap&gt;
+firstName=givenName|lastName=sn|loginName=uid|city=city
+&lt;/samlAttributeMap&gt;
+&lt;samlAuthnContextComparison&gt;minimum&lt;/samlAuthnContextComparison&gt; &lt;/resp&gt; Response when viewing the default authentication profile of a customer &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;
+&lt;authProfileId&gt;6fba7e5a-64ab-47e8-ba4b-c360c482e280&lt;/authProfileId&gt;
+&lt;authType&gt;0&lt;/authType&gt;
+&lt;authDescription&gt;Password&lt;/authDescription&gt;
+&lt;APIAuthType&gt;0&lt;/APIAuthType&gt;
+&lt;authAPIDescription&gt;Password&lt;/authAPIDescription&gt;
+&lt;useSecQuestions&gt;false&lt;/useSecQuestions&gt;
+&lt;securityLevel&gt;Low&lt;/securityLevel&gt;
+&lt;expirPolicy&gt;0&lt;/expirPolicy&gt;
+&lt;enablePasswordHistory&gt;false&lt;/enablePasswordHistory&gt;
+&lt;passwordHistoryLimit&gt;1&lt;/passwordHistoryLimit&gt;
+&lt;passwordActivationContextExpiry&gt;2&lt;/passwordActivationContextExpiry&gt;
+&lt;newUserPasswordActivationContextExpiry&gt;2&lt;/newUserPasswordActivationContextExpiry&gt;
+&lt;useKnowledgeFactorToken&gt;false&lt;/useKnowledgeFactorToken&gt;
+&lt;/resp&gt;</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>The following is example content for a response.properties file passed to the Platform installer in silent mode: #Infinite Blue License File
+#------------------------------
+PATH_ROLLBASE_LICENSE=
+#Destination and Working Directories
+#-----------------------------------
+USER_INSTALL_DIR=C:\\InfiniteBlue\\Rollbase
+#Tomcat Instance Port Numbers
+#-------------------------
+HTTP_PORT=8830
+HTTPS_PORT=8831
+SHUTDOWN_PORT=8832
+#Choose EMail Server
+#-------------------
+USER_EMAIL_SMTP=1
+USER_EMAIL_MSEX=0
+USER_EMAIL_GMAIL=0
+#Email Configuration
+#-------------------
+MAIL_HOST_NAME=Localhost
+MAIL_PORT_NUMBER=1234
+MAIL_ADMIN_ADDRESS=example@exampleDomain.com
+MAIL_USER_NAME=testUser
+MAIL_PASSWORD=Passsword
+MAIL_USE_NONE=0
+MAIL_USE_SSL=1
+MAIL_USE_TSL=0 Note: In the above example, the Email Configuration is done for SMTP server. However, when you configure email for Exchange server or Gmail server, the email content in the response.properties file is as follows. Exchange server properties: #Choose EMail Server
+#-------------------
+USER_EMAIL_SMTP=0
+USER_EMAIL_MSEX=1
+USER_EMAIL_GMAIL=0
+#Microsoft Exchange Server Configuration
+#---------------------------------------
+MAIL_ADMIN_ADDRESS=example@exampleDomain.com
+EXCHANGE_AUTHORITY=https://login.microsoftonline.com/abc-example-id
+EXCHANGE_CLIENT_ID=dummy-client-id
+EXCHANGE_CLIENT_SECRET=dummy-client-secret Gmail server properties: #Choose EMail Server
+#-------------------
+USER_EMAIL_SMTP=0
+USER_EMAIL_MSEX=0
+USER_EMAIL_GMAIL=1
+#GMail Configuration
+#-------------------
+MAIL_ADMIN_ADDRESS=example@exampleDomain.com
+GOOGLE_USER_NAME=example@gmail.com
+GOOGLE_REFRESH_TOKEN=&lt;any value&gt;
+GOOGLE_CLIENT_ID=Google client ID
+GOOGLE_CLIENT_SECRET_KEY=Google secret key</body>
+</html>

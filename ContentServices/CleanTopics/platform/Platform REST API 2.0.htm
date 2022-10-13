@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>REST API v2.0 represents a significant effort to improve the capabilities of the APIs, which are now fully REST Compliant and following latest OpenAPI(v3) Standard using Swagger with an enriched set of API to cover more functionality. Currently, Platform supports Data APIs for object, user and customer. For documentation on Platform REST API 2.0, see REST API v2.0 Documentation. Note: All the REST 2.0 APIs use an integration name as a mandatory parameter. If unavailable, add integration names to the entities in the user interface manually. REST API 2.0 Authentication This section details how API developers can be authenticated through one of the following methods while using basic authentication to utilize REST APIs within the Platform. 01. JSON Web Token This section shows the API developer authentication using basic authentication with an Infinite Blue Platform account and JSON Web Token. JSON Web Token is a mechanism to authenticate APIs. To access any REST 2.0 APIs, a user needs to pass JW Token in the request header. Generating a JSON Web Token To generate a JW token, access the URL http://{HostName}/rest/api2/login/ with basic authentication. This returns the JSON Web Token and URL. Use the URL in subsequent requests. The default expiry time of a JSON Web Token is 30 minutes. Users can change the expiry time under Built-in security levels . Request: In the following example, the URL http://{HostName}/rest/api2/login/ is accessed with basic authentication. curl -X POST \
+http://{HostName}/rest/api2/login \
+-H 'Authorization: Basic Y2hyb21lQHlvcG1haWwuY29tOnByb2dyZXNz' \ Response: In the following example, the response has a generated JSON Web Token &lt;token-value&gt; along with the URL http://{HostName}/prod1/api2/ to be used in subsequent requests. {
+"JWT": "&lt;token-value&gt;",
+"url": "http://{HostName}/prod1/api2/"
+} Invoking REST API using JW Token In the following example, the JSON Web Token &lt;token-value&gt; along with the URL http://{HostName}/prod1/api2/ is used to invoke the REST API. curl -X GET \
+'http://{HostName}/prod1/api2/data/&lt;object_integration_name&gt;/record/&lt;id&gt;' \
+-H '"JWT": "&lt;token-value&gt;" 02. API Key Token This section shows the API developer authentication using basic authentication with an Infinite Blue Platform account and API Key Token. Generating an API Key Token Basic authentication utilizes API Key tokens. An API token can be generated for the Infinite Blue Platform account to authenticate instead of a password. For information on generating an API Key Token, see Change API Credential . To access any REST 2.0 APIs, the user needs to pass this key in the request header. Note: API developers need to explicitly generate the API Key Token. These keys never expire unless a new one is generated while replacing the previous key. Invoking REST API using API-Key Token In the following example, the API Key Token &lt;token-value&gt; is used to invoke the REST API. curl -XPOST \
+-H 'Api-Key: &lt;token-value&gt;' \
+-H "Content-type: application/json" \
+'http://{HostName}/prod1/api2/data/&lt;object_integration_name&gt;/record/&lt;id&gt;' Request Header: To know the base URL for all REST 2.0 APIs, access the following URL with the key in the request header. In the following example, the API Key Token &lt;token-value&gt; is used along the URL http://{HostName}/rest/api2/login in the request header. curl -XPOST \
+-H 'Api-Key: &lt;token-value&gt;' \
+-H "Content-type: application/json" \
+'http://{HostName}/rest/api2/login' Response: In the following response, the API developer was successfully authenticated with the API Key Token passed in the request header. {
+"code": 200,
+"message": "OK",
+"results": [
+{
+"url": "http://localhost:8080/prod1/api2/"
+}
+]
+} 03. UI Session If the users are already logged-into either Platform or portal, they can directly access the APIs. This enables users to directly invoke the REST API without a need for authentication. Invoking a REST API from a UI Session $.ajax({url: "http://&lt;hostName&gt;/prod1/api2/data/{objectIntegrationName}/{recordId}", success: function(val){ console.log(val);</body>
+</html>

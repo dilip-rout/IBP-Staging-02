@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>To create an HTML icon with an image that reflects the current status of a particular record, follow these steps: Create several Shared Icon fields to hold your icons. Create a formula field with return type string and the following formula: if ("{!status#code}"=="CRE") return "{!order.created_icon#html}"; else if ("{!status#code}"=="SHI") return "{!order.shipped_icon#html}"; else if ("{!status#code}"=="CAN") return "{!order.cancelled_icon#html}"; return ""; Add this formula field to views and view pages as needed. It will generate HTML with an image field which depends on the record's status. Note: Please note that the formula above uses status integration codes rather than IDs. This approach ensures that the formula above can be published as part of application and installed without requiring changes. Never rely on IDs in formulas if you plan on publishing your application.</body>
+</html>

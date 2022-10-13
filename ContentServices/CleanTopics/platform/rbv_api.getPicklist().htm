@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns items available for selected picklist field (including radio buttons and groups of check box fields) as a JSON array. Each array entry has the elements name, id, and code. Syntax rbv_api.getPicklist (objName, fieldName, mainValueId) Parameters objName The object integration name. fieldName The picklist field integration name. mainValueId The ID of the main picklist item (optional, for dependent picklists only). Return value A JSON array of picklist items Example var arr = rbv_api.getPicklist("invoice", "options", null);
+for (var k=0; k&lt;arr.length; k++) { rbv_api.println(k+" Name: "+arr[k].name+" Code: "+arr[k].code+" ID: "+arr[k].id);
+}</body>
+</html>

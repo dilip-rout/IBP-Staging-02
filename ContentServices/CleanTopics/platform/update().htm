@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Updates an existing record. This method only works with native Platform objects. To update an external object record, see updateRecord() . Syntax update(string sessionId, long id, DataFieldArr arr, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. id A long value containing the record ID. arr A DataFieldArr array of values for fields of a newly created record.
+Record ID and auto-numbers are assigned automatically. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output None Permissions Required Edit permission for the requested object type. Example // Populate data Fields to be updated for existing record
+DataField[] Fields = new DataField[5];
+DataField Field = new DataField();
+Field.setName("R34567");
+Field.setValue("100088,100089");
+Fields[0]=Field; // Call update API
+long id = 123456;	// Record id - required
+binding.update(sessionId, id, new DataFieldArr(Fields), true);</body>
+</html>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Permanently deletes an existing field definition from the specified object, along with any existing values for that field. See Field XML Definition for a description of the DataFieldDef XML node and an example of its use. Syntax deleteFieldDef(string sessionId, string objDefName, string fieldName); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing the integration name for the object containing the field fieldName String containing the integration name for the field definition to delete Output Status text: Field ABC has been deleted Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example deletes the firstName field from lead objects: String infoMessage = binding.deleteFieldDef(sessionId, "lead", "firstName");</body>
+</html>

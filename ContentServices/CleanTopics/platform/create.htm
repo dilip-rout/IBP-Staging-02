@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Creates a new record using data from an XML document. This method can be used to create a single record or a single record and related records. Note: Do not use this method with PHP CURL. Instead use create2 HTTP Method POST URL https://app.infiniteblue.com/rest/api/create URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. requestBody XML document containing object name, "useIds" attribute(true or false - same meaning as in Web API), and Fields for the new record (see example below). output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Create permission for the requested object type. Response The ID and integration name of the new record and a status of ok (see examples below). Example Create input example: &lt;?xml version="1.0" encoding="utf-8" ?&gt; &lt;data objName="person" useIds="false"&gt; &lt;Field name="club_member"&gt;false&lt;/Field&gt; &lt;Field name="lastName"&gt;Smith&lt;/Field&gt; &lt;Field name="status"&gt;Created&lt;/Field&gt; &lt;/data&gt; Create output example (XML): &lt;resp status="ok"&gt; &lt;data id="314452" objName="person" /&gt; &lt;Msg&gt;12 fields have been processed.&lt;/Msg&gt; &lt;/resp&gt; Create output example (JSON): {
+id: 314452
+objName: "person"
+status: "ok"
+} To create related objects in the same call, include a "composite" XML node which wraps a set of "data" XML nodes as described above. A new record is created for each "data" XML node. These new nodes have relationships with with core record. Consider this example with dependent nodes: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;data objName="person" useIds="false"&gt;
+&lt;Field name="club_member"&gt;false&lt;/Field&gt;
+&lt;Field name="lastName"&gt;Smith&lt;/Field&gt;
+&lt;Field name="status"&gt;Created&lt;/Field&gt;
+&lt;composite&gt;
+&lt;data objName="payment" useIds="false"&gt;
+&lt;Field name="amount"&gt;500.00&lt;/Field&gt;
+&lt;Field name="paym_date"&gt;09/12/2011&lt;/Field&gt;
+&lt;/data&gt;
+&lt;data objName="payment" useIds="false"&gt;
+&lt;Field name="amount"&gt;450.00&lt;/Field&gt;
+&lt;Field name="paym_date"&gt;09/22/2011&lt;/Field&gt;
+&lt;/data&gt;
+&lt;/composite&gt;
+&lt;/data&gt; This XML creates one "person" record and two related "payment" records in one call. Output example: &lt;resp status="ok"&gt;
+&lt;data id="314452" objName="person" /&gt;
+&lt;Msg&gt;12 fields have been processed. 2 related records have been created.&lt;/Msg&gt;
+&lt;/resp&gt;</body>
+</html>

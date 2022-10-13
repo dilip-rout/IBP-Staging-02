@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>String tokens such as {!lastName} will be replaced by values from text fields before sending the formula to the JavaScript engine. Unlike numeric tokens that can be used in the formulas as is, text tokens typically must be enclosed in quotes to produce meaningful results. Using an example for a record where Ellison is the last name and John is the first, the following table shows valid ways of using the name in a formula. Token Usage JavaScript Results {!amount}*{!counter} 20.5*2 Valid JavaScript expression {!lastName} Ellison No variable "Ellison" exists, this usage will cause an error "{!lastName}" "Ellison" Valid JavaScript expression "{!lastName}, {!firstName}" "Ellison, John" Valid and efficient concatenation of two tokens "{!lastName}"+ ", "+"{!firstName}" "Ellison, John" Valid, but an inefficient way to concatenate tokens - see efficient example above You can also use custom string tokens in formulas. See Creating and using string tokens for more information.</body>
+</html>

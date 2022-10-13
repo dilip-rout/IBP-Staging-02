@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns the specified property of the PDF document specified as a base-64 encoded string. This method only works with native Platform objects. Syntax rbv_api.getPDFProperty(encodedValue, property) Parameters encodedValue base-64 encoded string representing PDF document Property One of the following: TITLE, AUTHOR, CREATIONDATE, CREATOR, KEYWORDS, MODDATE, ENCRYPTED, ERROR Return value Property of PDF document as a string Example var str = rbv_api.getBinaryData("document", {!id}, "file"); var author = rbv_api.getPDFProperty(str, 'AUTHOR'); var encrypted = rbv_api.getPDFProperty(str,'ENCRYPTED');</body>
+</html>

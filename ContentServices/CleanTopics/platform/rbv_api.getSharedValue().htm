@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This method must be called within a trigger. It returns a value stored by the setSharedValue() method. Syntax rbv_api.getSharedValue(name) Parameters name Symbolic name for the stored value Return value Shared value or null Example Trigger 1: var x = rbv_api.selectNumber(...);
+// Store queried value for subsequent re-use
+rbv_api.setSharedValue("x", x); Trigger 2: // Retrieve previously stored value
+var x = rbv_api.getSharedValue("x");</body>
+</html>

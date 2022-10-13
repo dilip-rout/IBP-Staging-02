@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Starts the process of creating a new customer tenant. A welcome email containing a temporary password is sent to the first administrative user when the process is complete. If the password field is included in the list of fields, as in the example below, its value is used as the password for the first administrative user. In this case, the system does not send the welcome email to first administrative user and the password will not expire after the first log in. Syntax createCustomer(string sessionId, DataFieldArr arr, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. arr A DataFieldArr array of values for fields of a newly created record.
+Record ID and auto-numbers are assigned automatically. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output ID of newly created Customer Permissions Required Create permission for the Customer object type Example DataField[] arr = new DataField[7];
+arr[0] = getField("companyName", "API Test");
+arr[1] = getField("email", "myemail@mycompany.com");
+arr[2] = getField("lastName", "Admin");
+arr[3] = getField("loginName", "myemail@mycompany.com");
+arr[4] = getField("timeZone", "Pacific/Guam");
+arr[5] = getField("mailSender", "noreply@mycompany.com");
+arr[6] = getField("password", "my_password");
+arr[7] = getField("searchServer", "SEARCH");
+arr[8] = getField("searchIndex", "12c882bb-7dcb-4424-a5f7-4ed74482eafa&lt;&gt;indiazone");
+arr[7] = getField("storageLocation", "781df589-0fff-4e2d-afa7-a1ec1460xxx0&lt;&gt;s3databucket");
+arr[8] = getField("storageServer", "STORAGE");
+binding.createCustomer(sessionId, new DataFieldArr(arr), true);</body>
+</html>

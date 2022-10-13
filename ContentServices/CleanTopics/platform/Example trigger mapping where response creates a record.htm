@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>This example calls a Corticon Decision Service that returns a risk assessment based on an applicant's age and whether the applicant is a skydiver. It illustrates how the response mapping can create records. The response includes a message, which is mapped to a field in a Message object. The trigger creates a Message record each time it is called. Request mapping The request mapping maps the Applicant's Age and Skydiver fields to the decision service. Response mapping The response mapping updates the applicant's Risk Rating field and creates a related Message record with the reason for the risk rating. Result The trigger is configured to run after create or update. The following screen shows the values input into a new Applicant record: The trigger ran when the record was saved. The screen below shows the results. A new related Message is now associated with the Applicant record indicating why the Risk Rating is High:</body>
+</html>

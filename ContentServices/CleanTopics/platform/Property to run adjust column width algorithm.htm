@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Property to run adjust column width algorithm Purpose This property allows you to enable the rb.newui.options.listView.runNewAlgoToAdjustReportColumns property based on the number of columns the report grid has. If report columns are less than this property value, then the algorithm to adjust the column width is not run. If the number of columns of the report grid is greater that the value of this property, the algorithm to adjust the report column width is run. The default value of this property is 6. Note: This property applies to the new UI, not the classic UI. Most Platform tenants are using the new UI. However, tenants on older Private Cloud installations might still be using the classic UI. This property is not supported in portals. You must set this property value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Fully qualified name rb.newui.options.listView.minNumberOfColumnsReqToRunAlgo Example The following example sets the property value to run the algorithm to adjust column width: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.listView.minNumberOfColumnsReqToRunAlgo = 6;
+}
+&lt;/script&gt;</body>
+</html>

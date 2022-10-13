@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose A check used to guard NewUI specific functions. Note: If your Platform application pages are rendered in both ClassicUI and NewUI (selectively for different subset of users), then all NewUI specific client-side SDK functions/features should be guarded with this check. This method is not supported in portals. Syntax rbf_isNewUI() Parameters None Example The following example turns off the direction attribute to all paragraph elements inside Rich Text Editor. &lt;script&gt;
+try { if (!rbf_isNewUI()) { throw 'This Script is written for New UI'; } //Set to false to turned this featured off.. Default it is enabled rb.newui.options.richEditor.addAutoDirectionAttribute = false;
+} catch (err) { if (console) { console.log(err); }
+}
+&lt;/script&gt;</body>
+</html>

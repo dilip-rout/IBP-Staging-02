@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose Returns the number of records in the selected view. Optionally, this method can filter by field name and value. Syntax rbv_api.getCount(viewId, filterName, filterValue) Parameters viewID Original ID of view filterName Optional field integration name to filter results filterValue Optional field integration value to filter results Return value Number of records Permissions required View permission for the selected object type. Example The following example returns the total number of records in view 123456 where the Status field equals Open (any filters imposed by the view apply as well): var count = rbv_api.getCount("123456", "status", "Open");</body>
+</html>

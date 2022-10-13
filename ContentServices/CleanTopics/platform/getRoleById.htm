@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns information about the specified role in XML or JSON format. Throws an exception if roleId evaluates to Super Admin. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getRoleById URL Parameters sessionId The session ID obtained from the body of the response when calling login . roleId The original ID of the role. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required Full administrative privileges. Response The integration code, name, description, ID, and original ID of the role in XML or JSON format. Example Output example in XML format: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt; &lt;role&gt; &lt;name&gt;Administrator&lt;/name&gt; &lt;description&gt;System Administrator has unrestricted access to all applications.&lt;/description&gt; &lt;id&gt;90&lt;/id&gt; &lt;originalId&gt;90&lt;/originalId&gt; &lt;/role&gt;
+&lt;/resp&gt; Output example in JSON format: { "code": null, "name": "Administrator", "description": "System Administrator has unrestricted access to all applications.", "id": "90", "originalId": "90"
+}</body>
+</html>

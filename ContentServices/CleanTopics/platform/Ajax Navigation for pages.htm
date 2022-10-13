@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This property allows you to specify whether Platform uses page navigation using AJAX requests. Setting it to false disables page navigation using AJAX requests. Setting it to true enables page navigation using AJAX requests. This property applies to all of the actions listed below. Note: This property applies to the new UI, not the classic UI. Most Platform tenants are using the new UI. However, tenants on older Private Cloud installations might still be using the classic UI. This property is not supported in portals. You must set this property's value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Platform performs AJAX requests instead of full page reloads for the following actions: When navigating top level tabs on the application menu bar. When viewing a record (from a record list page to a record view page). When navigating back to the record list view from a record view page. When viewing the next and previous record from a record view page. When editing a record (Clicking Edit on a record view page). Note: Save is a full page reload. Fully qualified name rb.newui.options.applicationPage.ajaxNavigation Example The following example disables page navigation using AJAX requests for an application: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.applicationPage.ajaxNavigation = false;
+}
+&lt;/script&gt;</body>
+</html>

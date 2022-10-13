@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves all field data (including formulas) for a given record in XML format. This method works with external objects, including those mapped to OpenEdge services. Syntax getRecord(string sessionId, string objDefName, string uid, boolean useIds); Parameters sessionId A string containing the session ID obtained at log in. objDefName A string containing the object definition integration name. uid A string containing the object ID. useIds A boolean value: if true , use numeric IDs for lookup and picklist
+values; otherwise, use integration codes and record names. Output All of the field data for the specified object record. Each field value is wrapped in a DataField container. See DataField Container Class for more information. Permissions Required View permission for the requested object type. Example DataObj obj = binding.getRecord(sessionId, "client", "123456", true);
+if (obj != null) { DataField[] fields = obj.getFields();
+}</body>
+</html>

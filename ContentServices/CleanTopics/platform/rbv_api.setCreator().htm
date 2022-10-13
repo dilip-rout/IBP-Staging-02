@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This Object Script trigger method sets the Created By field value for the selected record. This method only works with native Platform objects. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.setCreator(objName, Id, creatorName, creatorId) Parameters objName The object integration name. Id The ID of the record. creatorName Integration name of the user or portal user to be set as creator creatorId ID of the creator record Return value None Permissions required The current user must have the Administrator role to use this method. Example rbv_api.setCreator("item", {!id}, "USER", 123456);</body>
+</html>

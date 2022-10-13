@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns the GridFieldContext object for the specified grid control, row index, and field. Note: This API and the GridFieldContext object are only available in the New UI. Syntax rbf_getGridFieldContext(gridNo, rowIndex, fieldName) Parameters gridNo The order in which the grid control appears on the page. For the first grid control on the page, the value is 0, for the second grid control on the page, the value is 1, and so on. rowIndex The index of the row of the grid from which to return the field context. fieldName The field integration name. Note: This API is not supported in portals. Return value The specified . Example The following example returns a JSON object representing the value of the description field in the fourth row of the second grid control component on the current page: var fieldData = rbf_getGridFieldContext(1, 3, "description").getGridFieldData();</body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This Object Script method creates a new object record from the record and values passed in. The Object Script API invokes triggers on create, on update, and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue() . Note: This methods observes required and unique field properties. An attempt to create or update a record without setting required fields or by violating uniqueness of field values will cause an error. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.cloneRecord(objName, ID, arr) Parameters objName Integration name of the type of object to create ID ID of the record to clone arr JavaScript array of field name/value pairs (required fields must be supplied) Return value Object ID of the newly created record Permissions required Create permission for the selected object type and View permission on the record to be cloned Example The following creates a related record: var x = new Array();
+x["amount"]=1000;
+x["name"]="API Cloned";
+var newId = rbv_api.cloneRecord("item", {!id}, x);
+rbv_api.print("Cloned record with id: "+newId);</body>
+</html>

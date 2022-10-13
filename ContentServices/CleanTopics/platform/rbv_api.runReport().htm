@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Runs a report and returns it as a base-64 encoded string. This method only works with native Platform objects. Syntax rbv_api.runReport(reportId, filterName, filterValue) Parameters reportId The original ID of the report. filterName An optional field that specifies the name of the field to filter. filterValue Specifies a value for the field. Only records with this value will be added to the report. Return value Base-64 encoded string. Example The following example reads the order report and stores the results in the file upload field: var reportData = rbv_api.runReport("23086", null, null);
+rbv_api.setBinaryFieldValue("report", {!id}, "file", reportData, "application/pdf", "report.pdf");</body>
+</html>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>The Platform REST API uses the same workflow mechanism as the standard Platform user interface. For instance, triggers designed to run on object record creation will run if a record is created through the REST API. Each REST method is accessed through URLs of the form: https://app.infiniteblue.com/rest/api/{method_name} Parameters to methods can be supplied as URL parameters for GET calls or in the HTTP request for POST calls. An XML document or JSON object containing the result of the call or an error message will be returned as a response. Example of a GET call: https://app.infiniteblue.com/rest/api/logout?sessionId=ba0787e245befcb47@1482&amp;output=xml A successful response: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="ok"&gt;&lt;/resp&gt; An error response: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;resp status="login"&gt; &lt;err&gt;Session expired or invalid login credentials&lt;/err&gt;
+&lt;/resp&gt; Most REST methods require the logged-in user to have the appropriate permission for the type of object used in the method call. For example, calling the the create method to create a Customer record requires the logged-in user to have Create permission on the Customer object. The documentation for each method includes the required permissions. See REST Metadata Methods for information about REST metadata methods.</body>
+</html>

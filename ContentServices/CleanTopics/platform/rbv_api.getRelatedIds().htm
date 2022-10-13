@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose For native Platform objects, this method returns an array of related IDs for a specified relationship and object record ID. Note: For external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), you can use the method, rbv_api.getRelatedIds2() . Syntax rbv_api.getRelatedIds (relName, id) Parameters relName Integration name of relationship id Record ID from one side of the relationship Return value An array of related record IDs Example var arr = rbv_api.getRelatedIds("R1321", {!id});
+for (var k=0; k&lt;arr.length; k++) { var id = arr[k]; rbv_api.println("id="+id);
+}</body>
+</html>

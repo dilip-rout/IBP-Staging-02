@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves a full description of an object definition as an XML document. The XML schema for this document can be found at: https://app.infiniteblue.com/webapi/wsdl/metadata.xsd See Object XML Definition for a description of the DataObjectDef XML node and an example of its use. Syntax getObjectDef(string sessionId, string objDefName); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing the integration name for the object definition to retrieve Output An XML document containing the object definition description in a DataObjectDef node. Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example retrieves the definition of a lead object. String xmlData = binding.getObjectDef(sessionId, "lead");</body>
+</html>

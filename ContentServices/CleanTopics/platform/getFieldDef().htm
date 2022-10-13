@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves a description of a field definition as an XML document in a sub-node of the DataObjectDef node. See Field XML Definition for a description of the DataFieldDef XML node and an example of its use. Syntax getFieldDef(string sessionId, string objDefName, string fieldDefName); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing the integration name of the object definition that contains the field fieldDefName String containing the integration name of the field definition to retrieve Output An XML document with the field definition in a DataFieldDef node. Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example retrieves the field definition of firstName: String xmlData = binding.getFieldDef(sessionId, "lead", "firstName");</body>
+</html>

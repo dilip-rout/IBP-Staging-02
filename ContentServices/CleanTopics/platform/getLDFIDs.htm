@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves IDs of LDF nodes (Locations, Departments, or Functions) assigned to the current non-administrative user. This set of nodes is determined by: The groups assigned to current user The LDF nodes assigned to these groups The hierarchical structure of the LDF nodes See the LDF Filter field on the user view page for more information. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getLDFIDs URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The integration name of LDF dimension. It must be one of the following: $ORG_LOCN, $ORG_DEPT, or $ORG_FUNC. output Optional parameter specifying the output format, one of: xml (default) or json . Response Returns a comma-separated list of LDF node IDs assigned to the current user. Returns “Full Access” if the user has full access to all LDF nodes. Returns “No Access” if the user has no access to LDF nodes. Example Example output (JSON): { "ids": "4567,7890,4567" }</body>
+</html>

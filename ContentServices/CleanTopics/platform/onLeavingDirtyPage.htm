@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This property controls whether Platform opens a notification when a user tries to navigate away from a form page (new, edit) which has unsaved changes. The notification gives the user a chance to save the changes. This property has the value true by default. To disable the notifications, set its value to false. You can set the value of this property in any script component. This property is only available when using the New UI. Fully qualified name rb.newui.options.notify.onLeavingDirtyPage Example The following example disables notifications when a user navigates away from a page with unsaved changes: &lt;script&gt; try { if ( window.rb !== undefined &amp;&amp; window.rb.newui !== undefined ) { console.log("*** Executing Custom Sidebar for New UI"); rb.newui.options.notify.onLeavingDirtyPage = false;
+} }
+catch (e) {alert ('Error in custom sidebar code' + e);
+}
+&lt;/script&gt;</body>
+</html>

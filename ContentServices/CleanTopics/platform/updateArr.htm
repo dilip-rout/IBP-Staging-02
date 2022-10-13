@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Updates a group of records using data from an XML document. For objects in dedicated tables , you must specify the objName. HTTP Method POST URL https://app.infiniteblue.com/rest/api/updateArr URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. output Optional parameter specifying the output format, one of: xml (default) or json . Request Body An XML document with valid id and useIds attributes ( true or false ) and data fields to be updated, wrapped in &lt;data&gt; XML nodes (see example below). You only need to include the fields to be changed; all fields not included will remain unchanged. For objects in dedicated tables , you must specify the objName in the data XML nodes. Required Permissions Edit permission for the requested object types. Response Standard success or failure output. Example Input example: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;request&gt;
+&lt;data id="314452" useIds="false"&gt;
+&lt;Field name="club_member"&gt;true&lt;/Field&gt;
+&lt;/data&gt;
+&lt;data id="314453" useIds="false"&gt;
+&lt;Field name="lastName"&gt;Gray&lt;/Field&gt;
+&lt;/data&gt;
+&lt;request&gt; Output example: &lt;resp status="ok"&gt;
+&lt;Msg&gt;2 records have been updated.&lt;/Msg&gt;
+&lt;/resp&gt;</body>
+</html>

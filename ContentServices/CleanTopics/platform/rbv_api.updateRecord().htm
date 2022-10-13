@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose This Object Script method updates any record. Only supply values for the fields you want to change, others fields will remain unchanged. The Object Script API invokes triggers on create, on update and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue() . Note: This methods observes required and unique field properties. An attempt to create or update a record without setting required fields or by violating uniqueness of field values will cause an error. Formulas used in Object Script triggers can include other API methods and regular Platform template functionality, such as loops. Object Script methods have no effect if called outside of update triggers. Syntax rbv_api.updateRecord(objName, Id, arr, objs) Parameters objName The object integration name. Id The ID of the record. arr Used for a single record. JavaScript array of field name/value pairs (required fields must be supplied). objs Used for multiple records. Multiple JavaScript array of object field name/value pairs (required fields must be supplied). Return value None Permissions required Edit permission for the selected object type. Example The following example loops through related records and updates them: var x;
+{!#LOOP_BEGIN.R477842}
+x = new Array();
+x["amount"]={!R477842.amount}+100;
+rbv_api.updateRecord("item", {!R477842.id}, x);
+{!#LOOP_END.R477842} The following example loops through multiple related records and updates them: var result = rbv_api.selectQuery("SELECT ID FROM ServerSideAPIBulk WHERE fld=?", 10, "modify");
+var objs = [];
+for (var i=0; i&lt;result.length; i++) {
+var record = new Object();
+record['id'] = result[i][0];
+record['fld'] = "Modified-Again"
+objs.push(record);
+}
+rbv_api.updateRecord("ServerSideAPIBulk", objs);</body>
+</html>

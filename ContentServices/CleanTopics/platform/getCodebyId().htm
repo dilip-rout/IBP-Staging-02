@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves the integration code of a picklist item or status by ID. Note: This API only works when the ID is numeric. Therefore, Picklist(char) or Radio Button(char) are not supported. Syntax getCodeById(string sessionId, string objDefName, string fieldName, long id); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing integration name of object definition fieldName String containing integration name of Field (picklist or status) id Long numeric ID of picklist item or status Output Integration code of item with matching ID or null Example String code = binding.getCodeById(sessionId, "lead", "type", 98765);</body>
+</html>

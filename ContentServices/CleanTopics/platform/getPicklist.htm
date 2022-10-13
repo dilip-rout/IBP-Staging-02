@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Returns items available for the selected Picklist field (including radio buttons and groups of check box fields) as a JSON array. Each array entry has elements: name, id, and code. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getPicklist URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. fieldName The field integration name. mainValueId The ID of the main picklist item (optional, for dependent picklists only). Response A JSON string of picklist items. Example Example output: [{"code":"S","id":721774,"name":"South"},{"code":"N","id":721775,"name":"North"},
+{"code":"E","id":721776,"name":"East"},{"code":"W","id":721777,"name":"West"}]</body>
+</html>

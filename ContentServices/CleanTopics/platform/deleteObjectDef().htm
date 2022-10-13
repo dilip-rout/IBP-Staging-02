@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Permanently deletes an existing object definition, its components, and its records. See Object XML Definition for a description of the DataObjectDef XML node and an example of its use. Syntax deleteObjectDef(string sessionId, string objDefName); Parameters sessionId A string containing the session ID obtained at log in. objDefName String containing the integration name for the object definition to delete Output Status text: Object ABC has been deleted Permissions Required All metadata methods require administrative privileges, regardless of the view, edit, create and delete permissions set on the application or object. Establish the session by logging in with credentials for an administrative user. Example The following example deletes the definition of a lead object, its records, and components. String infoMessage = binding.deleteObjectDef(sessionId, "lead");</body>
+</html>

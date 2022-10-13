@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Retrieves an array of record IDs of the specified object type that were either created or updated within the given date/time interval. This method is not available for external objects, including those mapped to OpenEdge service objects. HTTP Method GET URL https://app.infiniteblue.com/rest/api/getUpdated URL Parameters sessionId The session ID obtained from the body of the response when calling login . objName The object integration name. from Beginning of date/time interval in ISO 8601 format. till End of date/time interval in ISO 8601 format. output Optional parameter specifying the output format, one of: xml (default) or json . Permissions Required View permission for the requested object type. Response IDs of all records found in the search, returned as an array of longs Example Output example in XML: &lt;resp status="ok"&gt;
+&lt;ids&gt;
+&lt;id&gt;314452&lt;/id&gt;
+&lt;id&gt;128003&lt;/id&gt;
+&lt;/ids&gt;
+&lt;/resp&gt; Output example in JSON: [ 314452, 128003 ]</body>
+</html>

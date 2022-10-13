@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose Creates a group of new records using data from an XML document. HTTP Method POST URL https://app.infiniteblue.com/rest/api/createArr URL Parameters sessionId The session ID obtained from the body of the response when calling login . output Optional parameter specifying the output format, one of: xml (default) or json . Request Body XML document containing object name, "useIds" attribute(true or false - same meaning as in the Web API), and Fields for new records wrapped in &lt;data&gt; XML nodes (see example below). Required Permissions Create permission for the requested object types. Response The ID and integration name of the new record and a status of ok (see examples below). Example Input example: &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;request&gt;
+&lt;data objName="person" useIds="false"&gt;
+&lt;Field name="club_member"&gt;false&lt;/Field&gt;
+&lt;Field name="lastName"&gt;Smith&lt;/Field&gt;
+&lt;Field name="status"&gt;Created&lt;/Field&gt;
+&lt;/data&gt;
+&lt;data objName="person" useIds="false"&gt;
+&lt;Field name="club_member"&gt;true&lt;/Field&gt;
+&lt;Field name="lastName"&gt;Green&lt;/Field&gt;
+&lt;Field name="status"&gt;Created&lt;/Field&gt;
+&lt;/data&gt;
+&lt;/request&gt; Output example (XML): &lt;resp status="ok"&gt;
+&lt;data id="314452" objName="person"/&gt;
+&lt;data id="314453" objName="person"/&gt;
+&lt;/resp&gt; Output example (JSON): { "ids": 314452, "objName": "person", "status": "ok" }, { "ids": 314453, "objName": "person", "status": "ok" }</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This function returns a decoded string in supplied character-encoding scheme. Syntax rbv_api.decodeBase64String(str, charSetName) Parameters str The input string to be decoded from base64. charSetName Name of the character-encoding scheme of resultant string. Currently only UTF-8 or ISO-8859-1 schemes are supported. Return Value A decoded string. Example The below example shows how an URL&#160;is encoded/decoded. var str1 = "https://infiniteblue.com/";
+var encodedStr1 = rbv_api.encodeBase64String(str1,"UTF-8");
+rbv_api.println(encodedStr1); //aHR0cHM6Ly9pbmZpbml0ZWJsdWUuY29tLw==
+var decodedStr1 = rbv_api.decodeBase64String(encodedStr1,"UTF-8");
+rbv_api.println(decodedStr1); //https://infiniteblue.com/
+rbv_api.println( str1.equals(decodedStr1) ); //true The below example shows how a binary data string from a file-field is decoded. //Consider a FileUpload field - MyJsonFile of a record is updated with the below mentioned content:
+//{"fruit": "Apple","size": "Large","color": "Red"}
+var jsonBinaryContent = rbv_api.getBinaryData("EncodeDecodeTestObj", "{!id}", "MyJsonFile");
+rbv_api.println(jsonBinaryContent); //ew0KICAgICJmcnVpdCI6ICJBcHBsZSIsDQogICAgInNpemUiOiAiTGFyZ2UiLA0KICAgICJjb2xvciI6ICJSZWQiDQp9
+var jsonStr = rbv_api.decodeBase64String(jsonBinaryContent,"UTF-8");
+rbv_api.println(jsonStr); //{"fruit": "Apple","size": "Large","color": "Red"}</body>
+</html>

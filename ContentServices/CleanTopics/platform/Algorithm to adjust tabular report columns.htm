@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This property allows you to set a new algorithm to adjust column width of a tabular report grid. Setting it to false disables the algorithm. Setting it to true enables the algorithm to adjust column width. By default, this option is set to true. Note: This property applies to the new UI, not the classic UI. Most Platform tenants are using the new UI. However, tenants on older Private Cloud installations might still be using the classic UI. This property is not supported in portals. You must set this property's value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Fully qualified name rb.newui.options.listView.runNewAlgoToAdjustReportColumns Example The following example disables the algorithm to adjust column width: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.listView.runNewAlgoToAdjustReportColumns = false;
+}
+&lt;/script&gt;</body>
+</html>

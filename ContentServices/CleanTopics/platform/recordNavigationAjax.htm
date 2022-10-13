@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Purpose This property allows you to specify whether Platform uses AJAX requests to navigate between object records (previous and next). Setting it to false disables navigation between object records using AJAX requests. Setting it to true enables navigation between object records using AJAX requests. Note: This property applies to the new UI, not the classic UI. Most Platform tenants are using the new UI. However, tenants on older Private Cloud installations might still be using the classic UI. This property is not supported in portals. You must set this property's value in a custom sidebar script that executes before the UI starts. See Executing a script before the UI starts for details. Fully qualified name rb.newui.options.objectViewPage.recordNavigationAjax Example The following example disables navigation between object records using AJAX requests for an application: &lt;script id="executeBeforeUIStarts"&gt;
+if(rbf_isNewUI()){ rb.newui.options.objectViewPage.recordNavigationAjax = false;
+}
+&lt;/script&gt;</body>
+</html>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>Warning: Support for using this method with external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection) is a beta feature. This method is supported in production systems, except for external objects. Purpose Gets an array of record ids selected by current user using check boxes in list view. Syntax rbv_api.getSelectedIds(objName) Parameters objName Integration name of object Return value Array of record IDs Example var arr = rbv_api.getSelectedIds("order");
+var buff = '';
+if (arr!=null) {
+for (var k=0; k&lt;arr.length; k++) buff += arr[k]+', ';
+}
+return buff;</body>
+</html>
