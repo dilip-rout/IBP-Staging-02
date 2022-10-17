@@ -54,6 +54,9 @@ xmlAliasData += '    <Map Name=\"rb_hosted_files\" Link=\"platform/Hosted files.
 xmlAliasData += '    <Map Name=\"rb_mobile_capabilities\" Link=\"platform/Supporting mobile users.htm\" ResolvedId=\"1057\" />';
 xmlAliasData += '    <Map Name=\"telerik-ovr\" Link=\"Welcome.htm\" ResolvedId=\"1058\" />';
 xmlAliasData += '    <Map Name=\"data-catalog\" Link=\"Welcome.htm\" ResolvedId=\"1059\" />';
+xmlAliasData += '    <Map Name=\"views-first\" Link=\"platform/Using the Views first approach.htm\" ResolvedId=\"1060\" />';
+xmlAliasData += '    <Map Name=\"jsdo-settings\" Link=\"platform/Configure JSDO settings.htm\" ResolvedId=\"1061\" />';
+xmlAliasData += '    <Map Name=\"appbuilder-testing\" Link=\"platform/Test the app.htm\" ResolvedId=\"1062\" />';
 xmlAliasData += '    <Map Name=\"rb_oe\" Link=\"platform/Creating Platform objects from OpenEdge Object Services.htm\" ResolvedId=\"1063\" />';
 xmlAliasData += '    <Map Name=\"rb_ddc\" Link=\"platform/Using DataDirect Hybrid Data Pipeline to access external data.htm\" ResolvedId=\"1064\" />';
 xmlAliasData += '    <Map Name=\"rb_ms_access\" Link=\"platform/Creating a Platform application from Microsoft Access.htm\" ResolvedId=\"1065\" />';
@@ -64,6 +67,7 @@ xmlAliasData += '    <Map Name=\"rb_exporting\" Link=\"platform/Exporting from v
 xmlAliasData += '    <Map Name=\"rb_google_apps\" Link=\"platform/Integrating with Google applications.htm\" ResolvedId=\"1071\" />';
 xmlAliasData += '    <Map Name=\"enable_google\" Link=\"platform/Enabling Google integration.htm\" ResolvedId=\"1072\" />';
 xmlAliasData += '    <Map Name=\"rb_soap_rest_ovr\" Link=\"platform/Using SOAP or REST to integrate with Platform.htm\" ResolvedId=\"1073\" />';
+xmlAliasData += '    <Map Name=\"rb_jsdocatalog\" Link=\"platform/Creating Progress Data Catalogs for external applications.htm\" ResolvedId=\"1074\" />';
 xmlAliasData += '    <Map Name=\"rb_security_ovr\" Link=\"platform/Security and access control.htm\" ResolvedId=\"1075\" />';
 xmlAliasData += '    <Map Name=\"rb_security_whitelist\" Link=\"platform/Whitelist IP addresses.htm\" ResolvedId=\"1076\" />';
 xmlAliasData += '    <Map Name=\"permissions-roles\" Link=\"platform/Access control.htm\" ResolvedId=\"1077\" />';

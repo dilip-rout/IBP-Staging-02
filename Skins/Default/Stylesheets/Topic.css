@@ -553,11 +553,17 @@ a.MiniTOC1:link
 	transition: max-height 0.2s ease-out;
 }
 
+.dropDown
+{
+	font-size: 1.2em;
+}
+
 .dropDownHotspot
 {
 	color: #0572ed;
 	font-weight: normal;
 	font-family: Tenon;
+	font-size: 1.2em;
 	text-decoration: none;
 }
 
@@ -566,6 +572,7 @@ a.MiniTOC1:link
 	color: #0572ed;
 	font-weight: normal;
 	font-family: Tenon;
+	font-size: 1.2em;
 	text-decoration: none;
 }
 
