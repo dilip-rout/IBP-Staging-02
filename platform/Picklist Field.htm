@@ -145,7 +145,7 @@
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div style=" text-align: right; color:white; font-size: 9pt; background: #0572ed; margin-bottom: 15px; padding: 4px 12px; ">Documentation Version 
-		<select class="minimal" onchange="gotopage(this)"><option value="">6.4 (current)</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
+		<select class="minimal" onchange="gotopage(this)"><option value="">6.5 (current)</option><option value="https://documentation.infiniteblue.com/6.4/platform/What's%20New%20in%20Platform%206.4.htm" target="_blank">6.4</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
                                         </div>
@@ -184,16 +184,58 @@
     from the selected shared picklist. <div class="fig"><p><img alt="Picklist Share" src="lsl1428346842549.jpg" /></p></div></p>
                                                         </li>
                                                         <li>
-                                                            <p><span class="uicontrol">Values</span> — First, define a list of values, one value per line, for the picklist. Each value
+                                                            <p><span class="uicontrol">Values</span>
+                                                            </p>
+                                                            <ul style="list-style-type: square;">
+                                                                <li>
+                                                                    <p><span class="uicontrol">Add Value</span>
+                                                                    </p>
+                                                                    <p>A list of available options for any newly added value includes:</p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Delete</span>: Deletes the particular value from the list.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Move up</span>: Moves the value one level up in the picklist order.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Move down</span>: Moves the value one level down in the picklist order.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Default</span>: Select if you want the particular value to be set as default for new records.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Name</span>: The name of the value. This is a mandatory field.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Code</span>: The integration code of the given value.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Language</span>: The name of the value based on set additional language.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p>
+                                                                        <img src="../img/Picklist-field-add-values.png" alt="" />
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="uicontrol">Bulk Add Values</span>:</p>
+                                                                    <p> First, define a list of values, one value per line, for the picklist. Each value
         represents a selectable item. The length of a picklist value cannot exceed 100 characters.
         If you want a particular value to be selected by default for new records, prefix it with
           <span class="uicontrol">{D}</span>.</p>
-                                                            <p>Optionally, at the end of each line, add<span class="uicontrol">
+                                                                    <p>Optionally, at the end of each line, add<span class="uicontrol">
           |</span> followed by an integration name for that value (no longer than 40
         characters). Formulas and APIs can use this integration name to access unique picklist
         values (e.g., for data import and export).</p>
-                                                            <p>Example: In the following list of picklist values, each value is assigned an integration name
+                                                                    <p>Example: In the following list of picklist values, each value is assigned an integration name
    and <span class="uicontrol">Yes</span> is the default value:</p>
+                                                                    <div class="note"><b>Note</b>:<ul><li>Bulk Add option cannot be used to edit any existing values.</li><li>Adding names corresponding to additional languages are not supported in Bulk Add option.</li></ul></div>
+                                                                    <p>
+                                                                        <img src="../img/picklist-field-bulk-add-values.png" alt="" />
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li>
                                                             <p><span class="uicontrol">Letters are not case-sensitive</span> — See <a href="#Configur">Configuring picklist case-sensitivity</a> for more information.</p>
@@ -228,15 +270,13 @@
                                                     <p>
                                                         <img src="../img/picklist-field-case-sen.png" style="width: 620px;height: 342px;" alt="" />
                                                     </p>
+                                                    <div class="note"><b>Note</b>:<ul><li>From <span class="mc-variable IB.ProductName variable">Platform</span> 6.5 onwards, Application XML generation, installation, or push updating would be blocked if any duplicate labels or integration codes exist in the picklist items.</li><li>You may still proceed with any of the above mentioned operation with duplicate integration codes. This is governed by shared property - <a href="Shared Properties.htm#SkipUniquePicklistCodesCheck">SkipUniquePicklistCodesCheck</a>. Tenant administrators can enable the same using the <a href="Configuring Administrative Preferences.htm#Skip_unique_codes_check_on_picklist">Skip unique codes check on picklist</a> option from the Administrative Preferences section.</li></ul> </div>
                                                 </p>
                                             </div>
                                             <div class="section">
                                                 <h2 class="sectiontitle">Editing picklists</h2>
                                                 <p>The following rules and behaviors apply when editing picklists:<ul><li>You cannot change the integration name of a shared picklist. All picklists that share
-            the same values have the same integration name.</li><li>Changing the text value of a picklist item destroys the modified item and creates a
-            new item. Existing records will lose their assigned values. If you just want to change
-            the text of a picklist item, use the <span class="uicontrol">Replace</span> functionality as
-            described in <a href="Replacing a picklist value.htm" class="MCXref xref">Replacing a picklist value</a>.</li><li>If you delete the text value of a picklist item, existing records will lose their
+            the same values have the same integration name.</li><li>If you delete the text value of a picklist item, existing records will lose their
             assigned values.</li><li>Shared picklists share the same text values for their picklist items. If you delete
             the text value from one shared picklist, that value is deleted from all of the picklists
             that share with it.</li></ul></p>
@@ -253,17 +293,25 @@
                                                                 <p>The <b>Tenant Admin</b> should ensure that the picklist field does not have any existing conflicting labels.</p>
                                                             </li>
                                                             <li>
-                                                                <p>For any existing duplicate labels (case-insensitive), ensure a manual clean up or use the replace functionality to avoid any loss of data.</p>
+                                                                <p>For any existing duplicate labels (case-insensitive), ensure a manual clean up to avoid any loss of data.</p>
                                                                 <p>
                                                                     <img src="../img/picklist-field-case-sen-warning.png" alt="" />
                                                                 </p>
                                                             </li>
                                                             <li>
-                                                                <p>You can also manually promote the existing field to case-insensitive configuration via the metadata <span class="uicontrol">Edit</span> page</p>
+                                                                <p>You can also manually promote the existing field to case-insensitive configuration via the metadata <span class="uicontrol">Edit</span> page.</p>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                 </ul>
+                                            </div>
+                                            <div class="section">
+                                                <h2 class="sectiontitle">Viewing a Picklist</h2>
+                                                <p>The entire set of values pertaining to any Picklist available for lookup within a tabular section in the Field View page. The table specifies the <span class="uicontrol">ID</span>, <span class="uicontrol">Original ID</span>, <span class="uicontrol">Order Number</span>, <span class="uicontrol">Values</span>, <span class="uicontrol">Code </span>and <span class="uicontrol">Default</span> for every picklist item. </p>
+                                                <p>
+                                                    <img src="../img/picklist_view.png" alt="" />
+                                                </p>
+                                                <p>&#160;</p>
                                             </div>
                                         </div>
                                     </div>

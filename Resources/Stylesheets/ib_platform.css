@@ -804,35 +804,35 @@ a.MCBreadcrumbsLink
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #001649;
 }
 
 a.MCBreadcrumbsPrefix
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #001649;
 }
 
 a.MCBreadcrumbsSelf
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #001649;
 }
 
 a.MiniTOC1
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #001649;
 }
 
 a.MiniTOC1:link
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #001649;
 }
 
 a.GlossaryPageTerm
@@ -1678,11 +1678,11 @@ div.note
 	font-size: 12pt;
 	padding: 10px;
 	color: #000000;
-	background: #add8e6;
-	border: solid 1px #add8e6;
+	background: #9cc1ff;
+	border: solid 0px #9cc1ff;
 	border-bottom-width: 1px;
-	border-left-color: #f37c20;
-	border-left-width: 2px;
+	border-left-color: #ef5b18;
+	border-left-width: 3px;
 	font-family: 'Tenon';
 }
 

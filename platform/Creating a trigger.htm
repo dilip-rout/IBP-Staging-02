@@ -30,6 +30,7 @@
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Resources/Stylesheets/ib_platform.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/ib-table.css" rel="stylesheet" data-mc-stylesheet-type="table" />
         <link rel="apple-touch-icon" sizes="180x180" href="../Skins/Favicons/apple-touch-icon.png" />
         <link rel="shortcut icon" href="../Skins/Favicons/favicon-32x32.png" />
         <link rel="icon" sizes="96x96" href="../Skins/Favicons/favicon-96x96.png" />
@@ -145,7 +146,7 @@
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div style=" text-align: right; color:white; font-size: 9pt; background: #0572ed; margin-bottom: 15px; padding: 4px 12px; ">Documentation Version 
-		<select class="minimal" onchange="gotopage(this)"><option value="">6.4 (current)</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
+		<select class="minimal" onchange="gotopage(this)"><option value="">6.5 (current)</option><option value="https://documentation.infiniteblue.com/6.4/platform/What's%20New%20in%20Platform%206.4.htm" target="_blank">6.4</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
                                         </div>
@@ -163,38 +164,176 @@
 						Definition</span> from the <span class="uicontrol">Page Options</span>
 						menu:<div class="fig"><p style="text-align: center;"><img alt="Rollbase - Open page menu" src="oxr1526382034549.jpg" style="width: 677px;height: 182px;" /></p></div></div>
                                                 </li>
-                                                <li class="step" value="2"><span class="cmd">In the ribbon of object components, click <span class="uicontrol">Triggers</span>: <img src="rut1411743942671.jpg" style="width: 509.600006103516;height: 78.4000015258789;" alt="" /></span>
+                                                <li class="step" value="2">
+                                                    <p><span class="cmd">In the ribbon of object components, click <span class="uicontrol">Triggers</span>: </span>
+                                                    </p>
+                                                    <p><span class="cmd"><img src="rut1411743942671.jpg" style="width: 509.600006103516;height: 78.4000015258789;" alt="" /></span>
+                                                    </p>
                                                 </li>
-                                                <li class="step" value="3"><span class="cmd">Click <span class="uicontrol">New Trigger</span>.</span>
+                                                <li class="step" value="3">
+                                                    <p><span class="cmd">Click <span class="uicontrol">New Trigger</span>.</span>
+                                                    </p>
                                                     <div class="stepresult">The <span class="uicontrol">New Trigger</span> screen
 					opens.
 					<div class="fig"><p style="text-align: center;"><img alt="New Trigger Screen" src="fve1477321675008.jpg" style="width: 668px;height: 255px;" /></p></div></div>
                                                 </li>
-                                                <li class="step" value="4"><span class="cmd">Select the trigger type and click <span class="uicontrol">Next</span>.</span>
+                                                <li class="step" value="4">
+                                                    <p><span class="cmd">Select the desired trigger type and click <span class="uicontrol">Next</span>.</span> The following table details various trigger types which can be created.</p>
+                                                    <table style="mc-table-style: url('../Resources/TableStyles/ib-table.css');margin-left: 0;margin-right: auto;" class="TableStyle-ib-table" cellspacing="0">
+                                                        <col class="TableStyle-ib-table-Column-Column1" />
+                                                        <col class="TableStyle-ib-table-Column-Column1" />
+                                                        <col class="TableStyle-ib-table-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-ib-table-Head-Header1">
+                                                                <th class="TableStyle-ib-table-HeadE-Column1-Header1">Trigger Type</th>
+                                                                <th class="TableStyle-ib-table-HeadE-Column1-Header1">Group</th>
+                                                                <th class="TableStyle-ib-table-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Send Email</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Notification</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger sends an email based on an Email Template.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Create Audit Trail Record</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Notification</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger creates a new Audit Trail Record based on a text template and attaches it to current or related record.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Validate Record Data</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Validation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger validates a record's data using expression. If expression results in error, data operation will be terminated and error message displayed.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Unique Fields Combination</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Validation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger validates that certain combination of fields is unique across all the records.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Update Field Value</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger updates the value of a Field in a Record or a Related Record using formula.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Change Workflow Status</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger changes a Record's Workflow Status.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Create New Record</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger creates a new record. Ensure at least one Conversion Map  is created before using this trigger.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Attach Related Record</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger attaches a Record to another Related Record (i.e. establish a relationship between two Records).</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Create Template Document</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger creates a new template document. Ensure at least one Document Template is created   before using this trigger.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Run Triggers on Related Records</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">
+                                                                    <p>This trigger runs selected triggers on related records with selected relationships. Use this trigger if you want to explicitly run triggers on related records. </p>
+                                                                    <div class="note"><b>Note</b>: Other types of triggers do not invoke triggers on related records.  </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Object Script</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Data Manipulation</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger runs a script to manipulate multiple fields and objects in one trigger through API calls.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Corticon Decision Service</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Integration</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger is used for point and click invocation of Corticon Decision Service and automatic processing of results into fields. Ensure that Corticon server is configured in app setting before using this trigger.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">REST Service</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Integration</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger is used for point and click invocation of REST service and process the results into fields</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Send HTTP GET Request</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Integration</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger sends a HTTP&#160;GET Request. Ensure at least one Integration Link field is created before using this trigger.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1"><span class="uicontrol">Send HTTP POST Request</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyE-Column1-Body1">Integration</td>
+                                                                <td class="TableStyle-ib-table-BodyD-Column1-Body1">This trigger sends a HTTP POST Request. Ensure at least one Document Template with text document  is created before using this trigger.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-ib-table-Body-Body1">
+                                                                <td class="TableStyle-ib-table-BodyB-Column1-Body1"><span class="uicontrol">Send SMS Message</span>
+                                                                </td>
+                                                                <td class="TableStyle-ib-table-BodyB-Column1-Body1">Integration</td>
+                                                                <td class="TableStyle-ib-table-BodyA-Column1-Body1">This trigger send SMS text message to recipient through external SMS Gateway.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </li>
+                                                <li class="step" value="5">
                                                     <div class="stepresult">The options available on the next screen depend on the type of trigger
 					you select.</div>
                                                 </li>
-                                                <li class="step" value="5"><span class="cmd">Finalize the definition of your trigger using the controls on this
+                                                <li class="step" value="6"><span class="cmd">Finalize the definition of your trigger using the controls on this
 					screen:</span>
                                                     <div class="choices">
-                                                        <div class="choice"><span class="uicontrol">Deployment Status</span> — If checked,
-						the trigger will run. If unchecked, the trigger will not run.</div>
-                                                        <div class="choice"><span class="uicontrol">Trigger Timing</span> — Causes the
-						trigger to fire during events in a record lifecycle. See <a href="Trigger timing options.htm" class="MCXref xref">Trigger timing options</a> for details. </div>
-                                                        <div class="choice"><span class="uicontrol">General Properties</span> — Enter a <span class="uicontrol">Name</span> and an
+                                                        <ul>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">Deployment Status</span> — If checked,
+						the trigger will run. If unchecked, the trigger will not run.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">Trigger Timing</span> — Causes the
+						trigger to fire during events in a record lifecycle. See <a href="Trigger timing options.htm" class="MCXref xref">Trigger timing options</a> for details. </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">General Properties</span> — Enter a <span class="uicontrol">Name</span> and an
 						<span class="uicontrol">Integration Name</span>. The <span class="uicontrol">Integration Name</span> should be unique across the object definition. If you selected <span class="uicontrol">Before Update</span> or
 							<span class="uicontrol">After Update</span> timing, choose the field(s) for
-						which an update should fire the trigger.</div>
-                                                        <div class="choice"><span class="uicontrol">Trigger Properties</span> — Read the
+						which an update should fire the trigger.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">Trigger Properties</span> — Read the
 							<span class="uicontrol">Tip</span> to understand what type of
 						formula the trigger expects. Use the <span class="uicontrol">Template
 							Helper</span> and formula editor to create and validate the
-						expression. See <a href="Best practices for trigger formulas.htm" class="MCXref xref">Best practices for trigger formulas</a> for more information.</div>
-                                                        <div class="choice"><span class="uicontrol">Trigger Delay Time</span> — Optionally, set a delay time. See <a href="Delayed and recursive triggers.htm" class="MCXref xref">Delayed and recursive triggers</a> for details.</div>
-                                                        <div class="choice"><span class="uicontrol">Recursion</span> — Optionally, set times for the trigger to repeat. See <a href="Delayed and recursive triggers.htm" class="MCXref xref">Delayed and recursive triggers</a> for details.</div>
+						expression. See <a href="Best practices for trigger formulas.htm" class="MCXref xref">Best practices for trigger formulas</a> for more information.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">Trigger Delay Time</span> — Optionally, set a delay time. See <a href="Delayed and recursive triggers.htm" class="MCXref xref">Delayed and recursive triggers</a> for details.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="choice"><span class="uicontrol">Recursion</span> — Optionally, set times for the trigger to repeat. See <a href="Delayed and recursive triggers.htm" class="MCXref xref">Delayed and recursive triggers</a> for details.</p>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </li>
-                                                <li class="step" value="6"><span class="cmd">Click <span class="uicontrol">Save</span>.</span>
+                                                <li class="step" value="7">
+                                                    <p><span class="cmd">Click <span class="uicontrol">Save</span>.</span>
+                                                    </p>
                                                     <div class="stepresult">Platform creates the trigger and it appears in the <span class="uicontrol">Triggers</span> table in the object definition. You can
 					control the order in which triggers fire by reordering them in this
 					table.</div>

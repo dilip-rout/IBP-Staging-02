@@ -145,7 +145,7 @@
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div style=" text-align: right; color:white; font-size: 9pt; background: #0572ed; margin-bottom: 15px; padding: 4px 12px; ">Documentation Version 
-		<select class="minimal" onchange="gotopage(this)"><option value="">6.4 (current)</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
+		<select class="minimal" onchange="gotopage(this)"><option value="">6.5 (current)</option><option value="https://documentation.infiniteblue.com/6.4/platform/What's%20New%20in%20Platform%206.4.htm" target="_blank">6.4</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
                                         </div>
@@ -153,16 +153,117 @@
                                     <div class="home-container">
                                         <div role="main" id="mc-main-content">
                                             <h1 class="concepttitle">Dependent Picklist Field</h1>
-                                            <p>The Dependent Picklist Field type is a special type of single-select picklist that displays different available values depending on the current selection in another (main) picklist. This main picklist must be selected before creating a dependent picklist. 
+                                            <p>The Dependent Picklist Field type is a special type of single-select picklist that displays different available values depending on the current selection in another (main) picklist. This main picklist must be selected before creating a dependent picklist. A typical example of a dependent picklist is a list of States or Provinces that depends on the selection of a Country picklist. Once the selection in the Country picklist changes, Platform will automatically update the available list of states.<![CDATA[
    
-   </p>
+   ]]></p>
                                             <img src="rfi1391098076181.jpg" style="width: 628;height: 167;" alt="" />
-                                            <p>For each value of the main picklist, you can enter a comma-separated list of available values as shown below.
-   </p>
-                                            <p>A typical example of a dependent picklist is a list of States or Provinces that depends on the selection of a Country picklist. Once the selection in the Country picklist changes, Platform will automatically update the available list of states.</p>
-                                            <div class="note">For more information on configuring case-sensitivity of picklist field values, see <a href="Picklist Field.htm#Configur">Configuring picklist case-sensitivity</a>.</div>
-                                            <p>Limitation: Each value in a dependent picklist may belong to only one value from the main picklist. If you need to re-use values in dependent picklists because one or more values needs to be associated with more than one value from the main picklist, you should instead create new Object definitions and use a lookup Field dependency. See the Relationships section below for more information regarding configuring relationship Lookup Fields to use Main and Link lookups to dynamically filter available selection choices. 
-   </p>
+                                            <p>You can define the following properties: </p>
+                                            <ul>
+                                                <li>
+                                                    <p style="font-weight: bold;">Field Properties</p>
+                                                    <ul style="list-style-type: circle;">
+                                                        <li>
+                                                            <p><span class="uicontrol">Field Label</span> — (mandatory) is displayed on
+    the left from the field on view, edit, and new record pages. </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">View Header</span> — (optional) is used in
+    headers of views and reports. If not specified, the <span class="uicontrol">Field Label</span> is used. </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">View Width</span> — (optional) is used to set
+    width (in pixels or %) of columns in views and reports. If not specified, the browser calculates
+    the width of columns automatically.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Shared As</span> — In some situations, you might want picklists belonging to different objects to
+    have the same set of values. Platform allows you to share picklists among those objects. To
+    share a picklist, select <span class="uicontrol">Share as New</span> from the <span class="uicontrol">Shared
+     As</span> drop-down when you create the picklist.</p>
+                                                            <p>To use values from an existing shared picklist, select the integration name of
+    the shared picklist from the <span class="uicontrol">Shared As</span> drop-down when you create the
+    picklist. The content of the <span class="uicontrol">Values</span> box is replaced with existing values
+    from the selected shared picklist. <div class="fig"><p><img alt="Picklist Share" src="lsl1428346842549.jpg" /></p></div></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Values</span>
+                                                            </p>
+                                                            <ul style="list-style-type: square;">
+                                                                <li>
+                                                                    <p><span class="uicontrol">Add Value</span>
+                                                                    </p>
+                                                                    <p>A list of available options for any newly added value includes:</p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Delete</span>: Deletes the particular value from the list.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Move up</span>: Moves the value one level up in the picklist order.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Move down</span>: Moves the value one level down in the picklist order.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Default</span>: Select if you want the particular value to be set as default for new records.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Name</span>: The name of the value. This is a mandatory field.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Code</span>: The integration code of the given value.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><span class="uicontrol">Language</span>: The name of the value based on set additional language.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p>
+                                                                        <img src="../img/picklist-field-dep-add-values.png" alt="" />
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="uicontrol">Bulk Add Values</span>:</p>
+                                                                    <p> For each value of the main picklist, you can enter a comma-separated list of available values as shown below. For each value of the main picklist, you can enter a comma-separated list of available values as shown below.</p>
+                                                                    <div class="note"><b>Note</b>:<ul><li>Bulk Add option cannot be used to edit any existing values.</li><li>Adding names corresponding to additional languages are not supported in Bulk Add option.</li></ul></div>
+                                                                    <p>
+                                                                        <img src="../img/picklist-field-dep-bulk-add-values.png" alt="" />
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Letters are not case-sensitive</span> — See <a href="Picklist Field.htm#Configur">Configuring picklist case-sensitivity</a> for more information.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Sort values alphabetically, not in the order entered</span> — You can also choose whether to display values sorted alphabetically (the default)
+   or in the order the values were entered. </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Use value instead of integration code for Export and Reports</span> — Enable to use display name instead of Integration code.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Assign values for all existing object records now</span> — Enable to assign this field to all existing Object records once it is created or updated.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">Exclude items to be added in picklist from import</span> — Enable if you want to restrict the scope of import to lookup possible picklist values from already entered list. With this, no new picklist option are created and assigned on the fly based on non-matching inputs from the import payload. Also, when checked at field level, no new picklist items are created during import.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><span class="uicontrol">List Height</span> — Choose a height (in rows) to determine the number of values visible at any given time. If more than one value is visible the user can use the CTRL key plus their mouse to select multiple items.</p>
+                                                        </li>
+                                                    </ul>&#160;</li>
+                                                <li>
+                                                    <p><span class="uicontrol">Advanced Field Properties</span> — For more information, see <a href="Advanced field properties.htm">Advanced field properties</a>.</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="uicontrol">Integration Name</span>  —  The integration name is used to reference this field via merge fields or with <span class="mc-variable IB.ProductName variable">Platform</span> APIs.</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="uicontrol">Field-Level Help</span>   — The <span class="uicontrol">Field-Level Help</span> box allows you to define help text
+   for the field that will appear in a popup when the user clicks the help icon next to the field. </p>
+                                                </li>
+                                            </ul>
+                                            <div class="note"><b>Note</b>:<ul><li>For more information on configuring case-sensitivity of picklist field values, see <a href="Picklist Field.htm#Configur">Configuring picklist case-sensitivity</a>.</li><li>From <span class="mc-variable IB.ProductName variable">Platform</span> 6.5 onwards, Application XML generation, installation, or push updating would be blocked if any duplicate labels or integration codes exist in the picklist items.</li><li>You may still proceed with any of the above mentioned operation with duplicate integration codes. This is governed by shared property - <a href="Shared Properties.htm#SkipUniquePicklistCodesCheck">SkipUniquePicklistCodesCheck</a>. Tenant administrators can enable the same using the <a href="Configuring Administrative Preferences.htm#Skip_unique_codes_check_on_picklist">Skip unique codes check on picklist</a> option from the Administrative Preferences section.</li></ul></div>
+                                            <div class="note"><b>Limitation</b>: Each value in a dependent picklist may belong to only one value from the main picklist. If you need to re-use values in dependent picklists because one or more values needs to be associated with more than one value from the main picklist, you should instead create new Object definitions and use a lookup Field dependency. See the Relationships section below for more information regarding configuring relationship Lookup Fields to use Main and Link lookups to dynamically filter available selection choices. 
+   </div>
                                         </div>
                                     </div>
                                     <footer class="footer-distributed">

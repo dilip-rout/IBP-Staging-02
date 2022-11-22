@@ -145,7 +145,7 @@
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div style=" text-align: right; color:white; font-size: 9pt; background: #0572ed; margin-bottom: 15px; padding: 4px 12px; ">Documentation Version 
-		<select class="minimal" onchange="gotopage(this)"><option value="">6.4 (current)</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
+		<select class="minimal" onchange="gotopage(this)"><option value="">6.5 (current)</option><option value="https://documentation.infiniteblue.com/6.4/platform/What's%20New%20in%20Platform%206.4.htm" target="_blank">6.4</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
                                         </div>
@@ -171,7 +171,7 @@
                 page.</p>
                                                 <p>If you continue development of an application that has already been
                 published, you can publish updates to that application. Each updated application
-                will have a higher version string than the last and customers who installed previous
+                will have a higher version number than the last and customers who installed previous
                 versions will be able to upgrade to the latest version. Private Cloud Master system
                 administrators can also push updates of an application to all tenants that have
                 installed the applications. See <a href="Pushing application updates to other tenants.htm" class="MCXref xref">Pushing application updates to other tenants</a>. </p>
@@ -205,12 +205,9 @@
                         information you provide here will be displayed on the Marketplace's
                         application page.</div>
                                                         <ul>
-                                                            <li>
-                                                                <p><a name="app_version"></a><span class="uicontrol">Version</span>: The
-                            version number of the application. Enter a string value. For example,
-                            if you publishing an update to version <b>1.0.0.0</b>, you may use <b>2.0.0.0</b> for any major update, <b>1.1.0.0</b> for any minor update, <b>1.0.1.0</b> for any patch update or <b>1.0.0.1</b> for any build revision.</p>
-                                                                <p>The default input mask is <code>{*}.{*}.{*}.{*}</code>. For any changes to the string format, update the desired input mask within the <b>App Version Number</b> field property in the published application's object definition. </p>
-                                                            </li>
+                                                            <li><span class="uicontrol">Version</span>: The
+                            version number of the application. Enter an integer value. For example,
+                            if you publish an update to version 1, use 2.</li>
                                                             <li><span class="uicontrol">Application Name</span>:
                             The name of the application</li>
                                                             <li><span class="uicontrol">Tags</span>: The terms

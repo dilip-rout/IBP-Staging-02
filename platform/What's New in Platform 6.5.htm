@@ -145,7 +145,7 @@
                             <div class="body-container">
                                 <div data-mc-content-body="True">
                                     <div style=" text-align: right; color:white; font-size: 9pt; background: #0572ed; margin-bottom: 15px; padding: 4px 12px; ">Documentation Version 
-		<select class="minimal" onchange="gotopage(this)"><option value="">6.4 (current)</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
+		<select class="minimal" onchange="gotopage(this)"><option value="">6.5 (current)</option><option value="https://documentation.infiniteblue.com/6.4/platform/What's%20New%20in%20Platform%206.4.htm" target="_blank">6.4</option><option value="https://documentation.infiniteblue.com/6.3/platform/What's%20New%20in%20Platform%206.3.htm" target="_blank">6.3</option><option value="https://documentation.infiniteblue.com/6.2/platform/What's%20New%20in%20Platform%206.2.htm" target="_blank">6.2</option></select></div>
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
                                         </div>
@@ -153,47 +153,47 @@
                                     <div class="home-container">
                                         <div role="main" id="mc-main-content">
                                             <h1>What's New in Platform 6.5</h1>
-                                            <p>The following is a summary of features updates, enhancements, and performance improvements bundled with the <span style="font-weight: bold;" class="mc-variable IB.CompanyName variable">Infinite Blue</span><span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span> version <b>6.4.0.0</b>.  Customers currently running version <b>5.0</b> or later are eligible to upgrade to version <b>6.4</b>. If you are running an earlier version, please contact <a href="https://infiniteblue.com/support/">Support</a> for additional information.</p>
+                                            <p>This section outlines a summary of the highly anticipated features updates, enhancements, and performance improvements bundled with the <span class="mc-variable IB.CompanyName variable">Infinite Blue</span> <span class="mc-variable IB.ProductName variable">Platform</span> version <b>6.5.0.0</b>.  Customers currently running version 5.0 or later are eligible to upgrade to version <b>6.5</b>. If you are running an earlier version, please contact Support for additional information.</p>
                                             <h2>Features/Enhancements</h2>
-                                            <h3>Quick Filtering</h3>
-                                            <p>While the current detailed search tool lacks list view filtering and has other limitations, <span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span><b> 6.4</b> is now equipped with a new feature – <span class="uicontrol">Quick Filters</span> to address these restrictions.     The detailed search feature will not be removed from the <span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span>, yet it will no longer be evaluated for improvements.</p>
-                                            <p>Using the new <span class="uicontrol">Quick Filter</span> functionality, administrators can now create reusable templates for any list view for a specific object. The fields that a user can use to quickly filter a list of records are defined in these templates. Administrators can enable keyword filtering in list views as well, which allows users to search for records with strings and wildcard characters. Keyword Filtering, Quick Filtering, and basic List View Filters all work together to return a single subset of entries in a list view. This allows users to easily filter records by criteria using the same search page rather than having to maintain numerous pages. Furthermore, the filtered records list may be simply shared to save time and collaborate more effectively.</p>
+                                            <h3>Picklist Enhancement</h3>
+                                            <p>In <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0, Picklist value integration codes must be unique by default. This helps to ensure that Picklist values are properly updated when an application is updated from an XML or through the Marketplace. However, for customers that do have duplicate codes today, they can disable this validation with the new shared property, <a href="Shared Properties.htm#SkipUniquePicklistCodesCheck">SkipUniquePicklistCodesCheck</a>.</p>
+                                            <p>The enhanced UI allows users to add, delete, edit, or reorder picklist values seamlessly without any impact on existing records. Additionally, users can also add new values in bulk.</p>
                                             <p>
-                                                <img src="../img/quick-search-1.png" style="width: 454px;height: 225px;" alt="" />
+                                                <img src="../img/Picklist-field-add-values.png" alt="" />
                                             </p>
-                                            <p>For detailed information on this, see <a href="Quick Filters.htm">Quick Filters</a>.</p>
-                                            <h3>Large Job Triggers</h3>
-                                            <p><span style="font-weight: bold;" class="mc-variable IB.ProductName variable">Platform</span><b> 6.4</b> now allows triggers to run as large jobs by administrators. This can be specified when invoking a trigger using REST API v2, Server-Side, or Client-Side APIs, or it can be enabled in the UI of a trigger. When a trigger operates in the background, it ignores typical trigger timing and transactional volume constraints (<code>MaxRuntimeTriggers</code> and <code>MaxTimeToRunTrigMS</code>).</p>
-                                            <p>This makes it possible to conduct more complex business logic in the background without interruption. Large job triggers can also be set delayed or recursive. When a large job trigger is queued and processing, it appears in Job Monitoring Section. Additionally, <span class="uicontrol">After Delete</span> trigger timing option is now also enabled for Create New Record and Object Scripts triggers.</p>
+                                            <p><span class="mc-variable IB.CompanyName variable">Infinite Blue</span> highly recommends customers plan to update any duplicate picklist codes and utilize this uniqueness validation if they upgrade their tenants' applications from XMLs or the Marketplace.</p>
+                                            <p>For detailed information, see <a href="Picklist Field.htm">Picklist Field</a>.</p>
+                                            <h3>Modern Authentication using OAuth 2.0 for Exchange Email</h3>
+                                            <p>As Microsoft has deprecated the use of basic authentication, <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0 now supports  0Auth 2.0 authentication for Microsoft Exchange. This can be configured at both MASTER and TENANT level.</p>
                                             <p>
-                                                <img src="rfi1391098488146.jpg" style="width: 500px;height: 115px;" alt="" />
+                                                <img src="../img/xchange_10.png" alt="" />
                                             </p>
-                                            <p>For detailed information on this, see <a href="Delayed and recursive triggers.htm#Run_as_Large_job">Delayed and recursive triggers</a>.</p>
-                                            <h3>Performance Improvements</h3>
-                                            <p>While actual performance gains will vary depending on your environment, application complexity, and data volume, in comparison to 6.3, the following areas have improved performance.:</p>
-                                            <ul>
-                                                <li>
-                                                    <p><b>GraalJS</b> - While this feature is still in beta, several known concerns have been addressed, and the feature has been streamlined to run faster.</p>
-                                                </li>
-                                                <li>
-                                                    <p><b>Elastic Search</b> - Elastic search has been improved in several ways to make it more stable and performant. This is now the preferred search engine over Lucene.</p>
-                                                </li>
-                                                <li>
-                                                    <p><b>Scheduled FTP Import Batch Job</b> - Import mode selection is now available in the Scheduled FTP Import Batch Job. For these batch jobs, the user can choose between test, normal, and bulk mode.</p>
-                                                </li>
-                                                <li>
-                                                    <p><b>UI Performance</b> - For better efficiency, UI record activities can be switched to Ajax calls using the shared property - <a href="Shared Properties.htm#EnableAjaxFormSubmit">EnableAjaxFormSubmit</a>.</p>
-                                                </li>
-                                                <li>
-                                                    <p><b>Import Performance</b> - The process to create records via import has been slightly optimized to complete more quickly. The update records flow has been updated to be on par with the create flow in terms of unique field validation and performance.</p>
-                                                </li>
-                                            </ul>
+                                            <p>For detailed information, see <a href="Enabling Microsoft Exchange Integration.htm">Enabling Microsoft Exchange Integration</a>.</p>
+                                            <h3>Server-Side API Bulk Action Support (Beta)</h3>
+                                            <p>Until <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0, the APIs used for creating, updating, and deleting records via <code>rbv_api</code> were done individually. <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0 now also allows API developers to use a single bulk call for multiple records requiring changes. This enhancement delivers improved performance, especially when dealing with a larger number of records.</p>
+                                            <p>For detailed information, see the APIs <a href="rbv_api.createRecord().htm">rbv_api.createRecord()</a>, <a href="rbv_api.deleteRecord().htm">rbv_api.deleteRecord()</a>, and <a href="rbv_api.updateRecord().htm">rbv_api.updateRecord()</a>.</p>
+                                            <h3>Background Job Processing Enhancements (Beta)</h3>
+                                            <p>Until now, there were only three <code>rbv_apis</code> that support asynchronous processing - <a href="rbv_api.runTrigger().htm">rbv_api.runTrigger()</a>, <a href="rbv_api.attachAsync().htm">rbv_api.attachAsync()</a>, and <a href="rbv_api.detachAsync().htm">rbv_api.detachAsync()</a>. While these methods use different ways to handle asynchronous processing, there was never a standard/global syntax standardization. With <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0, a new method <a href="rbv_api.setOptions().htm">rbv_api.setOptions()</a> is implemented along with async support for existing APIs. These options will be applied within the formula or trigger code.</p>
+                                            <p>For detailed information, see <a href="rbv_api.setOptions().htm">rbv_api.setOptions()</a>.</p>
+                                            <h3>Weak Password Protection</h3>
+                                            <p>With security top of mind, <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0 offers enhanced protection against weak passwords for high security level users. The built-in security is customizable and prevents users from specifying weak passwords by enforcing your requirements.</p>
+                                            <p style="font-weight: bold;">
+                                                <img src="../img/change-my-password-1.png" alt="Change my password screen" style="width: 561px;height: 176px;" />
+                                            </p>
+                                            <p>For detailed information, see <a href="Built-in security levels.htm">Built-in Security Levels</a>.</p>
+                                            <h3>UI Performance Enhancements</h3>
+                                            <p>The performance of UI utilizing <a href="GraalVM JavaScript.htm">GraalJS</a> operations has been measurably optimized. This is especially noticeable for enhanced page loading performance, specifically around time to load pages for records with extensive relationship data.</p>
+                                            <h3>Third-Party Library Update</h3>
+                                            <p>To mitigate risk from vulnerable or end-of-life (EOL) components, <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0 has proactively bundled its third-party libraries and dependencies to their latest versions  to ensure improved quality and performance.</p>
+                                            <p>&#160;</p>
                                             <h3>Miscellaneous</h3>
-                                            <ul>
-                                                <li data-mc-conditions="Default.ScreenOnly">
-                                                    <p><b>REST 2.0 APIs</b> - New parameters for runTrigger - <b>Large Job</b> and FTP Import Batch Job - <b>Import mode</b> have been added. For detailed information on this, see <a href="../Resources/Additional Files/RESTv2.html">REST API v2.0 Documentation</a>.</p>
-                                                </li>
-                                            </ul>
+                                            <h4>HTTP Proxy</h4>
+                                            <p><span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0 now supports utilizing a Proxy Server for HTTP requests made to external sources using ObjectScript API like <a href="rbv_api.sendHttpGet().htm">rbv_api.sendHttpGet()</a>, <a href="rbv_api.sendHttpPost().htm">rbv_api.sendHttpPost()</a>, or any other HTTP GET / HTTP POST triggers.</p>
+                                            <p>For detailed information, refer to <a href="https://infiniteblue.atlassian.net/servicedesk/customer/portal/4/article/2511503392">this knowledge base article</a>.
+</p>
+                                            <h4>SAML Authentication Enhancement</h4>
+                                            <p>In <span class="mc-variable IB.ProductName variable">Platform</span> 6.5.0.0,  Authentication Context Classes are introduced for SAML Authentication. The Authentication Context Class appends required authentication information to the Identity Provider (IDP). These classes are configurable and allow SSO integration with any previously unsupported identify providers like ADFS that require authentication contexts other than <code>PasswordprotectedTransport</code>.</p>
+                                            <p>For detailed information, see <a href="Configuring SAML or ADFS Authentication for all tenants.htm">Configuring SAML/ADFS Authentication for all tenants</a>.</p>
                                         </div>
                                     </div>
                                     <div class="MCMiniTocBox_0 miniToc nocontent" data-mc-autonum="In this section:" data-mc-depth="1" data-mc-toc="True"><span class="autonumber"><span class="miniTocBoxTitle">In this section:</span></span>
