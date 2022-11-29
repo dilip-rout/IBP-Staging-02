@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MadCapLog Protocol="2" Description="MadCap Flare 2022 Generated IB Platform User Guide - HTML 2021.fltar" Date="2022-11-22T17:40:02.0735895+05:30" Branch="6.6.x" Commit="fd96b92609ccb33fb580394b02cc4ac7ba28c522">
+<MadCapLog Protocol="2" Description="MadCap Flare 2022 Generated IB Platform User Guide - HTML 2021.fltar" Date="2022-11-28T17:36:47.0957749+05:30" Branch="6.6.x" Commit="fd96b92609ccb33fb580394b02cc4ac7ba28c522">
     <Messages>Compiling target IB Platform User Guide - HTML 2021...
 Removing previously generated content...
 Loading skin info...
@@ -4282,7 +4282,7 @@ Generated Skins\Default\Stylesheets\Topic.micro-content.css
 Generated Default.htm
 Saving result set...
 Ignored Compiler Warnings: 9166
-Output generated in 18 minute(s) and 46 second(s).
+Output generated in 13 minute(s) and 12 second(s).
 
 Done
 Saving log to "C:\Users\DilipRout\Desktop\Madcap Test Output\HTML\Output\IB Platform User Guide - HTML 2021\IB Platform User Guide - HTML 2021.mclog"

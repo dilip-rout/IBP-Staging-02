@@ -357,7 +357,7 @@ h1
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #0572ed;
+	color: #004293;
 	font-family: 'Tenon';
 	font: Tenon;
 	mc-hyphenate: never;
@@ -368,7 +368,7 @@ h1
 
 h2
 {
-	color: #0572ed;
+	color: #004293;
 	font: Tenon;
 	font-family: 'Tenon';
 	font-style: normal;
@@ -385,7 +385,7 @@ h3
 	vertical-align: baseline;
 	font: Tenon;
 	font-family: 'Tenon';
-	color: #0572ed;
+	color: #004293;
 	mc-heading-level: 3;
 	font-size: 1.6em;
 	font-weight: bold;
@@ -434,7 +434,7 @@ p.TOC1
 	font-size: 14pt;
 	mc-auto-number-format: '{n}. ';
 	mc-auto-number-offset: 2px;
-	color: #0572ed;
+	color: #004293;
 }
 
 ::marker
@@ -845,7 +845,7 @@ a:link
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #004293;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -861,14 +861,14 @@ a:focus
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #004293;
 }
 
 a:hover
 {
 	mc-hyphenate: never;
 	vertical-align: baseline;
-	color: #0572ed;
+	color: #004293;
 	font-size: ;
 }
 
@@ -883,7 +883,7 @@ a
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	font-family: 'Tenon';
-	color: #0572ed;
+	color: #004293;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -1113,7 +1113,7 @@ p.TOC6
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	color: #0572ed;
+	color: #004293;
 }
 
 p.TOC5
@@ -1121,7 +1121,7 @@ p.TOC5
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	color: #0572ed;
+	color: #004293;
 }
 
 p.TOC4
@@ -1130,7 +1130,7 @@ p.TOC4
 	vertical-align: baseline;
 	font-family: Tenon;
 	font-size: 12.5;
-	color: #0572ed;
+	color: #004293;
 }
 
 p.TOC3
@@ -1139,7 +1139,7 @@ p.TOC3
 	vertical-align: baseline;
 	font-family: Tenon;
 	font-size: 13pt;
-	color: #0572ed;
+	color: #004293;
 }
 
 p.TOC2
@@ -1148,7 +1148,7 @@ p.TOC2
 	vertical-align: baseline;
 	font-family: Tenon;
 	font-size: 13.5 pt;
-	color: #0572ed;
+	color: #004293;
 }
 
 p.ListOf
@@ -1474,7 +1474,7 @@ h1.concepttitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #0572ed;
+	color: #004293;
 	font-family: 'Tenon';
 	font: Tenon;
 	mc-heading-level: 1;
@@ -1553,7 +1553,7 @@ h2.sectiontitle
 	mc-heading-level: 2;
 	font-weight: normal;
 	font-size: 1.7em;
-	color: #0572ed;
+	color: #004293;
 }
 
 div.fig
@@ -1611,7 +1611,7 @@ h1.tasktitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #0572ed;
+	color: #004293;
 	font-family: 'Tenon';
 	font: Tenon;
 	mc-heading-level: 1;
@@ -1875,7 +1875,7 @@ h1.referencetitle
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #0572ed;
+	color: #004293;
 	font-family: 'Tenon';
 	font: Tenon;
 	mc-heading-level: 1;
@@ -2111,7 +2111,7 @@ h1.title
 	vertical-align: baseline;
 	mc-heading-level: 0;
 	font-weight: bold;
-	color: #0572ed;
+	color: #004293;
 	font-size: 4 em;
 }
 
@@ -2137,7 +2137,7 @@ h2.title
 	vertical-align: baseline;
 	mc-heading-level: 0;
 	font-weight: bold;
-	color: #0572ed;
+	color: #004293;
 	font-size: 4em;
 }
 
@@ -2292,7 +2292,7 @@ table.ibplatform01
 	{
 		mc-heading-level: 0;
 		font-size: 1.7em;
-		color: #0572ed;
+		color: #004293;
 		font-weight: bold;
 	}
 
@@ -2304,21 +2304,21 @@ table.ibplatform01
 
 	h3
 	{
-		color: #0572ed;
+		color: #004293;
 		font-size: 1.6em;
 		font-weight: bold;
 	}
 
 	h4
 	{
-		color: #0572ed;
+		color: #004293;
 		font-size: 1.5em;
 		font-weight: bold;
 	}
 
 	h5
 	{
-		color: #0572ed;
+		color: #004293;
 		font-size: 1.4em;
 		font-family: 'Tenon';
 		font-weight: bold;
@@ -2327,7 +2327,7 @@ table.ibplatform01
 	h6
 	{
 		font-family: 'Tenon';
-		color: #0572ed;
+		color: #004293;
 		font-size: 1.3em;
 		font-weight: bold;
 	}
@@ -2385,7 +2385,7 @@ p.h2
 	mc-hyphenate: never;
 	vertical-align: baseline;
 	mc-heading-level: 0;
-	color: #0572ed;
+	color: #004293;
 }
 
 div.note-list
@@ -2410,7 +2410,7 @@ h1.displayonly
 	font-style: normal;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	color: #0572ed;
+	color: #004293;
 	font-family: 'Tenon';
 	font: Tenon;
 	font-size: 1.8em;
@@ -2687,7 +2687,7 @@ span.beta
 	vertical-align: middle;
 	text-align: center;
 	border-radius: 5px;
-	background: #0572ed;
+	background: #004293;
 	padding: 1px 4px;
 }
 
@@ -2727,7 +2727,7 @@ select.minimal:focus
 	background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
 	background-size: 5px 5px, 5px 5px, 1px 1.5em;
 	background-repeat: no-repeat;
-	border-color: #0572ed;
+	border-color: #004293;
 	outline: 0;
 }
 
